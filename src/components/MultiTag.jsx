@@ -1,5 +1,5 @@
 import React from "react";
-import "./multiTag.css";
+import "./MultiTag.css";
 
 export default function MultiTag() {
   return (
