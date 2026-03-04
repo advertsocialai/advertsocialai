@@ -1,0 +1,252 @@
+/* 
+   MULTITAG –  MOBILE STACK */
+
+/* Hide mobile by default */
+.multitag-mobile {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  /* Hide desktop on mobile */
+  .multitag-desktop {
+    display: none;
+  }
+
+  /* Show mobile on mobile */
+  .multitag-mobile {
+    display: block;
+  }
+
+  /* Root flow */
+  .multitag-mobile-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  /* Headings */
+  h2,
+  p {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 14px;
+    text-align: center;
+  }
+
+  /* Remove dashed SVG */
+  .multitag-dashed-svg {
+    display: none !important;
+  }
+
+  .multitag-dashed-wrapper {
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .multitag-label {
+    margin: 12px auto !important;
+    width: 160px !important;
+    height: 56px !important;
+    font-size: 16px !important;
+  }
+
+  .multitag-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    align-items: center !important;
+  }
+
+  .multitag-row>div {
+    width: 90% !important;
+    max-width: 280px !important;
+  }
+
+  .multitag-bottom-card {
+    width: 90% !important;
+    max-width: 320px;
+    height: auto !important;
+    padding: 20px !important;
+    margin: 20px auto 0 !important;
+    text-align: center;
+  }
+
+  body,
+  section {
+    overflow-x: hidden;
+  }
+}
+
+/* MOBILE DASHED CONNECTOR */
+@media (max-width: 768px) {
+  .mobile-dashed-line {
+    width: 1px;
+    height: 32px;
+    border-left: 2px dashed rgba(255, 255, 255, 0.5);
+    margin: 8px 0;
+  }
+}
+
+/*
+   MOBILE FIX (< 550px)
+   Works for iOS + Android */
+@media (max-width: 550px) {
+
+  .multitag-main-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px !important;
+  }
+
+  .multitag-main-layout>div {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+
+  .multitag-main-layout * {
+    margin-top: 0 !important;
+  }
+}
+
+
+/*
+   SAFE MOBILE FIX (NO BLANK, NO OVERLAP) */
+@media (max-width: 768px) {
+
+  /* Switch desktop → mobile */
+  .multitag-desktop {
+    display: none;
+  }
+
+  .multitag-mobile {
+    display: block;
+  }
+
+  /* Mobile container */
+  .multitag-mobile-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  /* Fix source cards section ONLY */
+  .hero-card-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    min-height: auto;
+  }
+
+  .hero-card-grid>div {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Prevent side scroll */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* 
+   MOBILE ZIG-ZAG CARD STRUCTURE */
+@media (max-width: 768px) {
+
+  .hero-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+
+  /* Base card size */
+  .hero-card-grid>div {
+    max-width: 160px;
+    width: 100%;
+  }
+
+  /* Center single cards */
+  .hero-card-grid>div:nth-child(3),
+  .hero-card-grid>div:nth-child(4) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+/* 
+   ULTRA-WIDE & 4K RESPONSIVE SCALING  */
+
+/* 2K / 2560px - 2700px Scaling */
+@media (min-width: 2560px) {
+  .multitag-desktop {
+    width: 1440px !important;
+    /* Lock width to desktop size */
+    margin: 0 auto !important;
+    transform: scale(1.4) !important;
+    /* Proportional scale */
+    transform-origin: center top !important;
+    position: relative !important;
+  }
+
+  .multitag-title-container {
+    margin-left: 80px !important;
+    /* Shift right as requested */
+  }
+
+  /* Adjust section padding to accommodate scaled height */
+  section.relative.overflow-hidden.bg-\[\#161313\] {
+    padding-bottom: 500px !important;
+  }
+
+  /* Fix vector curve visibility */
+  .multitag-curve-bg {
+    height: 200px !important;
+    background-size: 100% 100% !important;
+    z-index: 1 !important;
+  }
+}
+
+/* 4K / 3840px Scaling */
+@media (min-width: 3840px) {
+  .multitag-desktop {
+    width: 1440px !important;
+    /* Lock width to desktop size */
+    margin: 0 auto !important;
+    transform: scale(2.0) !important;
+    /* Proportional scale */
+    transform-origin: center top !important;
+    position: relative !important;
+  }
+
+  .multitag-title-container {
+    margin-left: 120px !important;
+    /* Shift further right for 4K */
+  }
+
+  /* Adjusting section padding to accommodate scaled height */
+  section.relative.overflow-hidden.bg-\[\#161313\] {
+    padding-bottom: 1200px !important;
+  }
+
+  /*  vector curve visibility for 4K */
+  .multitag-curve-bg {
+    height: 350px !important;
+    background-size: 100% 100% !important;
+    z-index: 1 !important;
+  }
+}

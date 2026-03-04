@@ -1,0 +1,92 @@
+/* 4K / Ultra-wide Scaling (2560px - 2700px) */
+@media (min-width: 2560px) {
+    .features-advertisers-section {
+        padding-top: 150px !important;
+        padding-bottom: 150px !important;
+    }
+
+    .features-header-container {
+        width: 1500px !important;
+        max-width: 1500px !important;
+        gap: 60px !important;
+    }
+
+    .features-header-title {
+        font-size: 80px !important;
+        line-height: 100px !important;
+    }
+
+    .features-header-text-reg {
+        font-size: 32px !important;
+        line-height: 48px !important;
+    }
+
+    .features-desktop-grid {
+        width: 2200px !important;
+        height: auto !important;
+        margin-top: 150px !important;
+        gap: 40px !important;
+    }
+
+    .features-desktop-grid>div:nth-child(1) {
+        width: 2200px !important;
+        height: 1000px !important;
+        gap: 40px !important;
+    }
+
+    .features-desktop-grid>div:nth-child(2) {
+        width: 1100px !important;
+        height: 1000px !important;
+        gap: 40px !important;
+        margin-top: -800px !important;
+    }
+
+    .feature-card-main {
+        width: 520px !important;
+        padding: 80px 60px !important;
+        gap: 60px !important;
+        border-radius: 30px !important;
+    }
+
+    .feature-card-icon {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .feature-card-text-box {
+        max-width: 400px !important;
+    }
+
+    .feature-card-title {
+        font-size: 36px !important;
+        line-height: 48px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .feature-card-desc {
+        font-size: 30px !important;
+        line-height: 46px !important;
+    }
+
+    /* Staggered adjustments */
+    .features-desktop-grid>div:nth-child(1)>div:nth-child(2)>div {
+        margin-top: -80px !important;
+    }
+
+    .features-desktop-grid>div:nth-child(1)>div:nth-child(1)>div>.feature-card-main {
+        height: 750px !important;
+    }
+
+    .features-desktop-grid>div:nth-child(1)>div:nth-child(2)>div>.feature-card-main {
+        height: 950px !important;
+    }
+
+    .features-desktop-grid>div:nth-child(2)>div:nth-child(1)>.feature-card-main {
+        height: 980px !important;
+    }
+
+    .features-desktop-grid>div:nth-child(2)>div:nth-child(2)>div>.feature-card-main {
+        height: 780px !important;
+        margin-top: 100px !important;
+    }
+}

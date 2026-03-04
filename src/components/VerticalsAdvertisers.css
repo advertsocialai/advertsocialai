@@ -1,0 +1,105 @@
+/* 4K / Ultra-wide Scaling (2560px - 2700px) */
+@media (min-width: 2560px) {
+    .verticals-advertisers-section {
+        padding-top: 150px !important;
+        padding-bottom: 250px !important;
+    }
+
+    .verticals-pushads-wrapper {
+        width: 2500px !important;
+        height: 2050px !important;
+        padding: 150px 120px !important;
+        border-radius: 40px !important;
+        background-size: 100% 100% !important;
+    }
+
+    .verticals-header-text {
+        width: 1700px !important;
+        margin-top: 60px !important;
+        margin-left: 40px !important;
+        gap: 60px !important;
+    }
+
+    .verticals-title {
+        font-size: 110px !important;
+        line-height: 130px !important;
+    }
+
+    .verticals-cta-btn {
+        padding: 24px 60px !important;
+        gap: 16px !important;
+    }
+
+    .verticals-cta-btn span {
+        font-size: 24px !important;
+    }
+
+    .verticals-cta-btn img {
+        width: 24px !important;
+        height: 22px !important;
+    }
+
+    .verticals-cards-grid {
+        width: 100% !important;
+        max-width: 2200px !important;
+        margin-top: 120px !important;
+        gap: 80px !important;
+    }
+
+    .vertical-card-main {
+        width: 620px !important;
+        height: 880px !important;
+        border-radius: 30px !important;
+    }
+
+    .vertical-card-bg {
+        border-radius: 30px !important;
+        background-size: 100% 100% !important;
+        object-fit: fill !important;
+    }
+
+    .vertical-card-icon-box {
+        top: 100px !important;
+        left: 80px !important;
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .vertical-card-mask {
+        border-radius: 30px !important;
+        mask-size: 100% 100% !important;
+        -webkit-mask-size: 100% 100% !important;
+        mask-repeat: no-repeat !important;
+        -webkit-mask-repeat: no-repeat !important;
+        mask-position: center !important;
+        -webkit-mask-position: center !important;
+    }
+
+    .vertical-card-text {
+        bottom: 80px !important;
+        left: 80px !important;
+        width: 480px !important;
+        gap: 50px !important;
+    }
+
+    .vertical-card-text h3 {
+        font-size: 36px !important;
+        line-height: 48px !important;
+    }
+
+    .vertical-card-text p,
+    .vertical-card-text li {
+        font-size: 22px !important;
+        line-height: 32px !important;
+    }
+
+    .verticals-tip-text {
+        margin-top: 100px !important;
+        margin-left: 80px !important;
+    }
+
+    .verticals-tip-text p {
+        font-size: 42px !important;
+        line-height: 52px !important;
+    }
+}

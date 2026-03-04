@@ -1,0 +1,427 @@
+/* Mobile-only fixes */
+@media (max-width: 768px) {
+
+  .howitworks-pushads-mobile {
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Turn absolute layout into stacked layout */
+  /* .howitworks-pushads-mobile .hiw-content {
+    position: relative !important;
+    top: unset !important;
+    left: unset !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    gap: 32px !important;
+    margin-top: 220px !important;
+    padding: 0 16px !important;
+  }
+
+  /* Hide side phone images on mobile */
+  .howitworks-pushads-mobile .hiw-content>div:first-child,
+  .howitworks-pushads-mobile .hiw-content>div:last-child {
+    display: none !important;
+  }
+
+  */
+
+  /* Center text */
+  .howitworks-pushads-mobile .hiw-content>div {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* Checklist alignment */
+  .howitworks-pushads-mobile .hiw-content .flex.items-center {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+}
+
+/* REAL MOBILE FIX – iOS & Android */
+@media (max-width: 768px) {
+
+  /* Let section grow naturally */
+  .howitworks-pushads-mobile {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  /* Mobile layout must NOT be absolute */
+  .howitworks-pushads-mobile .lg\\:hidden {
+    position: relative !important;
+    inset: auto !important;
+  }
+
+  /* Prevent text overlap */
+  .howitworks-pushads-mobile h2 {
+    line-height: 1.2 !important;
+    word-break: break-word;
+  }
+}
+
+/* MOBILE ONLY – DO NOT AFFECT DESKTOP */
+@media (max-width: 768px) {
+  .howitworks-pushads-mobile>div {
+    height: auto !important;
+    min-height: unset !important;
+  }
+}
+
+/* 🔒 Mobile-only fix — desktop untouched */
+@media (max-width: 768px) {
+  .howitworks-pushads-mobile>div {
+    height: auto !important;
+    min-height: unset !important;
+  }
+}
+
+/* FIX title overlap on small phones ONLY */
+@media (max-width: 480px) {
+
+  .howitworks-pushads-mobile .hiw-title {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+
+    margin-bottom: 24px !important;
+  }
+
+}
+
+/* =========================================
+   HOW IT WORKS – MOBILE ONLY CLEAN FIX
+   DOES NOT TOUCH DESKTOP
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* Reset section spacing */
+  .howitworks-pushads-mobile {
+    margin-top: 0 !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  /* Remove fixed heights that cause blank space */
+  .howitworks-pushads-mobile>div {
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  /* Hide ALL images on mobile (phones, reels, side images, bg clutter) */
+  .howitworks-pushads-mobile img {
+    display: none !important;
+  }
+
+  /* Kill absolute positioning on mobile */
+  .howitworks-pushads-mobile * {
+    position: static !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  /* Title block */
+  .howitworks-pushads-mobile h2 {
+    text-align: left !important;
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Main text container */
+  .howitworks-pushads-mobile p {
+    text-align: left !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Content wrapper stack */
+  .howitworks-pushads-mobile .hiw-content,
+  .howitworks-pushads-mobile .lg\:hidden {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    padding: 0 16px !important;
+    margin-top: 0 !important;
+  }
+
+  /* Checklist rows */
+  .howitworks-pushads-mobile .flex.items-center {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  /* Checklist text */
+  .howitworks-pushads-mobile .flex.items-center span {
+    text-align: left !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* =========================================
+   MOBILE FIX — TEXT ONLY, NO IMAGES
+   Applies to ALL HowItWorks sections
+   Desktop untouched
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* 1️⃣ Hide ALL images safely (no text affected) */
+  .howitworks-pushads-mobile img {
+    display: none !important;
+  }
+
+  /* 2️⃣ Hide desktop absolute layout completely */
+  .howitworks-pushads-mobile .hiw-content {
+    display: none !important;
+  }
+
+  /* 3️⃣ Remove fixed height causing blank space */
+  .howitworks-pushads-mobile>div {
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  /* 4️⃣ Mobile text layout */
+  .howitworks-pushads-mobile .lg\\:hidden {
+    display: block !important;
+    padding-top: 120px !important;
+  }
+
+  /* 5️⃣ Proper left alignment */
+  .howitworks-pushads-mobile p,
+  .howitworks-pushads-mobile h2,
+  .howitworks-pushads-mobile span {
+    text-align: left !important;
+  }
+
+  /* 6️⃣ Checklist layout (KEEP TICK VISIBLE) */
+  .howitworks-pushads-mobile .flex.items-center {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  /* 7️⃣ Restore tick icons */
+  .howitworks-pushads-mobile .flex.items-center img {
+    display: block !important;
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Hide desktop absolute layout */
+  .howitworks-pushads-mobile .hiw-content {
+    display: none !important;
+  }
+
+  /* Hide ALL images */
+  .howitworks-pushads-mobile img {
+    display: none !important;
+  }
+
+  /* BUT show tick icons */
+  .howitworks-pushads-mobile .flex.items-center img {
+    display: inline-block !important;
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  /* Remove fixed height */
+  .howitworks-pushads-mobile>div {
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  /* Left align text */
+  .howitworks-pushads-mobile h2,
+  .howitworks-pushads-mobile p,
+  .howitworks-pushads-mobile span {
+    text-align: left !important;
+  }
+
+  /* Checklist alignment */
+  .howitworks-pushads-mobile .flex.items-center {
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* 1️⃣ Cancel desktop negative margin */
+  .howitworks-pushads-mobile {
+    margin-top: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* 2️⃣ Remove fixed height container */
+  .howitworks-pushads-mobile>div {
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  /* 3️⃣ Remove extra mobile top padding */
+  .howitworks-pushads-mobile .lg\\:hidden {
+    padding-top: 0 !important;
+    margin-top: 24px !important;
+  }
+
+  /* 4️⃣ Prevent text overflow */
+  .howitworks-pushads-mobile {
+    overflow-x: hidden !important;
+  }
+
+  /* 5️⃣ Make sure text wraps properly */
+  .howitworks-pushads-mobile p,
+  .howitworks-pushads-mobile h2,
+  .howitworks-pushads-mobile span {
+    word-break: break-word;
+  }
+}
+
+/* ===================================== STEP 2 — MOBILE ONLY (DESKTOP SAFE) ===================================== */
+@media (max-width: 1023px) {
+
+  /* Hide desktop absolute layout on mobile */
+  .howitworks-pushads-mobile .hiw-content {
+    display: none !important;
+  }
+
+  /* Mobile stack becomes the only visible content */
+  .howitworks-pushads-mobile .lg\:hidden {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding-top: 120px !important;
+  }
+
+  /* Let mobile content grow naturally */
+  .howitworks-pushads-mobile {
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
+/* MOBILE ONLY FIX */
+@media (max-width: 1024px) {
+
+  /* Hide doodle */
+  .howitworks-pushads-mobile img[alt="Doodle"] {
+    display: none !important;
+  }
+
+  /* Remove fixed height so content can flow */
+  .howitworks-pushads-mobile > div {
+    height: auto !important;
+  }
+
+  /* Title becomes normal flow */
+  .hiw-title {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    padding: 24px 16px 0;
+    gap: 16px !important;
+  }
+
+  /* Main content block */
+  .hiw-content {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column !important;
+    padding: 24px 16px 32px;
+    gap: 24px !important;
+  }
+
+  /* Hide side images */
+  .hiw-content > div:first-child,
+  .hiw-content > div:last-child {
+    display: none !important;
+  }
+
+  /* Center content full width */
+  .hiw-content > div:nth-child(2) {
+    width: 100% !important;
+    height: auto !important;
+    gap: 24px !important;
+  }
+
+  /* Paragraph text */
+  .hiw-content p {
+    font-size: 14px !important;
+    line-height: 22px !important;
+    text-align: left;
+  }
+
+  /* Checklist width fix */
+  .hiw-content .flex.flex-col {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  /* Force same desktop bg image on mobile */
+  .howitworks-pushads-mobile > div {
+    min-height: 100vh;
+    background-image: url("/assets/images/howitworks.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+  }
+
+  /* Hide the absolute bg image to avoid conflicts */
+  .howitworks-pushads-mobile img[alt="How it works background"] {
+    display: none;
+  }
+
+  /* Normal document flow */
+  .hiw-title {
+    position: relative !important;
+    top: 0 !important;
+    padding: 24px 16px 0;
+  }
+
+  .hiw-content {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column;
+    padding: 24px 16px 40px;
+    gap: 24px;
+  }
+
+  /* Remove side images */
+  .hiw-content > div:first-child,
+  .hiw-content > div:last-child {
+    display: none !important;
+  }
+
+  /* Full width center content */
+  .hiw-content > div:nth-child(2) {
+    width: 100% !important;
+    height: auto !important;
+  }
+}

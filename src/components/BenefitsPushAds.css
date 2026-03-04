@@ -1,0 +1,66 @@
+/* 4K / Ultra-wide Scaling (2560px - 2700px) */
+@media (min-width: 2560px) {
+    .bp-container {
+        padding-top: 100px !important;
+        padding-bottom: 120px !important;
+        gap: 120px !important;
+    }
+
+    .bp-section {
+        max-width: 2400px !important;
+    }
+
+    .bp-title {
+        font-size: 80px !important;
+        line-height: 100px !important;
+        margin-bottom: 100px !important;
+        max-width: 2000px !important;
+    }
+
+    .bp-grid-wrapper {
+        max-width: 2200px !important;
+    }
+
+    .bp-grid-lg {
+        gap: 100px !important;
+    }
+
+    .bp-grid-lg>.grid:first-child {
+        gap: 100px !important;
+        margin-bottom: 80px !important;
+    }
+
+    .bp-grid-lg>.grid:last-child {
+        gap: 100px !important;
+    }
+
+    .bp-card {
+        gap: 40px !important;
+    }
+
+    .bp-icon {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .bp-card-title {
+        font-size: 32px !important;
+        line-height: 44px !important;
+    }
+
+    .bp-card-desc {
+        font-size: 24px !important;
+        line-height: 36px !important;
+    }
+
+    .bp-v-divider {
+        right: -50px !important;
+        width: 2px !important;
+    }
+
+    .bp-h-divider {
+        max-width: 1800px !important;
+        height: 2px !important;
+        margin-bottom: 80px !important;
+    }
+}

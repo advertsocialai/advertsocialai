@@ -1,0 +1,63 @@
+/* 4K / Ultra-wide Scaling (2560px - 2700px) */
+@media (min-width: 2560px) {
+    .registration-root {
+        max-width: 1200px !important;
+        padding: 80px 60px !important;
+        border-radius: 40px !important;
+    }
+
+    .registration-close-btn {
+        top: 30px !important;
+        right: 30px !important;
+        font-size: 40px !important;
+    }
+
+    .registration-title {
+        font-size: 48px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .registration-subtitle {
+        font-size: 24px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .registration-input {
+        padding: 24px !important;
+        font-size: 24px !important;
+        border-radius: 20px !important;
+    }
+
+    .registration-phone-container {
+        padding: 16px 24px !important;
+        border-radius: 20px !important;
+    }
+
+    .registration-phone-container input {
+        font-size: 24px !important;
+    }
+
+    .registration-eye-icon {
+        width: 40px !important;
+        height: 40px !important;
+        right: 30px !important;
+    }
+
+    .registration-terms-label {
+        font-size: 24px !important;
+        gap: 16px !important;
+        margin-top: 20px !important;
+    }
+
+    .registration-terms-label input {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .registration-submit-btn {
+        padding: 24px !important;
+        font-size: 28px !important;
+        margin-top: 30px !important;
+        border-radius: 60px !important;
+    }
+}

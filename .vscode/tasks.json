@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Tailwind CSS",
+			"type": "shell",
+			"command": "npx tailwindcss -i ./src/index.css -o ./public/assets/tailwind.css --minify",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

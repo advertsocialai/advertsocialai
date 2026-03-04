@@ -1,0 +1,122 @@
+/* FeaturesVignette 4K Scaling Overrides */
+@media (min-width: 2560px) {
+    .fv-section {
+        padding-top: 150px !important;
+        padding-bottom: 120px !important;
+    }
+
+    /* Mesh Backgrounds */
+    .fv-mesh-bg {
+        width: 3100px !important;
+        height: 2000px !important;
+        top: 1200px !important;
+        left: -450px !important;
+    }
+
+    .fv-mesh-blob1 {
+        width: 1800px !important;
+        height: 1600px !important;
+        top: 1600px !important;
+        left: -450px !important;
+    }
+
+    .fv-mesh-blob2 {
+        width: 1800px !important;
+        height: 1600px !important;
+        top: 1300px !important;
+        left: 850px !important;
+    }
+
+    /* Header Block */
+    .fv-header-block {
+        max-width: 1400px !important;
+        margin-bottom: 150px !important;
+        gap: 60px !important;
+    }
+
+    .fv-title {
+        font-size: 80px !important;
+        line-height: 1.1 !important;
+    }
+
+    .fv-description {
+        font-size: 28px !important;
+        line-height: 1.5 !important;
+    }
+
+    .fv-inner-wrapper {
+        max-width: 1920px !important;
+    }
+
+    /* Grid Layout (Desktop) */
+    .fv-grid-wrapper {
+        max-width: 1920px !important;
+        height: 670px !important;
+    }
+
+    .fv-top-row {
+        width: 1920px !important;
+        height: 560px !important;
+    }
+
+    .fv-center-block {
+        width: 950px !important;
+        height: 570px !important;
+        top: 75px !important;
+        gap: 50px !important;
+    }
+
+    /* Card Scaling */
+    .fv-card {
+        width: 450px !important;
+        padding: 72px 48px !important;
+        border-radius: 24px !important;
+        gap: 48px !important;
+    }
+
+    /* Specific Card Heights in 4K */
+    /* index 0 (Always High CPMs) originally 303px -> ~455px */
+    .fv-top-row .fv-card-animated:first-child .fv-card {
+        height: 455px !important;
+    }
+
+    /* index 1 (Anti-AdBlock) originally 375px -> ~560px */
+    .fv-top-row>div:last-child .fv-card {
+        height: 560px !important;
+    }
+
+    /* index 2 (No need for extra space) originally 331px -> ~496px */
+    .fv-center-block>div:first-child .fv-card {
+        height: 496px !important;
+        margin-top: 48px !important;
+        /* Scale 32px */
+    }
+
+    /* index 3 (Get Paid for Every Impression) originally 379px -> ~570px */
+    .fv-center-block>div:last-child .fv-card {
+        height: 570px !important;
+    }
+
+    .fv-card-icon {
+        width: 69px !important;
+        /* Scale 46px */
+        height: 69px !important;
+    }
+
+    .fv-card-text-block {
+        max-width: 310px !important;
+        /* Scale 206px */
+    }
+
+    .fv-card-title {
+        font-size: 30px !important;
+        /* Scale 20px */
+        line-height: 38px !important;
+    }
+
+    .fv-card-desc {
+        font-size: 24px !important;
+        /* Scale 16px */
+        line-height: 32px !important;
+    }
+}

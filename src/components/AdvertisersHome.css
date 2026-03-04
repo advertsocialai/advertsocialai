@@ -1,0 +1,282 @@
+.advertisers-container {
+    width: 100%;
+    min-height: 500px;
+    aspect-ratio: 1608/720;
+    background-image: url(/assets/images/Advertisers-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+    background-color: transparent;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5vw;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.advertisers-content {
+    width: 1426px;
+    height: 631px;
+    display: flex;
+    flex-direction: column;
+}
+
+.advertisers-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 40px;
+    color: #000;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 30px;
+}
+
+.advertisers-description {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 30px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.advertisers-bottom-row {
+    display: flex;
+    flex: 1;
+}
+
+.advertisers-left-column {
+    width: 680px;
+}
+
+.advertisers-right-column {
+    width: 503.98px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.advertisers-provide-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+    color: #FFFFFF;
+    margin-top: -16px;
+}
+
+.advertisers-checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 503.98px;
+    height: 25px;
+}
+
+.advertisers-check-icon-wrapper {
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    background: #6A0DAD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advertisers-check-text {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.advertisers-measured-by {
+    width: 675px;
+    margin-top: 32px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+.advertisers-measured-span {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .advertisers-container {
+        height: auto;
+        min-height: auto;
+        aspect-ratio: auto;
+        padding: 40px 20px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 0;
+    }
+
+    .advertisers-content {
+        width: 100%;
+        height: auto;
+        gap: 20px;
+    }
+
+    .advertisers-title {
+        font-size: 32px;
+        line-height: 36px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .advertisers-description {
+        font-size: 18px;
+        line-height: 24px;
+        text-align: left;
+        margin-bottom: 24px;
+    }
+
+    .advertisers-bottom-row {
+        flex-direction: column;
+    }
+
+    .advertisers-left-column {
+        display: none;
+    }
+
+    .advertisers-right-column {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .advertisers-provide-title {
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .advertisers-checklist-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .advertisers-check-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .advertisers-measured-by {
+        width: 100%;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: left;
+    }
+
+    .advertisers-measured-span {
+        font-size: 28px !important;
+        line-height: 44px !important;
+    }
+}
+
+/* 4K+ / 2700px Scaling */
+@media (min-width: 1801px) {
+    .advertisers-container {
+        width: 2400px !important;
+        height: 1000px !important;
+        padding-right: 60px !important;
+        padding-left: 0 !important;
+        border-radius: 40px !important;
+        background-size: cover !important;
+        background-position: top right !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .advertisers-content {
+        width: 1700px !important;
+        height: auto !important;
+        padding-right: 0 !important;
+    }
+
+    .advertisers-title {
+        font-size: 70px !important;
+        line-height: 80px !important;
+        margin-top: 50px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .advertisers-description {
+        font-size: 38px !important;
+        line-height: 48px !important;
+        margin-bottom: 60px !important;
+        max-width: 1400px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .advertisers-bottom-row {
+        gap: 60px !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .advertisers-left-column {
+        width: 800px !important;
+    }
+
+    .advertisers-right-column {
+        width: 700px !important;
+        gap: 20px !important;
+    }
+
+    .advertisers-provide-title {
+        font-size: 34px !important;
+        line-height: 50px !important;
+        margin-top: -10px !important;
+        text-align: left !important;
+    }
+
+    .advertisers-checklist-item {
+        width: 100% !important;
+        height: auto !important;
+        gap: 16px !important;
+    }
+
+    .advertisers-check-icon-wrapper {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .advertisers-check-icon-img {
+        width: 14px !important;
+        height: 12px !important;
+    }
+
+    .advertisers-check-text {
+        font-size: 24px !important;
+        line-height: 32px !important;
+    }
+
+    .advertisers-measured-by {
+        width: 100% !important;
+        font-size: 34px !important;
+        line-height: 48px !important;
+        margin-top: 40px !important;
+        text-align: left !important;
+    }
+
+    .advertisers-measured-span {
+        font-size: 28px !important;
+        line-height: 44px !important;
+        text-align: left !important;
+    }
+}

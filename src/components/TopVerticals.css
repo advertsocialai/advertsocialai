@@ -1,0 +1,61 @@
+/* Ultra-Wide & 4K Responsive Scaling */
+
+/* 2560px - 2K/QHD Scaling */
+@media (min-width: 2560px) {
+    .verticals-section {
+        padding-top: 50px !important;
+        padding-bottom: 200px !important;
+    }
+
+    .verticals-wrapper {
+        padding-left: 120px !important;
+        padding-right: 120px !important;
+        max-width: 2400px !important;
+    }
+
+    .verticals-title {
+        font-size: 144px !important;
+        line-height: 160px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .verticals-desc {
+        font-size: 36px !important;
+        max-width: 1600px !important;
+        margin-top: 20px !important;
+        line-height: 1.5 !important;
+    }
+
+    .verticals-grid {
+        gap: 28px !important;
+        margin-top: 100px !important;
+    }
+
+    /* Card Size Overrides for 2560px */
+    .verticals-card {
+        width: 440px !important;
+        border-radius: 40px !important;
+    }
+
+    .verticals-card img {
+        border-radius: 40px !important;
+    }
+
+    /* Specific heights based on size logic */
+    /* Large */
+    .verticals-card:nth-child(1),
+    .verticals-card:nth-child(5) {
+        height: 750px !important;
+    }
+
+    /* Medium */
+    .verticals-card:nth-child(2),
+    .verticals-card:nth-child(4) {
+        height: 660px !important;
+    }
+
+    /* Small */
+    .verticals-card:nth-child(3) {
+        height: 580px !important;
+    }
+}

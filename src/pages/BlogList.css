@@ -1,0 +1,81 @@
+/* BlogList.css */
+
+/* 2560px - 2K Scaling */
+@media (min-width: 2560px) {
+    .bloglist-container {
+        max-width: 2500px !important;
+        padding-left: 80px !important;
+        padding-right: 80px !important;
+        margin-top: 100px !important;
+        position: relative !important;
+        z-index: 10 !important;
+    }
+
+    .bloglist-heading {
+        font-size: 4.5rem !important;
+        margin-bottom: 80px !important;
+    }
+
+    .bloglist-grid {
+        gap: 60px !important;
+    }
+
+    .blog-card {
+        padding: 40px !important;
+        border-radius: 30px !important;
+    }
+
+    .blog-card-title {
+        font-size: 1.6rem !important;
+        margin-bottom: 24px !important;
+    }
+
+    .blog-card-desc {
+        font-size: 1.4rem !important;
+        margin-bottom: 60px !important;
+        line-height: 1.6 !important;
+    }
+
+    .blog-card button {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 2rem !important;
+        bottom: 30px !important;
+        right: 30px !important;
+    }
+}
+
+/* 2700px - 4K Scaling */
+@media (min-width: 2700px) {
+    .bloglist-container {
+        max-width: 2400px !important;
+        padding-left: 120px !important;
+        padding-right: 120px !important;
+    }
+
+    .bloglist-heading {
+        font-size: 5.5rem !important;
+    }
+
+    .bloglist-grid {
+        gap: 80px !important;
+    }
+
+    .blog-card {
+        padding: 50px !important;
+    }
+
+    .blog-card-title {
+        font-size: 3rem !important;
+    }
+
+    .blog-card-desc {
+        font-size: 1.6rem !important;
+    }
+
+    .blog-card button {
+        width: 80px !important;
+        height: 80px !important;
+        font-size: 2.5rem !important;
+    }
+}

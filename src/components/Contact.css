@@ -1,0 +1,59 @@
+/* Contact Responsiveness */
+
+.contact-scaling-wrapper {
+    width: 100%;
+}
+
+/* 2K / 2560px Scaling */
+@media (min-width: 2560px) {
+    .contact-root-container {
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    .contact-section {
+        overflow: visible !important;
+        margin-bottom: 700px !important;
+        /* Handle height expansion */
+    }
+
+    .contact-scaling-wrapper {
+        width: 1440px !important;
+        /* Native desktop layout width */
+        max-width: none !important;
+        margin: 0 auto !important;
+        transform: scale(1.7777) !important;
+        /* fits 2560px: 1440 * 1.7777 = 2560 */
+        transform-origin: center top !important;
+        position: relative !important;
+    }
+}
+
+/* 4K / 3840px Scaling */
+@media (min-width: 3840px) {
+    .contact-root-container {
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    .contact-section {
+        overflow: visible !important;
+        margin-bottom: 1550px !important;
+        /* Handle height expansion */
+    }
+
+    .contact-scaling-wrapper {
+        width: 1440px !important;
+        /* Native desktop layout width */
+        max-width: none !important;
+        margin: 0 auto !important;
+        transform: scale(2.6666) !important;
+        /* fits 3840px: 1440 * 2.6666 = 3840 */
+        transform-origin: center top !important;
+        position: relative !important;
+    }
+}

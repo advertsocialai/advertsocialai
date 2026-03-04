@@ -1,0 +1,192 @@
+.story-about-root {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    overflow: visible;
+}
+
+.story-about-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    border-radius: 20px;
+}
+
+.story-about-container.desktop {
+    min-height: 400px;
+    height: 680px;
+}
+
+.story-about-doodle {
+    width: 1500px;
+    height: 800px;
+    left: -100px;
+    top: -100px;
+    opacity: 1;
+    transform: rotate(-5deg);
+    pointer-events: none;
+}
+
+.story-about-title-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 916px;
+    height: 34px;
+    top: 127px;
+    left: 182px;
+    opacity: 1;
+    gap: 40px;
+}
+
+.story-about-title-text {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 61px;
+    text-align: center;
+    color: #1B1A1A;
+}
+
+.story-about-union {
+    width: 164px;
+    height: 166px;
+    top: 514px;
+    left: 109px;
+    opacity: 1;
+}
+
+.story-about-counters-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1280px;
+    height: 246px;
+    top: 246px;
+    opacity: 1;
+}
+
+.story-about-counter-item {
+    width: 427px;
+    height: 246px;
+    gap: 56px;
+    padding-inline: 48px;
+}
+
+.story-about-icon-box {
+    width: 140px;
+    height: 120px;
+    padding: 24px;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-image-source: linear-gradient(69.88deg, #6549F6 2.47%, #FF611D 78.28%);
+}
+
+.story-about-counter-number {
+    font-family: "Outfit", sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 80px;
+    text-align: center;
+    color: #1B1A1A;
+}
+
+.story-about-counter-label {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #4B4B4B;
+    text-align: center;
+}
+
+.story-about-divider {
+    width: 1px;
+    height: 174px;
+    background: #EAEAEA;
+}
+
+/* 4K / Ultra-wide Scaling (2560px - 2700px+) */
+@media (min-width: 2560px) {
+    .story-about-root {
+        padding-top: 100px !important;
+        padding-bottom: 200px !important;
+    }
+
+    .story-about-container.desktop {
+        max-width: 2400px !important;
+        height: 1000px !important;
+    }
+
+    .story-about-doodle {
+        width: 2200px !important;
+        height: 1200px !important;
+        left: -150px !important;
+        top: -150px !important;
+    }
+
+    .story-about-title-wrapper {
+        width: 1400px !important;
+        top: 180px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .story-about-title-text {
+        font-size: 84px !important;
+        line-height: 100px !important;
+    }
+
+    .story-about-union {
+        width: 240px !important;
+        height: 240px !important;
+        top: 720px !important;
+        left: 150px !important;
+    }
+
+    .story-about-counters-wrapper {
+        width: 2400px !important;
+        height: 400px !important;
+        top: 380px !important;
+    }
+
+    .story-about-counter-item {
+        width: 800px !important;
+        height: 400px !important;
+        gap: 80px !important;
+        padding-inline: 80px !important;
+    }
+
+    .story-about-icon-box {
+        width: 200px !important;
+        height: 180px !important;
+        padding: 36px !important;
+        border-radius: 20px !important;
+    }
+
+    .story-about-icon-box img {
+        width: 130px !important;
+        height: 130px !important;
+    }
+
+    .story-about-counter-number {
+        font-size: 120px !important;
+        line-height: 130px !important;
+    }
+
+    .story-about-counter-label {
+        font-size: 28px !important;
+        line-height: 40px !important;
+    }
+
+    .story-about-divider {
+        height: 300px !important;
+    }
+}

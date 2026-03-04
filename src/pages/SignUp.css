@@ -1,0 +1,208 @@
+.signup-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Outfit', sans-serif;
+}
+
+.signup-page.signup-modal-mode {
+    min-height: auto;
+    background-color: transparent;
+}
+
+.signup-wrapper {
+    position: relative;
+    width: 1197.55px;
+    height: 658.61px;
+}
+
+.signup-close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+}
+
+.signup-close-btn:hover {
+    color: #00E676;
+}
+
+.signup-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.signup-content-flow {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    /* Adjusting vertical position to match Image 2 */
+}
+
+.signup-logo {
+    width: 118.74px;
+    height: 57.43px;
+    margin-bottom: 25px;
+}
+
+.signup-text-group {
+    width: 895px;
+    /* Width of the widest element (title) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.signup-title {
+    font-family: 'Outfit';
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    margin: 0 0 12px 0;
+}
+
+.signup-subtitle {
+    font-family: 'Outfit';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    margin: 0 0 32px 0;
+    max-width: 750px;
+    text-align: left;
+    margin-left: -10px;
+}
+
+.email-section {
+    width: 773px;
+    display: flex;
+    flex-direction: column;
+}
+
+.email-container {
+    width: 100%;
+    height: 84px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.email-label {
+    position: absolute;
+    left: 24px;
+    font-family: 'Outfit';
+    font-weight: 400;
+    font-size: 32px;
+    color: #878787;
+    pointer-events: none;
+}
+
+.email-input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Outfit';
+    font-size: 32px;
+    color: #000000;
+}
+
+.signup-disclaimer {
+    font-family: 'Outfit';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    margin: 0 0 32px 0;
+    text-align: left;
+}
+
+.privacy-link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cta-button {
+    width: 453.89px;
+    height: 53.73px;
+    background: #00E676;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+}
+
+.cta-button span {
+    font-family: 'Outfit';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    color: #000000;
+}
+
+.cta-button img {
+    width: 15px;
+    height: 14px;
+    display: block;
+}
+
+/* Responsiveness */
+@media (max-width: 1250px) {
+    .signup-wrapper {
+        transform: scale(0.85);
+    }
+}
+
+@media (max-width: 1000px) {
+    .signup-wrapper {
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-wrapper {
+        transform: scale(0.5);
+    }
+}
+
+@media (max-width: 500px) {
+    .signup-wrapper {
+        transform: scale(0.35);
+    }
+}

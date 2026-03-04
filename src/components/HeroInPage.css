@@ -1,0 +1,81 @@
+/* HeroInPage 4K Scaling Overrides */
+@media (min-width: 2560px) {
+    .hip-section {
+        max-height: none !important;
+        height: 100vh !important;
+        min-height: 1080px !important;
+        margin-top: -180px !important;
+    }
+
+    .hip-content-wrapper {
+        max-width: 1920px !important;
+        gap: 150px !important;
+    }
+
+    .hip-text-block {
+        width: 1000px !important;
+        height: auto !important;
+        gap: 60px !important;
+        margin-left: -300px !important;
+    }
+
+    .hip-title {
+        width: 1000px !important;
+        height: auto !important;
+        font-size: 108px !important;
+        line-height: 1.1 !important;
+    }
+
+    .hip-subtitle {
+        width: 1000px !important;
+        height: auto !important;
+        font-size: 72px !important;
+        line-height: 1.2 !important;
+    }
+
+    .hip-desc {
+        width: 1000px !important;
+        height: auto !important;
+        font-size: 28px !important;
+        line-height: 42px !important;
+    }
+
+    .hip-button {
+        width: 250px !important;
+        height: 80px !important;
+        padding: 36px 48px !important;
+        border-radius: 60px !important;
+        margin-top: 40px !important;
+    }
+
+    .hip-button-text {
+        font-size: 20px !important;
+    }
+
+    .hip-button-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .hip-right-img {
+        width: 1050px !important;
+        height: 850px !important;
+        border-radius: 100px !important;
+        margin-left: 250px !important;
+    }
+
+    .hip-breadcrumb {
+        bottom: 10px !important;
+        left: 280px !important;
+        gap: 16px !important;
+    }
+
+    .hip-breadcrumb-item {
+        font-size: 30px !important;
+    }
+
+    .hip-breadcrumb-arrow {
+        width: 12px !important;
+        height: 20px !important;
+    }
+}

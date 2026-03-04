@@ -1,0 +1,326 @@
+.casestudy-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url(/assets/images/casestudy-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1596px;
+    height: 975px;
+    border-radius: 20px;
+    margin: 0 auto;
+    font-family: "Outfit", sans-serif;
+}
+
+.casestudy-inner-container {
+    position: absolute;
+    z-index: 10;
+    left: 48%;
+    top: 50%;
+    width: 100%;
+    max-width: 1280px;
+    min-height: 400px;
+    height: 680px;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    padding: 0 4px;
+}
+
+.casestudy-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.casestudy-header-wrapper {
+    position: absolute;
+    top: 67px;
+    left: 182px;
+    width: 916px;
+    z-index: 10;
+}
+
+.casestudy-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 61px;
+    color: #1b1a1a;
+    text-align: center;
+    margin: 0;
+}
+
+.casestudy-body-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    margin-top: 165px;
+    padding: 0 109px;
+    gap: 118px;
+    align-items: flex-start;
+}
+
+.casestudy-image-wrapper {
+    width: 447px;
+    height: 385px;
+    flex-shrink: 0;
+}
+
+.casestudy-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.casestudy-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 496px;
+    margin-top: 81px;
+    /* To align with text-top of desktop */
+}
+
+.casestudy-checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.casestudy-check-icon-wrapper {
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    background: #6712ac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.casestudy-check-icon {
+    width: 9px;
+    height: 8px;
+}
+
+.casestudy-check-text {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #282828;
+}
+
+.casestudy-cta-btn {
+    width: 143px;
+    height: 48px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    font-size: 18px;
+    white-space: nowrap;
+    margin-top: 32px;
+}
+
+/* Mobile & Tablet Styles */
+@media (max-width: 1024px) {
+    .casestudy-section {
+        width: 100%;
+        height: auto;
+        min-height: 800px;
+        padding-bottom: 40px;
+        border-radius: 0;
+    }
+
+    .casestudy-inner-container {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        height: auto;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .casestudy-header-wrapper {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .casestudy-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .casestudy-body-content {
+        margin-top: 0;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .casestudy-image-wrapper {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 447/385;
+    }
+
+    .casestudy-info-wrapper {
+        max-width: 100%;
+        margin-top: 0;
+        align-items: center;
+    }
+
+    .casestudy-checklist-item {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .casestudy-check-text {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: left;
+    }
+}
+
+/* Ultra-Wide Responsive Scaling */
+
+/* 2560px - 2K/QHD Scaling */
+@media (min-width: 2560px) {
+    .casestudy-section {
+        width: 2554px;
+        height: 1560px;
+    }
+
+    .casestudy-inner-container {
+        max-width: 2048px;
+        height: 1088px;
+    }
+
+    .casestudy-header-wrapper {
+        top: 107px;
+        left: 291px;
+        width: 1465px;
+    }
+
+    .casestudy-title {
+        font-size: 77px;
+        line-height: 97px;
+    }
+
+    .casestudy-body-content {
+        margin-top: 264px;
+        padding: 0 174px;
+        gap: 189px;
+    }
+
+    .casestudy-image-wrapper {
+        width: 715px;
+        height: 616px;
+    }
+
+    .casestudy-info-wrapper {
+        max-width: 793px;
+        margin-top: 130px;
+        gap: 32px;
+    }
+
+    .casestudy-check-icon-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .casestudy-check-icon {
+        width: 14px;
+        height: 13px;
+    }
+
+    .casestudy-check-text {
+        font-size: 26px;
+        line-height: 38px;
+    }
+
+    .casestudy-cta-btn {
+        width: 229px;
+        height: 77px;
+        font-size: 29px;
+        margin-top: 51px;
+    }
+}
+
+/* 2700px - Maximum Scaling */
+@media (min-width: 2700px) {
+    .casestudy-section {
+        width: 2700px;
+        height: 1650px;
+    }
+
+    .casestudy-inner-container {
+        max-width: 2166px;
+        height: 1150px;
+    }
+
+    .casestudy-header-wrapper {
+        top: 113px;
+        left: 308px;
+        width: 1550px;
+    }
+
+    .casestudy-title {
+        font-size: 81px;
+        line-height: 103px;
+    }
+
+    .casestudy-body-content {
+        margin-top: 279px;
+        padding: 0 184px;
+        gap: 200px;
+    }
+
+    .casestudy-image-wrapper {
+        width: 757px;
+        height: 652px;
+    }
+
+    .casestudy-info-wrapper {
+        max-width: 840px;
+        margin-top: 137px;
+        gap: 34px;
+    }
+
+    .casestudy-check-icon-wrapper {
+        width: 42px;
+        height: 42px;
+    }
+
+    .casestudy-check-icon {
+        width: 15px;
+        height: 14px;
+    }
+
+    .casestudy-check-text {
+        font-size: 27px;
+        line-height: 41px;
+    }
+
+    .casestudy-cta-btn {
+        width: 242px;
+        height: 81px;
+        font-size: 30px;
+        margin-top: 54px;
+    }
+}

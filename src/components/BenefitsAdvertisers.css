@@ -1,0 +1,56 @@
+/* 4K / Ultra-wide Scaling (2560px - 2700px) */
+@media (min-width: 2560px) {
+    .benefits-advertisers-root {
+        padding-top: 150px !important;
+        padding-bottom: 250px !important;
+        gap: 120px !important;
+    }
+
+    .benefits-advertisers-section {
+        max-width: 2400px !important;
+    }
+
+    .benefits-advertisers-title {
+        font-size: 84px !important;
+        line-height: 100px !important;
+        max-width: 2000px !important;
+        margin-bottom: 120px !important;
+    }
+
+    .benefits-grid-container {
+        max-width: 2200px !important;
+    }
+
+    .benefits-grid-row {
+        gap: 100px !important;
+        margin-bottom: 80px !important;
+    }
+
+    .benefits-vertical-divider {
+        right: -50px !important;
+    }
+
+    .benefits-horizontal-divider {
+        max-width: 1800px !important;
+        margin-bottom: 80px !important;
+    }
+
+    .benefit-card-container {
+        gap: 32px !important;
+    }
+
+    .benefit-card-icon {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .benefit-card-title {
+        font-size: 32px !important;
+        line-height: 40px !important;
+    }
+
+    .benefit-card-desc {
+        font-size: 24px !important;
+        line-height: 36px !important;
+    }
+}

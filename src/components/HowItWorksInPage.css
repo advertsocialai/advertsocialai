@@ -1,0 +1,85 @@
+/* HowItWorksInPage 4K Scaling Overrides */
+@media (min-width: 2560px) {
+    .hiwip-section {
+        padding-top: 100px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .hiwip-wrapper {
+        max-width: 1920px !important;
+        height: 1020px !important;
+        border-radius: 40px !important;
+    }
+
+    .hiwip-doodle {
+        width: 2200px !important;
+        height: 1200px !important;
+        left: -150px !important;
+        top: -135px !important;
+    }
+
+    .hiwip-bg-img {
+        border-radius: 40px !important;
+    }
+
+    .hiwip-header {
+        top: 100px !important;
+        left: 270px !important;
+        width: 1374px !important;
+    }
+
+    .hiwip-title {
+        font-size: 72px !important;
+        line-height: 90px !important;
+    }
+
+    /* Left Image Block Scaling */
+    .hiwip-image-block {
+        top: 355px !important;
+        left: 163px !important;
+        width: 670px !important;
+        height: 577px !important;
+    }
+
+    .hiwip-play-icon {
+        width: 72px !important;
+        height: 72px !important;
+    }
+
+    /* Right Text Block Scaling */
+    .hiwip-text-block {
+        top: 369px !important;
+        left: 1011px !important;
+        width: 744px !important;
+    }
+
+    .hiwip-desc {
+        font-size: 24px !important;
+        line-height: 42px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .hiwip-list {
+        gap: 30px !important;
+        margin-top: 60px !important;
+    }
+
+    .hiwip-list-item {
+        gap: 24px !important;
+    }
+
+    .hiwip-tick-box {
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    .hiwip-tick-icon {
+        width: 14px !important;
+        height: 12px !important;
+    }
+
+    .hiwip-item-text {
+        font-size: 22px !important;
+        line-height: 48px !important;
+    }
+}

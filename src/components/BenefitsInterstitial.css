@@ -1,0 +1,108 @@
+/* BenefitsInterstitial.css */
+
+.benefits-interstitial-section {
+    width: 100% !important;
+}
+
+/* 4K Scaling (2560px - 2700px+) */
+@media (min-width: 2560px) {
+    .benefits-interstitial-section {
+        padding-top: 120px !important;
+        padding-bottom: 240px !important;
+        gap: 180px !important;
+        max-width: 95vw !important;
+    }
+
+    .benefits-interstitial-title {
+        font-size: 110px !important;
+        line-height: 1.1 !important;
+        margin-bottom: 150px !important;
+        max-width: 2600px !important;
+    }
+
+    .benefits-interstitial-grid-container {
+        max-width: 2800px !important;
+    }
+
+    .benefits-interstitial-card {
+        gap: 40px !important;
+        padding: 0 40px !important;
+        /* Adding padding to cards to create air */
+    }
+
+    .benefits-interstitial-icon {
+        width: 120px !important;
+        height: 120px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .benefits-interstitial-card-title {
+        font-size: 48px !important;
+        margin-bottom: 15px !important;
+        font-weight: 700 !important;
+    }
+
+    .benefits-interstitial-card-desc {
+        font-size: 28px !important;
+        line-height: 1.5 !important;
+        color: #4A4A4A !important;
+    }
+
+    .benefits-interstitial-divider {
+        max-width: 2600px !important;
+        height: 2px !important;
+        margin-top: 100px !important;
+        margin-bottom: 100px !important;
+        background-color: #F0F0F0 !important;
+    }
+
+    .benefits-interstitial-vertical-divider {
+        right: -60px !important;
+        width: 2px !important;
+        background-color: #F0F0F0 !important;
+    }
+
+    .benefits-interstitial-lg-grid {
+        gap: 120px !important;
+        margin-bottom: 100px !important;
+    }
+}
+
+/* 4K+ / 8K Screens (3840px+) */
+@media (min-width: 3840px) {
+    .benefits-interstitial-section {
+        padding-top: 180px !important;
+        padding-bottom: 360px !important;
+    }
+
+    .benefits-interstitial-title {
+        font-size: 140px !important;
+        max-width: 3400px !important;
+    }
+
+    .benefits-interstitial-grid-container {
+        max-width: 3600px !important;
+    }
+
+    .benefits-interstitial-icon {
+        width: 160px !important;
+        height: 160px !important;
+    }
+
+    .benefits-interstitial-card-title {
+        font-size: 64px !important;
+    }
+
+    .benefits-interstitial-card-desc {
+        font-size: 40px !important;
+    }
+
+    .benefits-interstitial-divider {
+        max-width: 3400px !important;
+        height: 3px !important;
+    }
+
+    .benefits-interstitial-lg-grid {
+        gap: 180px !important;
+    }
+}

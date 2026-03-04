@@ -1,0 +1,144 @@
+.global-container {
+    width: 100%;
+    min-height: 600px;
+    aspect-ratio: 1581/859;
+    background-image: url(/assets/images/Global-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+    background-color: transparent;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.global-left-content {
+    width: 836px;
+    height: 471px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+}
+
+.global-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 90px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.global-description {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0;
+}
+
+.global-right-image-wrapper {
+    width: 593px;
+    height: 601px;
+    border-radius: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.global-globe-image {
+    width: 593px;
+    height: 601px;
+    object-fit: contain;
+    border-radius: 47px;
+}
+
+/* Mobile & Tablet Styles */
+@media (max-width: 1024px) {
+    .global-container {
+        flex-direction: column;
+        height: auto;
+        aspect-ratio: auto;
+        padding: 60px 20px;
+        background-size: cover;
+        background-position: center;
+        gap: 40px;
+        text-align: center;
+        border-radius: 0;
+    }
+
+    .global-left-content {
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .global-title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .global-description {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .global-right-image-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .global-globe-image {
+        width: 280px;
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .global-title {
+        font-size: 28px;
+    }
+
+    .global-description {
+        font-size: 16px;
+    }
+}
+
+/* 
+   ULTRA-WIDE & 4K RESPONSIVE SCALING  */
+
+/* 2K / 2560px - 2700px Scaling */
+@media (min-width: 2560px) {
+    .global-container {
+        width: 1582px !important;
+        /* Base width */
+        max-width: none !important;
+        margin: 60px auto !important;
+        transform: scale(1.618) !important;
+        /* Exact match for 2560px (1582 * 1.618 = 2560) */
+        transform-origin: center top !important;
+        margin-bottom: 550px !important;
+    }
+}
+
+/* 4K / 3840px Scaling */
+@media (min-width: 3840px) {
+    .global-container {
+        width: 1582px !important;
+        /* Base width */
+        max-width: none !important;
+        margin: 100px auto !important;
+        transform: scale(2.427) !important;
+        /* Exact match for 3840px (1582 * 2.427 = 3840) */
+        transform-origin: center top !important;
+        margin-bottom: 1250px !important;
+    }
+}

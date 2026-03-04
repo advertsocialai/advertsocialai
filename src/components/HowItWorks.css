@@ -1,0 +1,127 @@
+/* HowItWorks.css */
+
+/* 2560px - 2K Scaling */
+@media (min-width: 2560px) {
+    .how-it-works-section {
+        padding-top: 100px !important;
+        padding-bottom: 120px !important;
+    }
+
+    .hiw-container {
+        max-width: 2100px !important;
+        height: 1100px !important;
+    }
+
+    .hiw-bg-image {
+        border-radius: 40px !important;
+    }
+
+    .hiw-doodle {
+        width: 2200px !important;
+        height: 1200px !important;
+        left: -200px !important;
+        top: -150px !important;
+    }
+
+    .hiw-heading-container {
+        top: 100px !important;
+        left: 280px !important;
+        width: 1400px !important;
+    }
+
+    .hiw-heading {
+        font-size: 4.5rem !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Desktop Layout Scaling */
+    .hiw-desktop-left-image {
+        width: 700px !important;
+        height: 600px !important;
+        top: 380px !important;
+        left: 180px !important;
+    }
+
+    .hiw-desktop-right-text {
+        width: 800px !important;
+        top: 390px !important;
+        left: 1100px !important;
+    }
+
+    .hiw-text {
+        font-size: 1.6rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 30px !important;
+    }
+
+    .hiw-list {
+        gap: 30px !important;
+        margin-top: 60px !important;
+    }
+
+    .hiw-list-item {
+        gap: 24px !important;
+    }
+
+    .hiw-list-item span:last-child {
+        font-size: 1.5rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .hiw-tick {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .hiw-list-item span:first-child {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+/* 2700px - 4K Scaling */
+@media (min-width: 2700px) {
+    .hiw-container {
+        max-width: 2500px !important;
+        height: 1300px !important;
+    }
+
+    .hiw-doodle {
+        width: 2800px !important;
+        height: 1400px !important;
+        left: -100px !important;
+    }
+
+    .hiw-heading-container {
+        top: 120px !important;
+        left: 350px !important;
+        width: 1800px !important;
+    }
+
+    .hiw-heading {
+        font-size: 5.5rem !important;
+    }
+
+    .hiw-desktop-left-image {
+        width: 850px !important;
+        height: 720px !important;
+        top: 450px !important;
+        left: 250px !important;
+    }
+
+    .hiw-desktop-right-text {
+        width: 1000px !important;
+        top: 460px !important;
+        left: 1350px !important;
+    }
+
+    .hiw-text {
+        font-size: 2rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 40px !important;
+    }
+
+    .hiw-list-item span:last-child {
+        font-size: 1.8rem !important;
+    }
+}

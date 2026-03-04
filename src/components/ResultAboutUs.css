@@ -1,0 +1,88 @@
+.result-about-root {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.result-about-container {
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* 4K / Ultra-wide Scaling (2560px - 2700px+) */
+@media (min-width: 2560px) {
+    .result-about-root {
+        padding-top: 100px !important;
+        padding-bottom: 200px !important;
+    }
+
+    .result-about-container {
+        max-width: 2400px !important;
+        gap: 200px !important;
+    }
+
+    .result-about-left {
+        width: 1100px !important;
+    }
+
+    .result-about-image {
+        max-width: 1100px !important;
+    }
+
+    .result-about-right {
+        width: 1100px !important;
+        gap: 80px !important;
+    }
+
+    .result-about-title span {
+        font-size: 80px !important;
+        line-height: 100px !important;
+    }
+
+    .result-about-buttons {
+        gap: 40px !important;
+    }
+
+    .result-about-btn-primary {
+        padding: 30px 60px !important;
+        font-size: 24px !important;
+        border-radius: 60px !important;
+    }
+
+    .result-about-btn-primary img {
+        width: 20px !important;
+        height: 20px !important;
+        margin-left: 15px !important;
+    }
+
+    .result-about-btn-secondary {
+        width: 240px !important;
+        height: 90px !important;
+        font-size: 24px !important;
+        border-radius: 60px !important;
+    }
+
+    .result-about-checklist {
+        gap: 40px !important;
+    }
+
+    .result-about-check-icon-container {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .result-about-check-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .result-about-check-text {
+        font-size: 24px !important;
+        line-height: 36px !important;
+    }
+
+    .result-about-check-item-3 .result-about-check-text {
+        margin-left: -85px !important;
+    }
+}

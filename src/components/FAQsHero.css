@@ -1,0 +1,134 @@
+/* FAQsHero.css */
+
+.faqshero-section {
+    height: 100vh;
+    max-height: 720px;
+    min-height: 600px;
+}
+
+.faqshero-bg {
+    width: 1568px;
+    height: 547px;
+    top: 0px;
+    left: 16px;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
+    padding-right: 32px;
+}
+
+.faqshero-breadcrumbs {
+    left: calc(4px + 690px);
+    bottom: calc(0.5rem + 140px);
+}
+
+/* 2560px - 2K Scaling */
+@media (min-width: 2560px) {
+    .faqshero-section {
+        max-height: 800px !important;
+        min-height: 700px !important;
+    }
+
+    .faqshero-bg {
+        width: 100% !important;
+        height: 100% !important;
+        left: 0 !important;
+        padding-right: 0 !important;
+        object-fit: fill !important;
+        border-radius: 12px !important;
+    }
+
+    .faqshero-content {
+        max-width: 2000px !important;
+    }
+
+    .faqshero-text-container {
+        max-width: 1000px !important;
+        height: auto !important;
+    }
+
+    .faqshero-title {
+        font-size: 100px !important;
+        margin-top: -60px !important;
+        margin-left: 0 !important;
+    }
+
+    .faqshero-desc {
+        font-size: 1.5rem !important;
+        width: 900px !important;
+        margin-left: 0 !important;
+        line-height: 1.2 !important;
+    }
+
+    .faqshero-btn {
+        margin-left: 0 !important;
+        min-width: 240px !important;
+        height: 70px !important;
+    }
+
+    .faqshero-btn span {
+        font-size: 1rem !important;
+    }
+
+    .faqshero-graphic {
+        max-width: 700px !important;
+        margin-left: 150px !important;
+        margin-top: -100px !important;
+    }
+
+    .faqshero-breadcrumbs {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        bottom: 2.2% !important;
+        gap: 12px !important;
+    }
+
+    .faqshero-breadcrumbs span {
+        font-size: 1.7rem !important;
+    }
+}
+
+/* 2700px - 4K Scaling */
+@media (min-width: 2700px) {
+    .faqshero-section {
+        max-height: 900px !important;
+        min-height: 800px !important;
+    }
+
+    .faqshero-content {
+        max-width: 2400px !important;
+    }
+
+    .faqshero-title {
+        font-size: 120px !important;
+    }
+
+    .faqshero-desc {
+        font-size: 1.8rem !important;
+        width: 1100px !important;
+    }
+
+    .faqshero-btn {
+        min-width: 300px !important;
+        height: 80px !important;
+    }
+
+    .faqshero-btn span {
+        font-size: 1.2rem !important;
+    }
+
+    .faqshero-graphic {
+        max-width: 850px !important;
+        margin-left: 200px !important;
+    }
+
+    .faqshero-breadcrumbs {
+        left: 44.2% !important;
+        transform: translateX(-50%) !important;
+        bottom: 2% !important;
+    }
+
+    .faqshero-breadcrumbs span {
+        font-size: 1.7rem !important;
+    }
+}

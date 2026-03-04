@@ -1,0 +1,126 @@
+/* FeaturesInPage.css */
+
+.features-page-section {
+    width: 100% !important;
+}
+
+/* 4K / Ultra-wide Scaling (2560px - 2700px+) */
+@media (min-width: 2560px) {
+    .features-page-section {
+        padding-top: 150px !important;
+        padding-bottom: 120px !important;
+    }
+
+    /* Background Elements */
+    .features-page-bg-mesh {
+        width: 3500px !important;
+        height: 2200px !important;
+        top: 1400px !important;
+        left: -500px !important;
+    }
+
+    .features-page-bg-grad-1 {
+        width: 2200px !important;
+        height: 1800px !important;
+        top: 1800px !important;
+        left: -500px !important;
+    }
+
+    .features-page-bg-grad-2 {
+        width: 2200px !important;
+        height: 1800px !important;
+        top: 1400px !important;
+        left: 1000px !important;
+    }
+
+    /* Header */
+    .features-page-header {
+        max-width: 1600px !important;
+        margin-bottom: 150px !important;
+        gap: 60px !important;
+    }
+
+    .features-page-title {
+        font-size: 80px !important;
+        line-height: 100px !important;
+    }
+
+    .features-page-description {
+        font-size: 32px !important;
+        line-height: 48px !important;
+    }
+
+    /* Grid Layout for Ultra-wide */
+    .features-page-content-wrapper {
+        max-width: 2400px !important;
+    }
+
+    .features-page-lg-grid {
+        height: 800px !important;
+        max-width: 2200px !important;
+    }
+
+    .features-page-lg-inner-flex {
+        width: 2200px !important;
+        height: 650px !important;
+    }
+
+    .features-page-lg-abs-container {
+        width: 1100px !important;
+        height: 650px !important;
+        top: 80px !important;
+        gap: 40px !important;
+    }
+
+    /* Feature Cards */
+    .features-page-card {
+        width: 530px !important;
+        border-radius: 32px !important;
+        padding: 85px 50px !important;
+        gap: 60px !important;
+    }
+
+    .features-page-card.h-303 {
+        height: 515px !important;
+    }
+
+    .features-page-card.h-375 {
+        height: 637px !important;
+    }
+
+    .features-page-card.h-331 {
+        height: 562px !important;
+    }
+
+    .features-page-card.h-379 {
+        height: 644px !important;
+    }
+
+    .features-page-card-icon {
+        width: 85px !important;
+        height: 85px !important;
+    }
+
+    .features-page-card-text-wrapper {
+        max-width: 400px !important;
+        gap: 40px !important;
+    }
+
+    .features-page-card-title {
+        font-size: 36px !important;
+        line-height: 48px !important;
+    }
+
+    .features-page-card-description {
+        font-size: 28px !important;
+        line-height: 40px !important;
+    }
+
+    .special-mt-wrapper {
+        margin-top: -30px !important;
+    }
+
+    .special-mt-desc {
+        margin-top: -55px !important;
+    }
+}

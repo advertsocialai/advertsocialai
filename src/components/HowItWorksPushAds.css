@@ -1,0 +1,85 @@
+/* 4K / Ultra-wide Scaling (2560px - 2700px) */
+/* Using !important to override the existing inline styles in the JSX only for ultra-wide screens */
+
+@media (min-width: 2560px) {
+    .hiw-push-section {
+        padding-top: 150px !important;
+        padding-bottom: 150px !important;
+    }
+
+    .hiw-main-container {
+        max-width: 2200px !important;
+        width: 2200px !important;
+        height: 1100px !important;
+    }
+
+    .hiw-doodle {
+        width: 2600px !important;
+        height: 1400px !important;
+        top: -150px !important;
+    }
+
+    .hiw-title-container {
+        top: 100px !important;
+        gap: 60px !important;
+    }
+
+    .hiw-title-text {
+        font-size: 80px !important;
+        line-height: 100px !important;
+    }
+
+    .hiw-content-row {
+        width: 1900px !important;
+        height: 700px !important;
+        top: 350px !important;
+        left: 1150px !important;
+        gap: 80px !important;
+    }
+
+    .hiw-left-image-container {
+        width: 560px !important;
+        height: 700px !important;
+    }
+
+    .hiw-center-content {
+        width: 840px !important;
+        height: 700px !important;
+        gap: 60px !important;
+    }
+
+    .hiw-paragraph {
+        font-size: 32px !important;
+        line-height: 48px !important;
+    }
+
+    .hiw-checklist {
+        width: 100% !important;
+        height: auto !important;
+        gap: 20px !important;
+    }
+
+    .hiw-check-item {
+        gap: 24px !important;
+    }
+
+    .hiw-check-icon-box {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .hiw-check-icon {
+        width: 16px !important;
+        height: 14px !important;
+    }
+
+    .hiw-check-text {
+        font-size: 28px !important;
+        line-height: 42px !important;
+    }
+
+    .hiw-right-image-container {
+        width: 360px !important;
+        height: 700px !important;
+    }
+}

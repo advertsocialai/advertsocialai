@@ -1,0 +1,111 @@
+/* HeroBlog.css */
+
+.heroblog-section {
+    height: 100vh;
+    max-height: 720px;
+    min-height: 600px;
+}
+
+.heroblog-bg {
+    width: 1568px;
+    height: 547px;
+    top: 0px;
+    left: 16px;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
+    padding-right: 32px;
+}
+
+.heroblog-breadcrumbs {
+    left: calc(4px + 690px);
+    bottom: calc(0.5rem + 140px);
+}
+
+/* 2K - 2560px Scaling */
+@media (min-width: 2560px) {
+    .heroblog-section {
+        max-height: 800px !important;
+        min-height: 700px !important;
+    }
+
+    .heroblog-bg {
+        width: 100% !important;
+        height: 100% !important;
+        left: 0 !important;
+        padding-right: 0 !important;
+        object-fit: fill !important;
+        /* Preserves curves better than cover */
+        border-radius: 12px !important;
+    }
+
+    .heroblog-content {
+        max-width: 2000px !important;
+    }
+
+    .heroblog-title {
+        font-size: 100px !important;
+        margin-top: -60px !important;
+        margin-left: -100px !important;
+    }
+
+    .heroblog-desc {
+        font-size: 1.9rem !important;
+        width: 800px !important;
+        margin-left: -100px !important;
+        line-height: 1.2 !important;
+
+    }
+
+    .heroblog-graphic {
+        max-width: 700px !important;
+        margin-left: 400px !important;
+        margin-top: -150px !important;
+    }
+
+    .heroblog-breadcrumbs {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        bottom: 2% !important;
+        gap: 12px !important;
+    }
+
+    .heroblog-breadcrumbs a {
+        font-size: 1.7rem !important;
+    }
+}
+
+/* 4K - 2700px+ Scaling */
+@media (min-width: 2700px) {
+    .heroblog-section {
+        max-height: 900px !important;
+        min-height: 800px !important;
+    }
+
+    .heroblog-content {
+        max-width: 2400px !important;
+    }
+
+    .heroblog-title {
+        font-size: 100px !important;
+    }
+
+    .heroblog-desc {
+        font-size: 1.8rem !important;
+        width: 1000px !important;
+    }
+
+    .heroblog-graphic {
+        max-width: 850px !important;
+        margin-left: 300px !important;
+    }
+
+    .heroblog-breadcrumbs {
+        bottom: 4% !important;
+        /* Adjusted for 900px height */
+    }
+
+    .heroblog-breadcrumbs a {
+        font-size: 1.5rem !important;
+    }
+}
