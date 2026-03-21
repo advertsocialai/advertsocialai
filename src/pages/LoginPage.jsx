@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import { supabase } from "../lib/supabase";
 
 // Update these paths if you use different locations
 const BG_IMAGE = "/assets/images/login-bg.png";
@@ -70,6 +71,9 @@ export default function LoginPage() {
             if (response.ok && data.status) {
                 const user = data.data.user;
 
+                // Log successful login attempt to Supabase
+                await supabase.from("login_attempts").insert([{ email: form.email, success: true }]);
+
                 // CHECK ROLE
                 if (user.role !== "admin") {
                     MySwal.fire({
@@ -97,7 +101,9 @@ export default function LoginPage() {
                 // Route to admin panel
                 navigate("/admin");
             } else {
-                // show SweetAlert error + keep inline error for visibility
+                // Log failed login attempt to Supabase
+                await supabase.from("login_attempts").insert([{ email: form.email, success: false }]);
+
                 const message = data.message || "Login failed";
                 MySwal.fire({
                     icon: "error",

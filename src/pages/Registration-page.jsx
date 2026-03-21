@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import PhoneInput from "react-phone-number-input";
 import { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { supabase } from "../lib/supabase";
 
 export default function RegistrationPage({ onClose }) {
   const [form, setForm] = useState({
@@ -93,42 +94,51 @@ export default function RegistrationPage({ onClose }) {
     };
 
     try {
-      const response = await fetch(
-        "https://bohrx.ai/backendadmin/api/register",
+      // Save to Supabase registrations table
+      const { error: dbError } = await supabase.from("registrations").insert([
         {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        }
-      );
+          first_name: form.firstname,
+          last_name: form.lastname,
+          company_name: form.companyName,
+          email: form.email,
+          phone: form.phone,
+        },
+      ]);
 
-      const data = await response.json();
+      if (dbError) throw new Error(dbError.message);
 
-      if (response.ok && data?.status === true) {
-        Swal.fire({
-          icon: "success",
-          title: "Success",
-          text: "Account created successfully",
-          showConfirmButton: false,
-          timer: 3000,                //  auto close after 3s
-          timerProgressBar: true,
-        });
+      // Send email notification via Edge Function
+      await supabase.functions.invoke("send-registration-email", {
+        body: {
+          first_name: form.firstname,
+          last_name: form.lastname,
+          company_name: form.companyName,
+          email: form.email,
+          phone: form.phone,
+        },
+      });
 
-        setForm({
-          firstname: "",
-          lastname: "",
-          companyName: "",
-          email: "",
-          phone: "",
-          password: "",
-          confirmPassword: "",
-          acceptTerms: false,
-        });
-      } else {
-        Swal.fire("Error", data?.message || "Registration failed", "error");
-      }
-    } catch {
-      Swal.fire("Error", "Server error. Please try again later.", "error");
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "Account created successfully",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+
+      setForm({
+        firstname: "",
+        lastname: "",
+        companyName: "",
+        email: "",
+        phone: "",
+        password: "",
+        confirmPassword: "",
+        acceptTerms: false,
+      });
+    } catch (err) {
+      Swal.fire("Error", err.message || "Registration failed. Please try again.", "error");
     } finally {
       setLoading(false);
     }
