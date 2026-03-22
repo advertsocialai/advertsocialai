@@ -5,8 +5,8 @@
     padding: 0 !important;
   }
 
-  /* Turn absolute layout into stacked layout */
-  /* .howitworks-pushads-mobile .hiw-content {
+  /* Turn absolute layout into stacked layout — commented out:
+  .howitworks-pushads-mobile .hiw-content {
     position: relative !important;
     top: unset !important;
     left: unset !important;
@@ -23,12 +23,11 @@
     padding: 0 16px !important;
   }
 
-  /* Hide side phone images on mobile */
+  Hide side phone images on mobile:
   .howitworks-pushads-mobile .hiw-content > div:first-child,
   .howitworks-pushads-mobile .hiw-content > div:last-child {
     display: none !important;
   }
-
   */
 
   /* Center text */
