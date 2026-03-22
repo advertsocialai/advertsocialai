@@ -49,6 +49,7 @@ import LeadershipTeam from "./pages/LeadershipTeam";
 import Careers from "./pages/Careers";
 import BestPush from "./pages/BestPush";
 import NativeTraffic from "./pages/NativeTraffic";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   const [isVerticalsOpen, setIsVerticalsOpen] = useState(false);
@@ -128,6 +129,7 @@ export default function App() {
                       <Route path="/careers" element={<Careers />} />
                       <Route path="/bestpush" element={<BestPush />} />
                       <Route path="/nativetraffic" element={<NativeTraffic />} />
+                      <Route path="*" element={<NotFound />} />
                     </Routes>
                   </main>
                   <Footer />
