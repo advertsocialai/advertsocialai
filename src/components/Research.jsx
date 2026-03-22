@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { API_ENDPOINTS, BLOG_IMAGE_BASE_URL } from "../lib/api";
 import "./Research.css";
 
 const cardVariant = {
@@ -21,15 +22,13 @@ export default function LatestResearch() {
   const navigate = useNavigate();
   const [blogs, setBlogs] = useState([]);
 
-  const IMAGE_BASE_URL = "https://bohrx.ai/backendadmin/public/Blog/";
-
   useEffect(() => {
     axios
-      .get("https://bohrx.ai/backendadmin/api/alblogs/getall")
+      .get(API_ENDPOINTS.GET_ALL_BLOGS)
       .then((res) => {
         setBlogs(res.data.data || []);
       })
-      .catch((err) => console.error("API Error:", err));
+      .catch(() => {});
   }, []);
 
   return (
@@ -57,7 +56,7 @@ export default function LatestResearch() {
             >
               <div className="research-card-image-wrapper">
                 <img
-                  src={IMAGE_BASE_URL + blog.image1}
+                  src={BLOG_IMAGE_BASE_URL + blog.image1}
                   alt={blog.name}
                   className="research-card-image"
                   onError={(e) =>

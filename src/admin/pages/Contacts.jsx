@@ -3,6 +3,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
+import { API_ENDPOINTS } from "../../lib/api";
 
 export default function Contacts() {
   const [contacts, setContacts] = useState([]);
@@ -16,7 +17,7 @@ export default function Contacts() {
 
   const fetchContacts = async () => {
     try {
-      const res = await axios.get("https://bohrx.ai/backendadmin/api/contacts/getall");
+      const res = await axios.get(API_ENDPOINTS.GET_ALL_CONTACTS);
 
       let finalData = [];
       if (Array.isArray(res.data)) {
@@ -29,7 +30,6 @@ export default function Contacts() {
 
       setContacts(finalData);
     } catch (err) {
-      console.error(err);
       setError("Failed to fetch contacts.");
     } finally {
       setLoading(false);

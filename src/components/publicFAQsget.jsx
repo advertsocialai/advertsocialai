@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { API_ENDPOINTS } from "../lib/api";
 import "./publicFAQsget.css";
 
 
 export default function FAQget({
-  apiUrl = "https://bohrx.ai/backendadmin/api/faqs",
+  apiUrl = API_ENDPOINTS.GET_ALL_FAQS,
   imageSrc = "/assets/images/FAQ AboutUs.png",
   navigateTo = "/contact",
   showIllustration = true,
@@ -30,7 +31,6 @@ export default function FAQget({
         setFaqs(payload);
         setError(null);
       } catch (err) {
-        console.error("FAQ Fetch Error:", err);
         setError("Failed to load FAQs");
       } finally {
         if (mounted) setLoading(false);
@@ -120,21 +120,9 @@ export default function FAQget({
             </div>
           )}
 
-          {/* <div className="flex items-center gap-4">
-            <button className="gradient-btn" onClick={() => navigate(navigateTo)}>
-              <span>Still Need Help? Contact Us Now</span>
-            </button> */}
-
-          {/* If limit is used (e.g. on About/Contact), optionally show a link to full FAQ page */}
-          {/* {typeof limit === "number" && limit > 0 && (
-              <button onClick={() => navigate("/faq")} className="text-sm underline">
-                View all FAQs
-              </button>
-            )} */}
         </div>
 
       </div>
-      {/* </div> */}
     </section>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import Swal from "sweetalert2";
+import { API_ENDPOINTS } from "../../lib/api";
 
 export default function Pages() {
   const [loading, setLoading] = useState(false);
@@ -92,7 +93,7 @@ export default function Pages() {
 
     try {
       const response = await fetch(
-        "https://bohrx.ai/backendadmin/api/Services/Addservice",
+        API_ENDPOINTS.CREATE_SERVICE,
         {
           method: "POST",
           body: formData,
@@ -100,7 +101,6 @@ export default function Pages() {
       );
 
       const res = await response.text();
-      console.log("Server Response:", res);
 
       if (response.ok) {
         Swal.fire("Success", "Page added successfully!", "success");
@@ -108,7 +108,6 @@ export default function Pages() {
         Swal.fire("Error", res || "Failed to add page", "error");
       }
     } catch (error) {
-      console.error("POST ERROR:", error);
       Swal.fire("Error", "Something went wrong!", "error");
     } finally {
       setLoading(false);

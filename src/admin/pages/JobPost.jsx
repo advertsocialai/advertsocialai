@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { FiImage, FiType } from "react-icons/fi";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { API_ENDPOINTS } from "../../lib/api";
 
 
 export default function JobPost() {
@@ -31,7 +32,7 @@ export default function JobPost() {
     useEffect(() => {
         if (!id) return;
 
-        fetch(`https://bohrx.ai/backendadmin/api/jobs/view/${id}`)
+        fetch(API_ENDPOINTS.GET_JOB(id))
             .then(res => res.json())
             .then(res => {
                 if (!res.status || !res.data) return;
@@ -120,7 +121,7 @@ export default function JobPost() {
         };
 
         try {
-            const res = await fetch("https://bohrx.ai/backendadmin/api/jobpost", {
+            const res = await fetch(API_ENDPOINTS.CREATE_JOB, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload),

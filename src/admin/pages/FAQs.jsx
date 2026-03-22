@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { API_ENDPOINTS } from "../../lib/api";
 
 export default function FAQs() {
   const [faqs, setFaqs] = useState([]);
@@ -20,11 +21,10 @@ export default function FAQs() {
   useEffect(() => {
     async function loadFAQs() {
       try {
-        const res = await fetch("https://bohrx.ai/backendadmin/api/faqs");
+        const res = await fetch(API_ENDPOINTS.GET_ALL_FAQS);
         const data = await res.json();
         setFaqs(data);
       } catch (err) {
-        console.log("Failed to load FAQs:", err);
       }
     }
     loadFAQs();
@@ -48,7 +48,7 @@ export default function FAQs() {
     };
 
     try {
-      const res = await fetch("https://bohrx.ai/backendadmin/api/faqs", {
+      const res = await fetch(API_ENDPOINTS.CREATE_FAQ, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +62,6 @@ export default function FAQs() {
       setForm({ question: "", answer: "" });
 
     } catch (err) {
-      console.error("Failed to add FAQ:", err);
       alert("Error adding FAQ");
     }
   }
@@ -70,17 +69,14 @@ export default function FAQs() {
   // edit (PUT)
   async function saveInlineEdit(id) {
     try {
-      const res = await fetch(
-        `https://bohrx.ai/backendadmin/api/faqs/${id}`,
-        {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            question: editForm.question,
-            answer: editForm.answer,
-          }),
-        }
-      );
+      const res = await fetch(API_ENDPOINTS.UPDATE_FAQ(id), {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          question: editForm.question,
+          answer: editForm.answer,
+        }),
+      });
 
       const updated = await res.json();
 
@@ -89,7 +85,6 @@ export default function FAQs() {
       setEditingId(null);
 
     } catch (err) {
-      console.error("Error updating FAQ:", err);
       alert("Error updating FAQ");
     }
   }
@@ -97,14 +92,13 @@ export default function FAQs() {
   // DELETE 
   async function confirmDelete() {
     try {
-      await fetch(`https://bohrx.ai/backendadmin/api/faqs/${deleteId}`, {
+      await fetch(API_ENDPOINTS.DELETE_FAQ(deleteId), {
         method: "DELETE",
       });
 
       setFaqs(faqs.filter((f) => f.id !== deleteId));
 
     } catch (err) {
-      console.error("Failed to delete FAQ:", err);
       alert("Error deleting FAQ");
     }
 

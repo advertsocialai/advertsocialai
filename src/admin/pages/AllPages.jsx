@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import Swal from "sweetalert2";
+import { API_ENDPOINTS } from "../../lib/api";
 
 export default function PagesTable() {
   const [pages, setPages] = useState([]);
@@ -24,10 +25,8 @@ export default function PagesTable() {
         setLoading(true);
         setFetchError(null);
 
-        const res = await fetch("https://bohrx.ai/backendadmin/api/Services/Getall");
+        const res = await fetch(API_ENDPOINTS.GET_ALL_SERVICES);
         const data = await res.json();
-
-        console.log("GET /Services/Getall response:", data);
 
         let normalized = [];
 
@@ -45,7 +44,6 @@ export default function PagesTable() {
           setLoading(false);
         }
       } catch (err) {
-        console.error("Error fetching pages:", err);
         if (!cancelled) {
           setFetchError(err.message);
           setPages([]);
@@ -99,7 +97,6 @@ export default function PagesTable() {
         onClick={() => {
           if (!realId) {
             alert("Invalid ID - cannot edit");
-            console.error("Missing ID for page:", rowData);
             return;
           }
           navigate(`/admin/page-update/${realId}`);
@@ -145,7 +142,7 @@ export default function PagesTable() {
         throw new Error("Admin token not found. Please login again.");
       }
 
-      const deleteUrl = `https://bohrx.ai/backendadmin/api/Services/delete/${realId}`;
+      const deleteUrl = API_ENDPOINTS.DELETE_SERVICE(realId);
       const response = await fetch(deleteUrl, {
         method: "GET",
         headers: {
@@ -178,7 +175,6 @@ export default function PagesTable() {
         text: "Page deleted successfully.",
       });
     } catch (err) {
-      console.error("Delete failed:", err);
       Swal.fire({
         icon: "error",
         title: "Delete failed",

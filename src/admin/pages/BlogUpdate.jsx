@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import ReactQuill from "react-quill";
+import { API_ENDPOINTS, BLOG_IMAGE_BASE_URL } from "../../lib/api";
 import "react-quill/dist/quill.snow.css";
 import Swal from "sweetalert2";
 import Quill from "quill";
@@ -71,7 +72,7 @@ export default function BlogUpdate() {
   const fetchBlog = async () => {
     try {
       const res = await axios.get(
-        `https://bohrx.ai/backendadmin/api/getblogs/${id}`
+        API_ENDPOINTS.GET_BLOG(id)
       );
 
       const blog = res.data?.data;
@@ -164,7 +165,7 @@ export default function BlogUpdate() {
       }
 
       await axios.post(
-        `https://bohrx.ai/backendadmin/api/updateblogs/${id}`,
+        API_ENDPOINTS.UPDATE_BLOG(id),
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -310,7 +311,7 @@ export default function BlogUpdate() {
               <div className="mt-3">
                 <p className="text-sm mb-1">Existing Image 1</p>
                 <img
-                  src={`https://bohrx.ai/backendadmin/public/Blog/${form.image1}`}
+                  src={`${BLOG_IMAGE_BASE_URL}${form.image1}`}
                   alt="existing"
                   className="w-40 rounded shadow"
                 />
@@ -331,7 +332,7 @@ export default function BlogUpdate() {
               <div className="mt-3">
                 <p className="text-sm mb-1">Existing Image 2</p>
                 <img
-                  src={`https://bohrx.ai/backendadmin/public/Blog/${form.image2}`}
+                  src={`${BLOG_IMAGE_BASE_URL}${form.image2}`}
                   alt="existing"
                   className="w-40 rounded shadow"
                 />

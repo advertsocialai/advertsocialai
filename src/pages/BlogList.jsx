@@ -3,20 +3,20 @@ import axios from "axios";
 import HeroBlog from "../components/HeroBlog";
 import Banner from "../components/BannerAboutUs";
 import { useNavigate } from "react-router-dom";
+import { API_ENDPOINTS, BLOG_IMAGE_BASE_URL } from "../lib/api";
 import "./BlogList.css";
 
 export default function BlogList() {
   const [blogs, setBlogs] = useState([]);
   const navigate = useNavigate();
 
-  const IMAGE_BASE_URL = "https://bohrx.ai/backendadmin/public/Blog/";
-
   useEffect(() => {
-    axios.get("https://bohrx.ai/backendadmin/api/alblogs/getall")
+    axios
+      .get(API_ENDPOINTS.GET_ALL_BLOGS)
       .then((res) => {
         setBlogs(res.data.data);
       })
-      .catch((err) => console.error("API Error:", err));
+      .catch(() => {});
   }, []);
 
   return (
@@ -40,7 +40,7 @@ export default function BlogList() {
             >
               <div className="w-full aspect-video overflow-hidden rounded-xl mb-4">
                 <img
-                  src={IMAGE_BASE_URL + blog.image1}
+                  src={BLOG_IMAGE_BASE_URL + blog.image1}
                   alt={blog.name}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   onError={(e) =>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import { API_ENDPOINTS, BLOG_IMAGE_BASE_URL } from "../../lib/api";
 
 export default function BlogView() {
   const { id } = useParams();
@@ -13,15 +14,12 @@ export default function BlogView() {
 
   const loadBlog = async () => {
     try {
-      const res = await axios.get(
-        "https://bohrx.ai/backendadmin/api/alblogs/getall"
-      );
+      const res = await axios.get(API_ENDPOINTS.GET_ALL_BLOGS);
 
       const found = res.data.data.find((b) => String(b.id) === id);
       setBlog(found || null);
 
     } catch (err) {
-      console.error(err);
     }
   };
 
@@ -60,7 +58,7 @@ export default function BlogView() {
             <p className="font-semibold mb-2">Image 1:</p>
             {blog.image1 ? (
               <img
-                src={`https://bohrx.ai/backendadmin/public/Blog/${blog.image1}`}
+                src={`${BLOG_IMAGE_BASE_URL}${blog.image1}`}
                 className="w-full max-w-xs rounded-xl shadow"
               />
             ) : "No Image"}
@@ -70,7 +68,7 @@ export default function BlogView() {
             <p className="font-semibold mb-2">Image 2:</p>
             {blog.image2 ? (
               <img
-                src={`https://bohrx.ai/backendadmin/public/Blog/${blog.image2}`}
+                src={`${BLOG_IMAGE_BASE_URL}${blog.image2}`}
 
                 className="w-full max-w-xs rounded-xl shadow"
               />

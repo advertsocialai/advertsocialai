@@ -4,7 +4,6 @@ import Result from '../components/ResultAboutUs'
 import Story from '../components/StoryAboutUs.jsx'
 import Reward from '../components/RewardAboutUs.jsx'
 import FAQget from '../components/publicFAQsget'
-// import FAQ from '../components/FAQAboutUs'
 import Banner from '../components/BannerAboutUs'
 import GetInTouch from '../components/GetInTouchAboutUs'
 

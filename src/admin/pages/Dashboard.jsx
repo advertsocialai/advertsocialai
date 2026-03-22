@@ -9,6 +9,7 @@ import {
   FiArrowRight
 } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import { API_ENDPOINTS } from "../../lib/api";
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -25,10 +26,10 @@ export default function Dashboard() {
     async function fetchStats() {
       try {
         const [blogsRes, faqsRes, pagesRes, contactsRes] = await Promise.all([
-          fetch("https://bohrx.ai/backendadmin/api/alblogs/getall").then(r => r.json()),
-          fetch("https://bohrx.ai/backendadmin/api/faqs").then(r => r.json()),
-          fetch("https://bohrx.ai/backendadmin/api/jobs/getall").then(r => r.json()),
-          fetch("https://bohrx.ai/backendadmin/api/contacts/getall").then(r => r.json())
+          fetch(API_ENDPOINTS.GET_ALL_BLOGS).then((r) => r.json()),
+          fetch(API_ENDPOINTS.GET_ALL_FAQS).then((r) => r.json()),
+          fetch(API_ENDPOINTS.GET_ALL_JOBS).then((r) => r.json()),
+          fetch(API_ENDPOINTS.GET_ALL_CONTACTS).then((r) => r.json()),
         ]);
 
         setStats({
@@ -38,7 +39,6 @@ export default function Dashboard() {
           contacts: contactsRes.data?.length || 0
         });
       } catch (err) {
-        console.error("Error fetching dashboard stats:", err);
       } finally {
         setLoading(false);
       }

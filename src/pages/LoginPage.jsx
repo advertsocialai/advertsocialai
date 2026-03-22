@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { supabase } from "../lib/supabase";
+import { API_ENDPOINTS } from "../lib/api";
 
 // Update these paths if you use different locations
 const BG_IMAGE = "/assets/images/login-bg.png";
@@ -54,7 +55,7 @@ export default function LoginPage() {
 
         // --- API CALL ---
         try {
-            const response = await fetch("https://bohrx.ai/backendadmin/api/login", {
+            const response = await fetch(API_ENDPOINTS.LOGIN, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

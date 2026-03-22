@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
+import { API_ENDPOINTS } from "../../lib/api";
 
 export default function RegisterTable() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://bohrx.ai/backendadmin/api/registered-users")
+    fetch(API_ENDPOINTS.GET_REGISTERED_USERS)
       .then((res) => res.json())
       .then((resData) => {
         if (resData?.status === true) {

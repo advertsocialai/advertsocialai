@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import PhoneInput from 'react-phone-number-input';
 import { isValidPhoneNumber } from 'react-phone-number-input';
+import { API_ENDPOINTS } from "../lib/api";
 
 const MySwal = withReactContent(Swal);
 
@@ -64,7 +65,7 @@ export default function GetInTouch() {
             Message: form.message,
         };
 
-        fetch('https://bohrx.ai/backendadmin/api/contacts/add', {
+        fetch(API_ENDPOINTS.ADD_CONTACT, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload),

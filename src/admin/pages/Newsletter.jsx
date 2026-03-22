@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
+import { API_ENDPOINTS } from "../../lib/api";
 
 export default function NewsletterAdmin() {
   const [subscribers, setSubscribers] = useState([]);
@@ -22,7 +23,7 @@ export default function NewsletterAdmin() {
   const fetchSubscribers = async () => {
     setLoadingSubs(true);
     try {
-      const res = await fetch("https://bohrx.ai/backendadmin/api/subscribers");
+      const res = await fetch(API_ENDPOINTS.GET_SUBSCRIBERS);
       const data = await res.json();
 
       let list = [];
@@ -32,7 +33,6 @@ export default function NewsletterAdmin() {
 
       setSubscribers(list);
     } catch (err) {
-      console.error("Error fetching subscribers:", err);
     } finally {
       setLoadingSubs(false);
     }
@@ -45,7 +45,7 @@ export default function NewsletterAdmin() {
     }
     setSubscribing(true);
     try {
-      const res = await fetch("https://bohrx.ai/backendadmin/api/subscribe", {
+      const res = await fetch(API_ENDPOINTS.SUBSCRIBE, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -61,7 +61,6 @@ export default function NewsletterAdmin() {
         Swal.fire("Error", "Failed to subscribe.", "error");
       }
     } catch (err) {
-      console.error(err);
       Swal.fire("Error", "Something went wrong. Please try again.", "error");
     } finally {
       setSubscribing(false);
@@ -75,7 +74,7 @@ export default function NewsletterAdmin() {
     }
     setUnsubscribing(true);
     try {
-      const res = await fetch("https://bohrx.ai/backendadmin/api/unsubscribe", {
+      const res = await fetch(API_ENDPOINTS.UNSUBSCRIBE, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: removeEmail }),
@@ -89,7 +88,6 @@ export default function NewsletterAdmin() {
         Swal.fire("Error", "Failed to unsubscribe.", "error");
       }
     } catch (error) {
-      console.error(error);
       Swal.fire("Error", "Something went wrong. Please try again.", "error");
     } finally {
       setUnsubscribing(false);
@@ -107,7 +105,7 @@ export default function NewsletterAdmin() {
     }
     setSending(true);
     try {
-      const res = await fetch("https://bohrx.ai/backendadmin/api/send-newsletter", {
+      const res = await fetch(API_ENDPOINTS.SEND_NEWSLETTER, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ subject, content, emails: selectedEmails }),
@@ -122,7 +120,6 @@ export default function NewsletterAdmin() {
         Swal.fire("Error", "Failed to send newsletter.", "error");
       }
     } catch (error) {
-      console.error(error);
       Swal.fire("Error", "Something went wrong while sending newsletter.", "error");
     } finally {
       setSending(false);

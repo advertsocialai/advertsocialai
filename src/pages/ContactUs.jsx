@@ -1,7 +1,6 @@
 import React from 'react'
 import Hero from '../components/HeroContact'
 import GetInTouch from '../components/GetInTouchContact'
-// import FAQ from '../components/FAQ'
 import FAQget from '../components/publicFAQsget'
 
 

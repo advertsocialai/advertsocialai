@@ -4,6 +4,7 @@ import { Column } from "primereact/column";
 import { Button } from "primereact/button";
 import { InputText } from "primereact/inputtext";
 import { useNavigate } from "react-router-dom";
+import { API_ENDPOINTS } from "../../lib/api";
 
 export default function JobsTable() {
     const [jobs, setJobs] = useState([]);
@@ -11,12 +12,7 @@ export default function JobsTable() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        console.log("Jobs Data:", jobs);
-    }, [jobs]);
-
-
-    useEffect(() => {
-        fetch("https://bohrx.ai/backendadmin/api/jobs/getall")
+        fetch(API_ENDPOINTS.GET_ALL_JOBS)
             .then((res) => res.json())
             .then((data) => setJobs(data?.data || []));
     }, []);

@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import { API_ENDPOINTS } from "../../lib/api";
 
 export default function PageUpdate() {
   const { id } = useParams();
@@ -40,7 +41,7 @@ export default function PageUpdate() {
     async function fetchData() {
       try {
         const res = await axios.get(
-          `https://bohrx.ai/backendadmin/api/Services/view/${id}`
+          API_ENDPOINTS.GET_SERVICE(id)
         );
 
         // Backend might return either the object directly or { data: {...} }
@@ -85,8 +86,6 @@ export default function PageUpdate() {
 
         setLoading(false);
       } catch (err) {
-        console.error("Fetch error:", err);
-        // show user-friendly message
         alert("Failed to load service data. Check console for details.");
         setLoading(false);
       }
@@ -146,7 +145,7 @@ export default function PageUpdate() {
 
       // PUT to update endpoint
       await axios.put(
-        `https://bohrx.ai/backendadmin/api/Services/update/${id}`,
+        API_ENDPOINTS.UPDATE_SERVICE(id),
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -154,7 +153,6 @@ export default function PageUpdate() {
       alert("Page updated successfully!");
       navigate("/admin/all-pages");
     } catch (err) {
-      console.error("Update error:", err);
       alert("Failed to update! Check console for details.");
     } finally {
       setLoading(false);

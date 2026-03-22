@@ -6,7 +6,6 @@ import Verticals from '../components/Verticals'
 import Benefits from '../components/Benefits'
 import Contact from '../components/Contact'
 import Research from '../components/Research'
-// import BackToTop from '../components/BackToTop'
 
 export default function LandingPage() {
     return (

@@ -5,9 +5,8 @@ import { useParams } from "react-router-dom";
 import Banner from "../components/BannerAboutUs";
 import HeroBlog from "../components/HeroBlog";
 import { FiClock } from "react-icons/fi";
-
-
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { API_ENDPOINTS } from "../lib/api";
 
 export default function BlogDetail() {
   const { id } = useParams();
@@ -18,7 +17,6 @@ export default function BlogDetail() {
 
 
 
-  const IMAGE_BASE_URL = "https://bohrx.ai/backendadmin/public/Blog/";
 
   useEffect(() => {
     loadBlog();
@@ -92,11 +90,10 @@ export default function BlogDetail() {
   const loadBlog = async () => {
     try {
       const res = await axios.get(
-        `https://bohrx.ai/backendadmin/api/getblogs/${id}`
+        API_ENDPOINTS.GET_BLOG(id)
       );
       setBlog(res.data.data);
     } catch (err) {
-      console.error("Error fetching blog:", err);
     }
   };
 
@@ -110,9 +107,6 @@ export default function BlogDetail() {
     ? (() => {
       const tempDiv = document.createElement("div");
       tempDiv.innerHTML = blog.description;
-
-      // const firstHeading = tempDiv.querySelector("h2, h3");
-      // if (firstHeading) firstHeading.remove();
 
       tempDiv.querySelectorAll("h2, h3").forEach((heading, index) => {
         heading.id = `section-${index}`;

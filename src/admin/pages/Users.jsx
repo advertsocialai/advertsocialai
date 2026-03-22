@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+import { API_ENDPOINTS } from '../../lib/api';
 import './Users.css';
 
 export default function Users() {
@@ -16,9 +17,7 @@ export default function Users() {
     });
 
     useEffect(() => {
-        console.log("Fetching Users...");
-        
-        fetch("https://bohrx.ai/backendadmin/api/contacts/getall", {
+        fetch(API_ENDPOINTS.GET_ALL_CONTACTS, {
             method: "GET",
             headers: {
                 "Accept": "application/json"
@@ -26,8 +25,6 @@ export default function Users() {
         })
         .then((res) => res.json())
         .then((result) => {
-            console.log("API RESULT:", result);
-
             if (!result.data) {
                 setUsers([]);
                 setLoading(false);
@@ -45,8 +42,7 @@ export default function Users() {
             setUsers(formatted);
             setLoading(false);
         })
-        .catch((err) => {
-            console.error("API ERROR:", err); // handling errors 
+        .catch(() => {
             setLoading(false);
         });
     }, []);

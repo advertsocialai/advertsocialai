@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import { API_ENDPOINTS } from '../lib/api';
 import './SignUp.css';
 
 const MySwal = withReactContent(Swal);
@@ -41,7 +42,7 @@ export default function SignUp({ onClose }) {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch("https://bohrx.ai/backendadmin/api/subscribe", {
+            const response = await fetch(API_ENDPOINTS.SUBSCRIBE, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

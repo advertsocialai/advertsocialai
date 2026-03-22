@@ -3,6 +3,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { API_ENDPOINTS } from "../../lib/api";
 
 export default function Blog() {
   const [form, setForm] = useState({
@@ -71,7 +72,7 @@ export default function Blog() {
       fd.append("image1", form.image1);
       fd.append("image2", form.image2);
 
-      await axios.post("https://bohrx.ai/backendadmin/api/blogs", fd);
+      await axios.post(API_ENDPOINTS.CREATE_BLOG, fd);
 
       Swal.fire({
         icon: "success",

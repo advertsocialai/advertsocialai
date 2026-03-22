@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { FiEdit2, FiTrash2 } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import { API_ENDPOINTS } from "../../lib/api";
 
 export default function BlogList() {
   const [blogs, setBlogs] = useState([]);
@@ -22,12 +23,9 @@ export default function BlogList() {
 
   const loadBlogs = async () => {
     try {
-      const res = await axios.get(
-        "https://bohrx.ai/backendadmin/api/alblogs/getall"
-      );
+      const res = await axios.get(API_ENDPOINTS.GET_ALL_BLOGS);
       setBlogs(res.data.data || []);
     } catch (err) {
-      console.error("Fetch error:", err);
     }
   };
 
@@ -40,14 +38,11 @@ export default function BlogList() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(
-        `https://bohrx.ai/backendadmin/api/deleteblogs/${id}`
-      );
+      await axios.delete(API_ENDPOINTS.DELETE_BLOG(id));
 
       alert("Blog deleted successfully!");
       loadBlogs(); // refresh table
     } catch (err) {
-      console.error("Delete failed:", err);
       alert("Failed to delete blog!");
     }
   };
