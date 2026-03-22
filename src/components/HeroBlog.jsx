@@ -3,40 +3,39 @@ import { motion } from "framer-motion";
 import "./HeroBlog.css";
 
 export default function HeroBlog({ blog }) {
-    const title = blog?.name || "BLOG's";
-    const description =
-        blog?.shortdescription ||
-        "Discover actionable blogs designed for publishers, advertisers, and creators looking to maximize performance through smart ad technology and AI-driven solutions.";
+  const title = blog?.name || "BLOG's";
+  const description =
+    blog?.shortdescription ||
+    "Discover actionable blogs designed for publishers, advertisers, and creators looking to maximize performance through smart ad technology and AI-driven solutions.";
 
-    return (
-        <section
-            id="advertisers"
-            className="heroblog-section relative flex justify-center items-center w-full overflow-hidden bg-white lg:bg-transparent"
-        >
+  return (
+    <section
+      id="advertisers"
+      className="heroblog-section relative flex justify-center items-center w-full overflow-hidden bg-white lg:bg-transparent"
+    >
+      {/* Desktop Background */}
+      <img
+        src="/assets/images/contact-BG.png"
+        alt="Hero Background"
+        className="heroblog-bg absolute hidden lg:block"
+      />
 
-            {/* Desktop Background */}
-            <img
-                src="/assets/images/contact-BG.png"
-                alt="Hero Background"
-                className="heroblog-bg absolute hidden lg:block"
-            />
+      {/* Mobile Background */}
+      <div
+        className="heroblog-bg-mobile absolute lg:hidden"
+        style={{
+          background: "#000000",
+          zIndex: 0,
+          top: "10px",
+          left: "10px",
+          right: "10px",
+          bottom: "10px",
+          borderRadius: "16px",
+        }}
+      />
 
-            {/* Mobile Background */}
-            <div
-                className="heroblog-bg-mobile absolute lg:hidden"
-                style={{
-                    background: "#000000",
-                    zIndex: 0,
-                    top: "10px",
-                    left: "10px",
-                    right: "10px",
-                    bottom: "10px",
-                    borderRadius: "16px",
-                }}
-            />
-
-            <div
-                className="
+      <div
+        className="
                     heroblog-content
                     relative z-10 
                     flex flex-col lg:flex-row 
@@ -48,10 +47,9 @@ export default function HeroBlog({ blog }) {
                     pt-4 pb-12 lg:py-0 
                     text-center lg:text-left
                 "
-            >
-
-                <motion.div
-                    className="
+      >
+        <motion.div
+          className="
                         heroblog-text-container
                         flex flex-col 
                         gap-4 sm:gap-6 lg:gap-10 
@@ -62,15 +60,13 @@ export default function HeroBlog({ blog }) {
                         mt-8 lg:mt-20
                         lg:ml-0
                     "
-                    initial={{ opacity: 0, x: -80 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: false, amount: 0.3 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-
-
-                    <h1
-                        className="
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h1
+            className="
                             heroblog-title
                             font-normal leading-tight 
                             text-3xl sm:text-4xl md:text-5xl 
@@ -80,14 +76,13 @@ export default function HeroBlog({ blog }) {
                             mx-auto lg:ml-0
                             break-words
                         "
-                        style={{ fontFamily: "Outfit" }}
-                    >
-                        {title}
-                    </h1>
+            style={{ fontFamily: "Outfit" }}
+          >
+            {title}
+          </h1>
 
-
-                    <p
-                        className="
+          <p
+            className="
                             heroblog-desc
                             text-base sm:text-lg lg:text-xl 
                             leading-relaxed 
@@ -96,17 +91,16 @@ export default function HeroBlog({ blog }) {
                             w-[90%] lg:w-[600px]
                             mb-0 lg:mb-0
                         "
-                        style={{ fontFamily: "Outfit", fontWeight: 500 }}
-                    >
-                        {description}
-                    </p>
-                </motion.div>
+            style={{ fontFamily: "Outfit", fontWeight: 500 }}
+          >
+            {description}
+          </p>
+        </motion.div>
 
-
-                <motion.img
-                    src="/assets/images/Mask group.png"
-                    alt="Popunder Graphic"
-                    className="
+        <motion.img
+          src="/assets/images/Mask group.png"
+          alt="Popunder Graphic"
+          className="
                         heroblog-graphic
                         block
                         w-full 
@@ -117,24 +111,31 @@ export default function HeroBlog({ blog }) {
                         mt-6 lg:mt-[-200px]
                         mx-auto lg:ml-60
                     "
-                    style={{ aspectRatio: "534/383" }}
-                />
-            </div>
+          style={{ aspectRatio: "534/383" }}
+        />
+      </div>
 
-            {/* DESKTOP BREADCRUMBS */}
-            <div className="heroblog-breadcrumbs absolute hidden lg:flex items-center gap-2 z-10">
-                <a href="/" className="text-xs sm:text-sm hover:underline">Home</a>
-                <img src="/assets/images/side-arrow.png" className="w-1 h-2" />
-                <a href="/blog" className="text-xs sm:text-sm hover:underline cursor-pointer">Blogs</a>
-            </div>
+      {/* DESKTOP BREADCRUMBS */}
+      <div className="heroblog-breadcrumbs absolute hidden lg:flex items-center gap-2 z-10">
+        <a href="/" className="text-xs sm:text-sm hover:underline">
+          Home
+        </a>
+        <img src="/assets/images/side-arrow.png" className="w-1 h-2" />
+        <a href="/blog" className="text-xs sm:text-sm hover:underline cursor-pointer">
+          Blogs
+        </a>
+      </div>
 
-            {/* MOBILE BREADCRUMBS */}
-            <div className="heroblog-breadcrumbs-mobile absolute lg:hidden flex items-center justify-center gap-2 z-10 bottom-4 left-0 right-0">
-                <a href="/" className="text-xs hover:underline">Home</a>
-                <img src="/assets/images/side-arrow.png" className="w-1 h-2" />
-                <a href="/blog" className="text-xs sm:text-sm hover:underline cursor-pointer">Blogs</a>
-            </div>
-
-        </section>
-    );
+      {/* MOBILE BREADCRUMBS */}
+      <div className="heroblog-breadcrumbs-mobile absolute lg:hidden flex items-center justify-center gap-2 z-10 bottom-4 left-0 right-0">
+        <a href="/" className="text-xs hover:underline">
+          Home
+        </a>
+        <img src="/assets/images/side-arrow.png" className="w-1 h-2" />
+        <a href="/blog" className="text-xs sm:text-sm hover:underline cursor-pointer">
+          Blogs
+        </a>
+      </div>
+    </section>
+  );
 }

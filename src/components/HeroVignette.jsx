@@ -74,8 +74,6 @@ function HeroVignette() {
       />
 
       <div className="hv-content-wrapper relative z-10 flex flex-col lg:flex-row justify-between items-center w-full px-4 sm:px-6 md:px-8 lg:px-[5%] max-w-[1280px]">
-
-
         <motion.div
           className="hv-text-block
     hero-push-text flex flex-col
@@ -96,9 +94,7 @@ function HeroVignette() {
             marginLeft: "-60px",
             marginTop: "20px",
           }}
-
         >
-
           <motion.h1
             variants={childVariants}
             className="hv-title
@@ -122,7 +118,6 @@ function HeroVignette() {
               letterSpacing: "0%",
               color: "#FFFFFF",
             }}
-
           >
             Vignette Banner Ads
           </motion.h1>
@@ -150,11 +145,9 @@ function HeroVignette() {
               letterSpacing: "0%",
               color: "#FFFFFF",
             }}
-
           >
             High-Impact, Full-Screen Brand Visibility
           </motion.h2>
-
 
           <motion.p
             variants={childVariants}
@@ -179,12 +172,9 @@ function HeroVignette() {
               letterSpacing: "0%",
               color: "#F9F9F9",
             }}
-
           >
-
-
-            Advert Social AI’s Vignette Banner Ads deliver immersive, full-screen ad experiences during natural
-            transition
+            Advert Social AI’s Vignette Banner Ads deliver immersive, full-screen ad experiences
+            during natural transition
           </motion.p>
 
           <motion.button
@@ -196,23 +186,14 @@ function HeroVignette() {
               gap: "8px",
               borderRadius: "40px",
               padding: "24px 32px",
-              background:
-                "linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%)",
+              background: "linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%)",
               color: "#FFFFFF",
             }}
-
           >
-            <span
-              className="hv-button-text text-sm font-bold"
-              style={{ fontFamily: "Outfit" }}
-            >
+            <span className="hv-button-text text-sm font-bold" style={{ fontFamily: "Outfit" }}>
               Get Started
             </span>
-            <img
-              src="/assets/images/arrow.png"
-              alt="Arrow"
-              className="hv-button-icon w-3 h-3"
-            />
+            <img src="/assets/images/arrow.png" alt="Arrow" className="hv-button-icon w-3 h-3" />
           </motion.button>
         </motion.div>
 
@@ -228,7 +209,6 @@ function HeroVignette() {
             marginLeft: "100px",
             marginTop: "30px",
           }}
-
           variants={rightVariants}
           initial="hidden"
           whileInView="visible"
@@ -291,7 +271,6 @@ function HeroVignette() {
   }
 `}
       </style>
-
     </section>
   );
 }

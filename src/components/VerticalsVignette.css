@@ -1,117 +1,117 @@
 /* VerticalsVignette 4K Scaling Overrides */
 @media (min-width: 2560px) {
-    .vv-section {
-        padding-top: 100px !important;
-        padding-bottom: 100px !important;
-    }
+  .vv-section {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
 
-    .vv-wrapper {
-        max-width: 2280px !important;
-        height: 1645px !important;
-        padding: 150px 120px !important;
-        border-radius: 40px !important;
-    }
+  .vv-wrapper {
+    max-width: 2280px !important;
+    height: 1645px !important;
+    padding: 150px 120px !important;
+    border-radius: 40px !important;
+  }
 
-    .vv-header {
-        max-width: 1520px !important;
-        margin-top: 40px !important;
-        margin-left: 20px !important;
-        gap: 40px !important;
-    }
+  .vv-header {
+    max-width: 1520px !important;
+    margin-top: 40px !important;
+    margin-left: 20px !important;
+    gap: 40px !important;
+  }
 
-    .vv-title {
-        font-size: 108px !important;
-        line-height: 110px !important;
-        margin-left: -48px !important;
-    }
+  .vv-title {
+    font-size: 108px !important;
+    line-height: 110px !important;
+    margin-left: -48px !important;
+  }
 
-    .vv-button {
-        padding: 24px 48px !important;
-        gap: 16px !important;
-        margin-left: -48px !important;
-    }
+  .vv-button {
+    padding: 24px 48px !important;
+    gap: 16px !important;
+    margin-left: -48px !important;
+  }
 
-    .vv-button-text {
-        font-size: 24px !important;
-        line-height: 36px !important;
-    }
+  .vv-button-text {
+    font-size: 24px !important;
+    line-height: 36px !important;
+  }
 
-    .vv-button-icon {
-        width: 28px !important;
-        height: 24px !important;
-    }
+  .vv-button-icon {
+    width: 28px !important;
+    height: 24px !important;
+  }
 
-    .vv-grid-container {
-        gap: 60px !important;
-        margin-top: 90px !important;
-    }
+  .vv-grid-container {
+    gap: 60px !important;
+    margin-top: 90px !important;
+  }
 
-    .vv-card-motion {
-        margin-top: -48px !important;
-    }
+  .vv-card-motion {
+    margin-top: -48px !important;
+  }
 
-    /* VerticalCard Scaling */
-    .vv-card {
-        max-width: 600px !important;
-        height: 600px !important;
-        border-radius: 24px !important;
-    }
+  /* VerticalCard Scaling */
+  .vv-card {
+    max-width: 600px !important;
+    height: 600px !important;
+    border-radius: 24px !important;
+  }
 
-    .vv-card-bg-shape {
-        border-radius: 24px !important;
-    }
+  .vv-card-bg-shape {
+    border-radius: 24px !important;
+  }
 
-    .vv-card-hover-bg {
-        border-radius: 24px !important;
-        mask-size: 100% 100% !important;
-        -webkit-mask-size: 100% 100% !important;
-        mask-repeat: no-repeat !important;
-        -webkit-mask-repeat: no-repeat !important;
-    }
+  .vv-card-hover-bg {
+    border-radius: 24px !important;
+    mask-size: 100% 100% !important;
+    -webkit-mask-size: 100% 100% !important;
+    mask-repeat: no-repeat !important;
+    -webkit-mask-repeat: no-repeat !important;
+  }
 
-    .vv-card-content {
-        left: 85px !important;
-        right: 85px !important;
-        bottom: 60px !important;
-        gap: 48px !important;
-    }
+  .vv-card-content {
+    left: 85px !important;
+    right: 85px !important;
+    bottom: 60px !important;
+    gap: 48px !important;
+  }
 
-    .vv-card-title {
-        font-size: 32px !important;
-        line-height: 48px !important;
-    }
+  .vv-card-title {
+    font-size: 32px !important;
+    line-height: 48px !important;
+  }
 
-    .vv-card-desc {
-        width: 420px !important;
-    }
+  .vv-card-desc {
+    width: 420px !important;
+  }
 
-    .vv-card-desc-item {
-        width: 420px !important;
-        font-size: 24px !important;
-        line-height: 36px !important;
-        margin-bottom: 4px !important;
-    }
+  .vv-card-desc-item {
+    width: 420px !important;
+    font-size: 24px !important;
+    line-height: 36px !important;
+    margin-bottom: 4px !important;
+  }
 
-    .vv-card-desc-p {
-        font-size: 24px !important;
-        line-height: 36px !important;
-    }
+  .vv-card-desc-p {
+    font-size: 24px !important;
+    line-height: 36px !important;
+  }
 
-    .vv-card-icon-box {
-        top: 100px !important;
-        left: 100px !important;
-        width: 100px !important;
-        height: 100px !important;
-    }
+  .vv-card-icon-box {
+    top: 100px !important;
+    left: 100px !important;
+    width: 100px !important;
+    height: 100px !important;
+  }
 
-    /* Footer Row */
-    .vv-footer-row {
-        margin-top: 90px !important;
-        margin-left: 60px !important;
-    }
+  /* Footer Row */
+  .vv-footer-row {
+    margin-top: 90px !important;
+    margin-left: 60px !important;
+  }
 
-    .vv-footer-text {
-        font-size: 45px !important;
-        line-height: 55px !important;
-    }
+  .vv-footer-text {
+    font-size: 45px !important;
+    line-height: 55px !important;
+  }
 }

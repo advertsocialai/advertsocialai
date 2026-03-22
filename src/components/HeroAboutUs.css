@@ -1,100 +1,100 @@
 .hero-about-root {
-    min-height: 600px;
-    height: 100vh;
-    max-height: 720px;
+  min-height: 600px;
+  height: 100vh;
+  max-height: 720px;
 }
 
 .hero-about-bg {
-    width: 1568px;
-    height: 547px;
-    top: 0px;
-    left: 16px;
-    opacity: 1;
-    z-index: 0;
-    pointer-events: none;
-    padding-right: 32px;
+  width: 1568px;
+  height: 547px;
+  top: 0px;
+  left: 16px;
+  opacity: 1;
+  z-index: 0;
+  pointer-events: none;
+  padding-right: 32px;
 }
 
 .hero-about-container {
-    max-width: 1280px;
+  max-width: 1280px;
 }
 
 /* 4K / Ultra-wide Scaling (2560px - 2700px+) */
 @media (min-width: 2560px) {
-    .hero-about-root {
-        max-height: 1200px !important;
-        height: 1000px !important;
-    }
+  .hero-about-root {
+    max-height: 1200px !important;
+    height: 1000px !important;
+  }
 
-    .hero-about-bg {
-        width: 2400px !important;
-        height: 840px !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        padding-right: 0 !important;
-    }
+  .hero-about-bg {
+    width: 2400px !important;
+    height: 840px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    padding-right: 0 !important;
+  }
 
-    .hero-about-container {
-        max-width: 2200px !important;
-        gap: 100px !important;
-    }
+  .hero-about-container {
+    max-width: 2200px !important;
+    gap: 100px !important;
+  }
 
-    .hero-about-content {
-        max-width: 1100px !important;
-        height: auto !important;
-        gap: 60px !important;
-    }
+  .hero-about-content {
+    max-width: 1100px !important;
+    height: auto !important;
+    gap: 60px !important;
+  }
 
-    .hero-about-title {
-        font-size: 110px !important;
-        margin-top: -80px !important;
-        margin-left: 60px !important;
-    }
+  .hero-about-title {
+    font-size: 110px !important;
+    margin-top: -80px !important;
+    margin-left: 60px !important;
+  }
 
-    .hero-about-desc {
-        font-size: 28px !important;
-        width: 1100px !important;
-        margin-left: 60px !important;
-        margin-bottom: 50px !important;
-        line-height: 1.6 !important;
-    }
+  .hero-about-desc {
+    font-size: 28px !important;
+    width: 1100px !important;
+    margin-left: 60px !important;
+    margin-bottom: 50px !important;
+    line-height: 1.6 !important;
+  }
 
-    .hero-about-btn {
-        min-width: 280px !important;
-        height: 90px !important;
-        border-radius: 60px !important;
-        margin-left: 60px !important;
-    }
+  .hero-about-btn {
+    min-width: 280px !important;
+    height: 90px !important;
+    border-radius: 60px !important;
+    margin-left: 60px !important;
+  }
 
-    .hero-about-btn span {
-        font-size: 22px !important;
-    }
+  .hero-about-btn span {
+    font-size: 22px !important;
+  }
 
-    .hero-about-btn img {
-        width: 20px !important;
-        height: 20px !important;
-    }
+  .hero-about-btn img {
+    width: 20px !important;
+    height: 20px !important;
+  }
 
-    .hero-about-graphic {
-        max-width: 850px !important;
-        margin-top: -100px !important;
-        margin-left: 150px !important;
-    }
+  .hero-about-graphic {
+    max-width: 850px !important;
+    margin-top: -100px !important;
+    margin-left: 150px !important;
+  }
 
-    .hero-about-breadcrumbs {
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        bottom: 180px !important;
-        gap: 20px !important;
-    }
+  .hero-about-breadcrumbs {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 180px !important;
+    gap: 20px !important;
+  }
 
-    .hero-about-breadcrumbs a,
-    .hero-about-breadcrumbs span {
-        font-size: 22px !important;
-    }
+  .hero-about-breadcrumbs a,
+  .hero-about-breadcrumbs span {
+    font-size: 22px !important;
+  }
 
-    .hero-about-breadcrumbs img {
-        width: 8px !important;
-        height: 12px !important;
-    }
+  .hero-about-breadcrumbs img {
+    width: 8px !important;
+    height: 12px !important;
+  }
 }

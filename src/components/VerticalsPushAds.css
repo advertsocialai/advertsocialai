@@ -3,7 +3,6 @@
    ================================ */
 
 @media (max-width: 1024px) {
-
   /* Main container */
   .verticals-pushads-wrapper {
     width: 100% !important;
@@ -13,7 +12,7 @@
   }
 
   /* Title section */
-  .verticals-pushads-wrapper>div:first-child {
+  .verticals-pushads-wrapper > div:first-child {
     width: 100% !important;
     margin-left: 0 !important;
     align-items: flex-start !important;
@@ -38,7 +37,7 @@
   }
 
   /* Card content */
-  .verticals-pushads-wrapper .group>div:last-child {
+  .verticals-pushads-wrapper .group > div:last-child {
     position: relative !important;
     bottom: unset !important;
     left: unset !important;
@@ -48,14 +47,13 @@
   }
 
   /* Icon positioning */
-  .verticals-pushads-wrapper .group>div[z-20],
-  .verticals-pushads-wrapper .group>div:nth-child(2) {
+  .verticals-pushads-wrapper .group > div[z-20],
+  .verticals-pushads-wrapper .group > div:nth-child(2) {
     position: relative !important;
     top: unset !important;
     left: unset !important;
     margin-bottom: 16px !important;
   }
-
 }
 
 /* ================================
@@ -63,7 +61,6 @@
    ================================ */
 
 @media (max-width: 1024px) {
-
   /* Wrapper */
   .verticals-pushads-wrapper {
     width: 100% !important;
@@ -75,7 +72,7 @@
   }
 
   /* Cards container */
-  .verticals-pushads-wrapper>.flex.justify-center {
+  .verticals-pushads-wrapper > .flex.justify-center {
     width: 100% !important;
   }
 
@@ -101,7 +98,7 @@
 
   /* REMOVE background image card layer */
   @media (max-width: 1024px) {
-    .verticals-pushads-wrapper .group>img:first-child {
+    .verticals-pushads-wrapper .group > img:first-child {
       display: block !important;
       position: absolute !important;
       inset: 0;
@@ -113,12 +110,12 @@
   }
 
   /* REMOVE gradient hover layer */
-  .verticals-pushads-wrapper .group>div[style*="mask-image"] {
+  .verticals-pushads-wrapper .group > div[style*="mask-image"] {
     display: none !important;
   }
 
   /* Icon */
-  .verticals-pushads-wrapper .group>div:nth-child(2) {
+  .verticals-pushads-wrapper .group > div:nth-child(2) {
     position: relative !important;
     top: unset !important;
     left: unset !important;
@@ -128,7 +125,7 @@
   }
 
   /* Content block */
-  .verticals-pushads-wrapper .group>div:last-child {
+  .verticals-pushads-wrapper .group > div:last-child {
     position: relative !important;
     bottom: unset !important;
     left: unset !important;
@@ -146,20 +143,19 @@
   }
 
   /* Footer text */
-  .verticals-pushads-wrapper>div:last-child {
+  .verticals-pushads-wrapper > div:last-child {
     margin-top: 32px !important;
     text-align: center !important;
   }
 }
 
 @media (max-width: 1024px) {
-
-  .verticals-pushads-wrapper>div:last-child p {
-    color: #FF611D !important;
+  .verticals-pushads-wrapper > div:last-child p {
+    color: #ff611d !important;
   }
 
-  .verticals-pushads-wrapper>div:last-child p span {
-    color: #FFFFFF !important;
+  .verticals-pushads-wrapper > div:last-child p span {
+    color: #ffffff !important;
   }
 }
 
@@ -192,10 +188,6 @@
 .group img {
   border-radius: inherit;
 }
-
-
-
-
 
 /* 4K / Ultra-wide Scaling (2560px - 2700px) */
 @media (min-width: 2560px) {

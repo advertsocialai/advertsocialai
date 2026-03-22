@@ -18,41 +18,51 @@ export default function AdFormats() {
       img: "/assets/images/push_notifications.svg",
       title: "Push Notifications",
       desc: "Push Ads are a high-engagement, permission-based ad format that delivers your message directly to users’ devices—even when they’re not browsing your site.",
-      features: ["These native notifications appear on desktop and mobile, ensuring repeat visibility and strong click-through rates.",
+      features: [
+        "These native notifications appear on desktop and mobile, ensuring repeat visibility and strong click-through rates.",
         "Fully compatible with other ad formats & banner placements",
-        "Consistent performance with stable CPM and CPC returns "],
+        "Consistent performance with stable CPM and CPC returns ",
+      ],
     },
     vignette: {
       img: "/assets/images/vignetee.svg",
       title: "Vignette Banner Ads",
       desc: "Vignette Ads are full-screen, high-impact ads displayed during natural page transitions, maximizing attention without interrupting user experience.",
-      features: ["These ads appear between page loads, allowing publishers to capture premium impressions effortlessly.",
+      features: [
+        "These ads appear between page loads, allowing publishers to capture premium impressions effortlessly.",
         "Optimized for both mobile and desktop traffic",
-        "Delivers exceptionally high CPMs with minimal UX friction"],
+        "Delivers exceptionally high CPMs with minimal UX friction",
+      ],
     },
     inpage: {
       img: "/assets/images/inpush_add.svg",
       title: "In-Page Push Ads",
       desc: "In-Page Ads are native, seamlessly embedded ads that blend naturally within your website content for higher user engagement.",
-      features: ["These ads maintain site aesthetics while ensuring strong visibility and scalable monetization.",
+      features: [
+        "These ads maintain site aesthetics while ensuring strong visibility and scalable monetization.",
         "Fully responsive across all devices",
-        "Ideal for long-session traffic and consistent revenue flow"],
+        "Ideal for long-session traffic and consistent revenue flow",
+      ],
     },
     interstitial: {
       img: "/assets/images/Interstitial.svg",
       title: "Interstitial Ads",
       desc: "Interstitial Ads are full-screen immersive ads shown at strategic moments, delivering maximum impact and advertiser value.",
-      features: ["These ads command full user attention, making them one of the highest-converting ad formats available.",
+      features: [
+        "These ads command full user attention, making them one of the highest-converting ad formats available.",
         "Perfect for app-like and mobile-first experiences",
-        "Premium format with top-tier CPM rates"],
+        "Premium format with top-tier CPM rates",
+      ],
     },
     smartlink: {
       img: "/assets/images/smart_link.svg",
       title: "SmartLink",
       desc: "Smartlink Ads are an intelligent, auto-optimizing monetization solution that routes traffic to the best-performing offers in real time.",
-      features: ["With zero ad placement complexity, Smartlinks allow you to monetize every visitor instantly.",
+      features: [
+        "With zero ad placement complexity, Smartlinks allow you to monetize every visitor instantly.",
         "Works across all geos and traffic types",
-        "AI-driven optimization ensures maximum revenue per click. "],
+        "AI-driven optimization ensures maximum revenue per click. ",
+      ],
     },
   };
 
@@ -92,7 +102,6 @@ export default function AdFormats() {
           // backgroundPosition: "top",
         }}
       >
-
         <div className="text-center mb-[40px] max-md:mb-[30px]">
           <motion.h2
             initial={{ opacity: 0, y: 60 }}
@@ -118,10 +127,10 @@ export default function AdFormats() {
             viewport={{ once: false, amount: 0.3 }}
             className="text-[#6C6C6C] text-[16px] mt-3 max-w-[550px] mx-auto max-sm:text-[14px] font-[Outfit] adformats-sub-desc"
           >
-            Cover 100% of your web, mobile & Telegram Mini App traffic with our smart and user-friendly solutions
+            Cover 100% of your web, mobile & Telegram Mini App traffic with our smart and
+            user-friendly solutions
           </motion.p>
         </div>
-
 
         <div className="bg-[#6A0DAD] rounded-lg px-4 py-4 flex justify-center gap-16 flex-wrap mb-[60px] max-md:gap-8 max-sm:gap-4 adformats-tabs">
           {tabs.map((tab) => (
@@ -138,16 +147,17 @@ export default function AdFormats() {
           ))}
         </div>
 
-
         <div
           className={`
             grid grid-cols-2 gap-[04px]
             max-lg:gap-[30px]
             max-md:grid-cols-1 max-md:gap-[24px]
             transition-all duration-300
-            ${fade
-              ? "opacity-0 scale-95 pointer-events-none"
-              : "opacity-100 scale-100 pointer-events-auto"}
+            ${
+              fade
+                ? "opacity-0 scale-95 pointer-events-none"
+                : "opacity-100 scale-100 pointer-events-auto"
+            }
           `}
         >
           <motion.div
@@ -183,7 +193,6 @@ export default function AdFormats() {
             />
           </motion.div>
 
-
           <motion.div
             key={data.title}
             initial={{ opacity: 0, x: 80 }}
@@ -192,8 +201,10 @@ export default function AdFormats() {
             viewport={{ once: false, amount: 0.3 }}
             className="text-left max-md:text-center max-md:mt-[-30px] adformats-text"
           >
-            <h3 className="text-[32px] font-bold mb-4 text-black
-  max-md:text-white max-md:text-[26px] max-sm:text-[22px] font-[Outfit] adformats-content-title">
+            <h3
+              className="text-[32px] font-bold mb-4 text-black
+  max-md:text-white max-md:text-[26px] max-sm:text-[22px] font-[Outfit] adformats-content-title"
+            >
               {data.title}
             </h3>
 

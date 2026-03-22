@@ -47,7 +47,6 @@ export default function HowToStart() {
       >
         <div className="w-[1320px] mx-auto max-xl:w-[95%] max-lg:w-[90%] howtostart-wrapper">
           <div className="howtostart-container grid grid-cols-[400px_1fr_400px] bg-[rgba(247,246,255,0.97)] items-center h-[582px] w-full rounded-[25px] gap-[90px] max-xl:gap-[50px]">
-
             {/* Advertisers */}
             <motion.div
               variants={leftVariant}
@@ -130,7 +129,6 @@ export default function HowToStart() {
                 <img src="/assets/images/arrow.png" alt="arrow" className="w-4 h-4" />
               </button>
             </motion.div>
-
           </div>
         </div>
       </motion.section>

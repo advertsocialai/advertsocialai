@@ -1,57 +1,57 @@
 /* BenefitsVignette 4K Scaling Overrides */
 @media (min-width: 2560px) {
-    .bv-container {
-        padding-top: 150px !important;
-        padding-bottom: 120px !important;
-        gap: 120px !important;
-    }
+  .bv-container {
+    padding-top: 150px !important;
+    padding-bottom: 120px !important;
+    gap: 120px !important;
+  }
 
-    .bv-section {
-        max-width: 2200px !important;
-    }
+  .bv-section {
+    max-width: 2200px !important;
+  }
 
-    .bv-title {
-        font-size: 80px !important;
-        line-height: normal !important;
-        margin-bottom: 120px !important;
-        max-width: 1600px !important;
-    }
+  .bv-title {
+    font-size: 80px !important;
+    line-height: normal !important;
+    margin-bottom: 120px !important;
+    max-width: 1600px !important;
+  }
 
-    .bv-grid-wrapper {
-        max-width: 2000px !important;
-    }
+  .bv-grid-wrapper {
+    max-width: 2000px !important;
+  }
 
-    .bv-grid>.grid {
-        gap: 120px !important;
-        margin-bottom: 80px !important;
-    }
+  .bv-grid > .grid {
+    gap: 120px !important;
+    margin-bottom: 80px !important;
+  }
 
-    .bv-divider-h {
-        max-width: 1600px !important;
-        margin-bottom: 80px !important;
-    }
+  .bv-divider-h {
+    max-width: 1600px !important;
+    margin-bottom: 80px !important;
+  }
 
-    .bv-divider-v {
-        right: -60px !important;
-    }
+  .bv-divider-v {
+    right: -60px !important;
+  }
 
-    /* Card Scaling */
-    .bv-card {
-        gap: 40px !important;
-    }
+  /* Card Scaling */
+  .bv-card {
+    gap: 40px !important;
+  }
 
-    .bv-card-icon {
-        width: 80px !important;
-        height: 80px !important;
-    }
+  .bv-card-icon {
+    width: 80px !important;
+    height: 80px !important;
+  }
 
-    .bv-card-title {
-        font-size: 32px !important;
-        line-height: 1.2 !important;
-    }
+  .bv-card-title {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+  }
 
-    .bv-card-desc {
-        font-size: 24px !important;
-        line-height: 1.6 !important;
-    }
+  .bv-card-desc {
+    font-size: 24px !important;
+    line-height: 1.6 !important;
+  }
 }

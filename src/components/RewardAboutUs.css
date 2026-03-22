@@ -1,105 +1,104 @@
 /* 4K / Ultra-wide Scaling (2560px - 2700px) */
 @media (min-width: 2560px) {
-    .reward-about-root {
-        padding-top: 240px !important;
-        /* Increased for better vertical centering on bg */
-        padding-bottom: 240px !important;
-    }
+  .reward-about-root {
+    padding-top: 240px !important;
+    /* Increased for better vertical centering on bg */
+    padding-bottom: 240px !important;
+  }
 
-    .reward-subtract-bg {
-        width: 2600px !important;
-        height: 1950px !important;
-        background-size: contain !important;
-        background-position: top center !important;
-    }
+  .reward-subtract-bg {
+    width: 2600px !important;
+    height: 1950px !important;
+    background-size: contain !important;
+    background-position: top center !important;
+  }
 
-    .reward-content-wrapper {
-        max-width: 2600px !important;
-        /* Allow it to match bg width */
-        width: 100% !important;
-    }
+  .reward-content-wrapper {
+    max-width: 2600px !important;
+    /* Allow it to match bg width */
+    width: 100% !important;
+  }
 
-    .reward-philosophy-section {
-        width: 2200px !important;
-        /* Adjusted to sit better within the bg frame */
-        gap: 120px !important;
-    }
+  .reward-philosophy-section {
+    width: 2200px !important;
+    /* Adjusted to sit better within the bg frame */
+    gap: 120px !important;
+  }
 
-    .reward-left-content {
-        width: 750px !important;
-        gap: 100px !important;
-    }
+  .reward-left-content {
+    width: 750px !important;
+    gap: 100px !important;
+  }
 
-    .reward-main-heading {
-        font-size: 80px !important;
-        line-height: 100px !important;
-    }
+  .reward-main-heading {
+    font-size: 80px !important;
+    line-height: 100px !important;
+  }
 
-    .reward-description {
-        font-size: 38px !important;
-        line-height: 56px !important;
-    }
+  .reward-description {
+    font-size: 38px !important;
+    line-height: 56px !important;
+  }
 
-    .reward-cta-container,
-    .reward-cta-container img {
-        width: 200px !important;
-        height: 220px !important;
-    }
+  .reward-cta-container,
+  .reward-cta-container img {
+    width: 200px !important;
+    height: 220px !important;
+  }
 
-    .reward-features-grid {
-        width: 1300px !important;
-        gap: 80px !important;
-        padding-left: 100px !important;
-        border-left: 2px solid #4C4C4C !important;
-    }
+  .reward-features-grid {
+    width: 1300px !important;
+    gap: 80px !important;
+    padding-left: 100px !important;
+    border-left: 2px solid #4c4c4c !important;
+  }
 
-    .reward-feature-item {
-        gap: 32px !important;
-    }
+  .reward-feature-item {
+    gap: 32px !important;
+  }
 
-    .reward-feature-icon {
-        width: 80px !important;
-        height: 80px !important;
-    }
+  .reward-feature-icon {
+    width: 80px !important;
+    height: 80px !important;
+  }
 
-    .reward-feature-title {
-        font-size: 38px !important;
-    }
+  .reward-feature-title {
+    font-size: 38px !important;
+  }
 
-    .reward-feature-desc {
-        font-size: 28px !important;
-        line-height: 44px !important;
-    }
+  .reward-feature-desc {
+    font-size: 28px !important;
+    line-height: 44px !important;
+  }
 
-    .reward-partners-box {
-        width: 2200px !important;
-        /* Matched philosophy section width */
-        height: 500px !important;
-        margin-top: 250px !important;
-        padding: 120px 140px !important;
-        border-radius: 40px !important;
-        background-size: 100% 100% !important;
-        background-repeat: no-repeat !important;
-    }
+  .reward-partners-box {
+    width: 2200px !important;
+    /* Matched philosophy section width */
+    height: 500px !important;
+    margin-top: 250px !important;
+    padding: 120px 140px !important;
+    border-radius: 40px !important;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+  }
 
-    .reward-partners-title {
-        font-size: 35px !important;
-        vertical-align: middle !important;
-        top: 40px !important;
-        left: 230px !important;
-    }
+  .reward-partners-title {
+    font-size: 35px !important;
+    vertical-align: middle !important;
+    top: 40px !important;
+    left: 230px !important;
+  }
 
-    .partners-scroll {
-        gap: 150px !important;
+  .partners-scroll {
+    gap: 150px !important;
+  }
 
-    }
+  .partners-scroll-container {
+    margin-top: 100px !important;
+    /* Move logos further down */
+  }
 
-    .partners-scroll-container {
-        margin-top: 100px !important;
-        /* Move logos further down */
-    }
-
-    .reward-partner-img {
-        height: 100px !important;
-    }
+  .reward-partner-img {
+    height: 100px !important;
+  }
 }

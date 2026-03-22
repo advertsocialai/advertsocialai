@@ -19,8 +19,8 @@ const AdvertisersSection = () => {
 
         {/* Description */}
         <p className="advertisers-description">
-          Startups, D2C brands, SaaS companies, and enterprise advertisers rely on
-          us for performance without waste.
+          Startups, D2C brands, SaaS companies, and enterprise advertisers rely on us for
+          performance without waste.
         </p>
 
         {/* Bottom section */}
@@ -48,8 +48,8 @@ const AdvertisersSection = () => {
             <div className="advertisers-measured-by">
               Measured By:
               <span className="advertisers-measured-span">
-                ROAS, CAC, CTR, Conversion Rate & Brand Lift When creative meets
-                media and data, scale happens.
+                ROAS, CAC, CTR, Conversion Rate & Brand Lift When creative meets media and data,
+                scale happens.
               </span>
             </div>
           </div>

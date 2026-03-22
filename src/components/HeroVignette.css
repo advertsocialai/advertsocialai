@@ -1,80 +1,80 @@
 /* HeroVignette 4K Scaling Overrides */
 @media (min-width: 2560px) {
-    .hv-section {
-        max-height: none !important;
-        height: 100vh !important;
-        min-height: 1080px !important;
-        margin-top: -180px !important;
-    }
+  .hv-section {
+    max-height: none !important;
+    height: 100vh !important;
+    min-height: 1080px !important;
+    margin-top: -180px !important;
+  }
 
-    .hv-content-wrapper {
-        max-width: 1920px !important;
-        gap: 150px !important;
-    }
+  .hv-content-wrapper {
+    max-width: 1920px !important;
+    gap: 150px !important;
+  }
 
-    .hv-text-block {
-        width: 1000px !important;
-        height: auto !important;
-        gap: 60px !important;
-        margin-left: -300px !important;
-    }
+  .hv-text-block {
+    width: 1000px !important;
+    height: auto !important;
+    gap: 60px !important;
+    margin-left: -300px !important;
+  }
 
-    .hv-title {
-        width: 1000px !important;
-        height: auto !important;
-        font-size: 108px !important;
-        line-height: 1.1 !important;
-    }
+  .hv-title {
+    width: 1000px !important;
+    height: auto !important;
+    font-size: 108px !important;
+    line-height: 1.1 !important;
+  }
 
-    .hv-subtitle {
-        width: 1000px !important;
-        height: auto !important;
-        font-size: 72px !important;
-        line-height: 1.2 !important;
-    }
+  .hv-subtitle {
+    width: 1000px !important;
+    height: auto !important;
+    font-size: 72px !important;
+    line-height: 1.2 !important;
+  }
 
-    .hv-desc {
-        width: 1000px !important;
-        height: auto !important;
-        font-size: 28px !important;
-        line-height: 42px !important;
-    }
+  .hv-desc {
+    width: 1000px !important;
+    height: auto !important;
+    font-size: 28px !important;
+    line-height: 42px !important;
+  }
 
-    .hv-button {
-        width: 250px !important;
-        height: 80px !important;
-        padding: 36px 48px !important;
-        border-radius: 60px !important;
-    }
+  .hv-button {
+    width: 250px !important;
+    height: 80px !important;
+    padding: 36px 48px !important;
+    border-radius: 60px !important;
+  }
 
-    .hv-button-text {
-        font-size: 20px !important;
-    }
+  .hv-button-text {
+    font-size: 20px !important;
+  }
 
-    .hv-button-icon {
-        width: 20px !important;
-        height: 20px !important;
-    }
+  .hv-button-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
 
-    .hv-right-img {
-        width: 750px !important;
-        height: 750px !important;
-        border-radius: 100px !important;
-        margin-left: 250px !important;
-    }
+  .hv-right-img {
+    width: 750px !important;
+    height: 750px !important;
+    border-radius: 100px !important;
+    margin-left: 250px !important;
+  }
 
-    .hv-breadcrumb {
-        bottom: 10px !important;
-        left: 280px !important;
-        gap: 16px !important;
-    }
+  .hv-breadcrumb {
+    bottom: 10px !important;
+    left: 280px !important;
+    gap: 16px !important;
+  }
 
-    .hv-breadcrumb-item {
-        font-size: 30px !important;
-    }
+  .hv-breadcrumb-item {
+    font-size: 30px !important;
+  }
 
-    .hv-breadcrumb-arrow {
-        width: 12px !important;
-        height: 20px !important;
-    }
+  .hv-breadcrumb-arrow {
+    width: 12px !important;
+    height: 20px !important;
+  }
 }

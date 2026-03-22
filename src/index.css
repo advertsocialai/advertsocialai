@@ -1,6 +1,6 @@
 /* 4K screen font size for GetInTouchContact section */
 .outfit-4k {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 @media (min-width: 2560px) {
   .outfit-4k {
@@ -15,9 +15,8 @@
 
 html,
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
-
 
 .nav-btn {
   display: inline-flex;
@@ -28,12 +27,10 @@ body {
   border-radius: 0px;
 }
 
-
 .nav-btn:hover {
-  background: #F7F6FF;
+  background: #f7f6ff;
   border-radius: 24px;
 }
-
 
 .nav-text {
   font-family: "DM Sans";
@@ -44,16 +41,14 @@ body {
   transition: color 0.25s ease-in-out;
 }
 
-
 .nav-btn:hover .nav-text {
-  color: #6A0DAD !important;
+  color: #6a0dad !important;
 }
 
 .icon-white-to-black {
   filter: brightness(0) saturate(100%);
   transition: filter 0.3s ease;
 }
-
 
 .group:hover .icon-white-to-black {
   filter: brightness(100%) invert(0);
@@ -82,9 +77,7 @@ body {
   }
 } */
 
-
 @keyframes gentlePulse {
-
   0%,
   100% {
     transform: scale(1);
@@ -111,12 +104,10 @@ body {
   font-weight: 500;
   font-size: 16px;
 
-
-  background: linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%);
+  background: linear-gradient(69.88deg, #00e676 2.47%, #6a0dad 78.28%);
   -webkit-background-clip: text;
   color: transparent;
 }
-
 
 .gradient-btn::before {
   content: "";
@@ -124,7 +115,7 @@ body {
   inset: 0;
   border-radius: 50px;
   padding: 2px;
-  background: linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%);
+  background: linear-gradient(69.88deg, #00e676 2.47%, #6a0dad 78.28%);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -132,7 +123,6 @@ body {
   mask-composite: exclude;
   pointer-events: none;
 }
-
 
 .header-logo {
   margin-left: 0;
@@ -156,28 +146,22 @@ body {
   }
 }
 
-
-
-
-
 .glass-card {
   position: relative;
   overflow: visible;
 
-
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.06) 0%,
-      rgba(255, 255, 255, 0.04) 40%,
-      rgba(255, 255, 255, 0.03) 60%,
-      rgba(255, 255, 255, 0.02) 100%);
-
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.04) 40%,
+    rgba(255, 255, 255, 0.03) 60%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
 
   border: 1px solid rgba(255, 255, 255, 0.12);
 
-
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
-
 
   box-shadow:
     0 28px 60px rgba(15, 23, 42, 0.12),
@@ -185,7 +169,6 @@ body {
 
   border-radius: 20px;
 }
-
 
 .glass-card .glass-highlight {
   position: absolute;
@@ -195,11 +178,13 @@ body {
   height: 140%;
   pointer-events: none;
   transform: rotate(-12deg);
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.55) 0%,
-      rgba(255, 255, 255, 0.18) 18%,
-      rgba(255, 255, 255, 0.06) 36%,
-      rgba(255, 255, 255, 0.0) 80%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.18) 18%,
+    rgba(255, 255, 255, 0.06) 36%,
+    rgba(255, 255, 255, 0) 80%
+  );
   filter: blur(22px);
   opacity: 0.95;
   border-radius: 40%;
@@ -220,11 +205,9 @@ input::placeholder {
   font-weight: 500;
 }
 
-
 .shadow-cta {
   filter: drop-shadow(0 18px 30px rgba(10, 138, 255, 0.14));
 }
-
 
 @media (min-width: 1280px) {
   .glass-card {
@@ -232,7 +215,6 @@ input::placeholder {
     margin: 0 auto;
   }
 }
-
 
 @media (max-width: 640px) {
   .glass-card {
@@ -246,12 +228,10 @@ input::placeholder {
   }
 }
 
-
 .PhoneInput {
   background: transparent !important;
   border: none !important;
 }
-
 
 .PhoneInputInput {
   background: transparent !important;
@@ -262,7 +242,6 @@ input::placeholder {
   font-size: 14px;
 }
 
-
 .PhoneInputCountry {
   background: transparent !important;
   border: none !important;
@@ -270,11 +249,9 @@ input::placeholder {
   overflow: hidden;
 }
 
-
 .PhoneInputCountrySelectArrow {
   color: #555;
 }
-
 
 .PhoneInputCountryIcon {
   box-shadow: none !important;
@@ -286,15 +263,14 @@ body {
   overflow-x: hidden;
 }
 
-
 .p-datatable {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   overflow: hidden;
 }
 
-.p-datatable .p-datatable-thead>tr>th,
-.p-datatable .p-datatable-tbody>tr>td {
+.p-datatable .p-datatable-thead > tr > th,
+.p-datatable .p-datatable-tbody > tr > td {
   border: 1px solid #e5e7eb;
 }
 
@@ -316,7 +292,9 @@ body {
   border-radius: 10px;
   cursor: pointer;
   font-size: 14px;
-  transition: background 0.2s ease, transform 0.1s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
 }
 
 .PhoneInputCountry:hover {
@@ -332,9 +310,7 @@ body {
 }
 
 .PhoneInputCountry--selected {
-  background: linear-gradient(90deg,
-      rgba(101, 73, 246, 0.12),
-      rgba(255, 97, 29, 0.12));
+  background: linear-gradient(90deg, rgba(101, 73, 246, 0.12), rgba(255, 97, 29, 0.12));
   font-weight: 600;
 }
 
@@ -355,9 +331,8 @@ body {
   border-radius: 14px;
   padding: 10px 12px;
   background-color: #ffffff;
-  border: 1px solid #EAEAEA;
+  border: 1px solid #eaeaea;
 }
-
 
 .PhoneInputCountrySelect option {
   padding: 10px 14px;
@@ -384,31 +359,30 @@ body {
     justify-items: center;
   }
 
-  .hero-card-grid> :nth-child(1) {
+  .hero-card-grid > :nth-child(1) {
     grid-area: website;
   }
 
-  .hero-card-grid> :nth-child(2) {
+  .hero-card-grid > :nth-child(2) {
     grid-area: telegram;
   }
 
-  .hero-card-grid> :nth-child(3) {
+  .hero-card-grid > :nth-child(3) {
     grid-area: paid;
   }
 
-  .hero-card-grid> :nth-child(4) {
+  .hero-card-grid > :nth-child(4) {
     grid-area: social;
   }
 
-  .hero-card-grid> :nth-child(5) {
+  .hero-card-grid > :nth-child(5) {
     grid-area: email;
   }
 
-  .hero-card-grid> :nth-child(6) {
+  .hero-card-grid > :nth-child(6) {
     grid-area: inventory;
   }
 }
-
 
 /* inde */
 
@@ -442,17 +416,14 @@ body {
   content: "24px";
 }
 
-
-
 span.absolute.left-1\/2.-bottom-3.-translate-x-1\/2.w-\[70px\].h-\[4px\].bg-white.rounded {
-
   margin-bottom: -5px;
   /* top: 61px; */
   height: 12px;
   width: 116px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 100px 100px 0px 0px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 100px 100px 0px 0px;
 }
 
@@ -510,7 +481,7 @@ body {
 /* experiment gradient */
 
 :root {
-  --robot-gradient: linear-gradient(135deg, #7F00FF, #E100FF);
+  --robot-gradient: linear-gradient(135deg, #7f00ff, #e100ff);
 }
 
 .robot-icon {
@@ -547,8 +518,6 @@ body {
   }
 }
 
-
-
 .cloudicon {
   width: 40px;
   height: 40px;
@@ -584,14 +553,12 @@ body {
    VERTICALS – MOBILE TEXT ALIGN FIX
    =============================== */
 @media (max-width: 768px) {
-
   /* Force description left aligned */
   .multitag-mobile-root p,
   .bg-\[\#0E0F14\] p {
     text-align: left !important;
     margin-left: 0 !important;
   }
-
 }
 
 /* ===============================
@@ -599,7 +566,6 @@ body {
    iOS + Android
    =============================== */
 @media (max-width: 550px) {
-
   /* Prevent horizontal overflow */
   body {
     overflow-x: hidden;
@@ -629,7 +595,6 @@ body {
    iOS + Android
    ====================================== */
 @media (max-width: 768px) {
-
   /* ---------- IMAGE FIX ---------- */
   .adformats-image img {
     width: 280px !important;
@@ -690,7 +655,6 @@ body {
 }
 
 /* Loader Spinner */
-
 
 .loader {
   width: 56px;

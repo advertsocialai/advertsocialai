@@ -48,11 +48,7 @@ function HeroPushAds() {
 
   return (
     <section id="advertisers" className="hero-push-ads-section">
-      <img
-        src="/assets/images/Image BG.png"
-        alt="Hero Background"
-        className="hero-push-ads-bg"
-      />
+      <img src="/assets/images/Image BG.png" alt="Hero Background" className="hero-push-ads-bg" />
 
       <div className="hero-push-ads-container">
         <motion.div
@@ -71,10 +67,9 @@ function HeroPushAds() {
           </motion.h2>
 
           <motion.p variants={childVariants} className="hero-push-ads-desc">
-            Advert Social AI delivers performance-driven Push Advertising
-            solutions that enable advertisers to reach opted-in users directly
-            on their devices. Push Ads offer immediate visibility, strong
-            click-through rates, and scalable global reach across desktop and
+            Advert Social AI delivers performance-driven Push Advertising solutions that enable
+            advertisers to reach opted-in users directly on their devices. Push Ads offer immediate
+            visibility, strong click-through rates, and scalable global reach across desktop and
             mobile.
           </motion.p>
 
@@ -108,10 +103,7 @@ function HeroPushAds() {
           Home
         </span>
         <img src="/assets/images/side-arrow.png" className="w-1 h-2" />
-        <span
-          className="text-xs sm:text-sm"
-          style={{ fontFamily: "Outfit", color: "#4B4B4B" }}
-        >
+        <span className="text-xs sm:text-sm" style={{ fontFamily: "Outfit", color: "#4B4B4B" }}>
           Services
         </span>
       </div>

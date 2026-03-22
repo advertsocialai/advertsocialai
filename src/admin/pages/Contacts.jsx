@@ -36,11 +36,26 @@ export default function Contacts() {
     }
   };
 
-  if (loading) return <div className="p-10 text-xl text-center text-gray-500">Loading contacts...</div>;
+  if (loading)
+    return <div className="p-10 text-xl text-center text-gray-500">Loading contacts...</div>;
   if (error) return <div className="p-10 text-xl text-center text-red-500">{error}</div>;
 
-  const hiddenColumns = ['updated_at', 'created_at', 'qualification', 'visa_status', 'visastatus', 'lastname', 'passportno', 'description', 'whatsapp', 'country'];
-  const headers = contacts.length > 0 ? Object.keys(contacts[0]).filter(k => !hiddenColumns.includes(k.toLowerCase())) : [];
+  const hiddenColumns = [
+    "updated_at",
+    "created_at",
+    "qualification",
+    "visa_status",
+    "visastatus",
+    "lastname",
+    "passportno",
+    "description",
+    "whatsapp",
+    "country",
+  ];
+  const headers =
+    contacts.length > 0
+      ? Object.keys(contacts[0]).filter((k) => !hiddenColumns.includes(k.toLowerCase()))
+      : [];
 
   const filteredContacts = contacts.filter((contact) => {
     if (!search) return true;

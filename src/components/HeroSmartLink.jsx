@@ -73,8 +73,6 @@ function HeroSmartLink() {
       />
 
       <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center w-full px-4 sm:px-6 md:px-8 lg:px-[5%] max-w-[1280px]">
-
-
         <motion.div
           className="
     hero-push-text flex flex-col
@@ -95,9 +93,7 @@ function HeroSmartLink() {
             marginLeft: "-60px",
             marginTop: "20px",
           }}
-
         >
-
           <motion.h1
             variants={childVariants}
             className="
@@ -121,7 +117,6 @@ function HeroSmartLink() {
               letterSpacing: "0%",
               color: "#FFFFFF",
             }}
-
           >
             Smart Link
           </motion.h1>
@@ -150,11 +145,9 @@ function HeroSmartLink() {
               color: "#FFFFFF",
               // marginTop: "-80px",
             }}
-
           >
             Intelligent Traffic Routing for Maximum ROI
           </motion.h2>
-
 
           <motion.p
             variants={childVariants}
@@ -179,13 +172,11 @@ function HeroSmartLink() {
               letterSpacing: "0%",
               color: "#F9F9F9",
             }}
-
           >
-
-
-           Advert Social AI’s Smart Link technology dynamically routes each user to the most relevant,
-highest-performing offer in real time. By analyzing multiple signals per click, Smart Links maximize
-conversions, fill rates, and revenue for both advertisers and publishers.
+            Advert Social AI’s Smart Link technology dynamically routes each user to the most
+            relevant, highest-performing offer in real time. By analyzing multiple signals per
+            click, Smart Links maximize conversions, fill rates, and revenue for both advertisers
+            and publishers.
           </motion.p>
 
           <motion.button
@@ -197,24 +188,15 @@ conversions, fill rates, and revenue for both advertisers and publishers.
               gap: "8px",
               borderRadius: "40px",
               padding: "24px 32px",
-              background:
-                "linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%)",
+              background: "linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%)",
               color: "#FFFFFF",
               marginTop: "20px",
             }}
-
           >
-            <span
-              className="text-sm font-bold"
-              style={{ fontFamily: "Outfit" }}
-            >
+            <span className="text-sm font-bold" style={{ fontFamily: "Outfit" }}>
               Get Started
             </span>
-            <img
-              src="/assets/images/arrow.png"
-              alt="Arrow"
-              className="w-3 h-3"
-            />
+            <img src="/assets/images/arrow.png" alt="Arrow" className="w-3 h-3" />
           </motion.button>
         </motion.div>
 
@@ -230,7 +212,6 @@ conversions, fill rates, and revenue for both advertisers and publishers.
             marginLeft: "100px",
             marginTop: "-10px",
           }}
-
           variants={rightVariants}
           initial="hidden"
           whileInView="visible"
@@ -248,10 +229,7 @@ conversions, fill rates, and revenue for both advertisers and publishers.
           Home
         </span>
         <img src="/assets/images/side-arrow.png" className="w-1 h-2" />
-        <span
-          className="text-xs sm:text-sm"
-          style={{ fontFamily: "Outfit", color: "#4B4B4B" }}
-        >
+        <span className="text-xs sm:text-sm" style={{ fontFamily: "Outfit", color: "#4B4B4B" }}>
           Services
         </span>
       </div>
@@ -294,7 +272,6 @@ conversions, fill rates, and revenue for both advertisers and publishers.
   }
 `}
       </style>
-
     </section>
   );
 }

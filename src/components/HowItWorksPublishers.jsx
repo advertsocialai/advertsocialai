@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import './HowItWorksPushAds.mobile.css';
+import "./HowItWorksPushAds.mobile.css";
 
 const parentVariants = {
   hidden: {},
@@ -24,7 +24,7 @@ const HowItWorksPublishers = () => {
   return (
     <section
       className="relative w-full flex justify-center bg-white overflow-visible howitworks-pushads-mobile"
-      style={{ fontFamily: "Outfit", }}
+      style={{ fontFamily: "Outfit" }}
     >
       <motion.div
         className="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-0"
@@ -229,7 +229,7 @@ const HowItWorksPublishers = () => {
             className="w-full rounded-[30px] hiw-main-image"
             alt="mobile"
           /> */}
-          {/* <div className="flex flex-col gap-4 text-center">
+        {/* <div className="flex flex-col gap-4 text-center">
             {[
               "Push notification ads are consent-based messages delivered directly to users via browsers or mobile apps.",
               "Users explicitly opt in, creating a high-intent, permission-driven audience.",

@@ -14,10 +14,6 @@ export default function BlogDetail() {
   const [contents, setContents] = useState([]);
   const [activeId, setActiveId] = useState(null);
 
-
-
-
-
   useEffect(() => {
     loadBlog();
   }, [id]);
@@ -53,14 +49,12 @@ export default function BlogDetail() {
       const { scrollTop, scrollHeight, clientHeight } = scrollContainer;
       const containerTop = scrollContainer.getBoundingClientRect().top;
 
-
       if (scrollTop + clientHeight >= scrollHeight - 40) {
         if (contents.length > 0) {
           setActiveId(contents[contents.length - 1].id);
           return;
         }
       }
-
 
       const activeThreshold = 160;
       let active = "introduction";
@@ -85,16 +79,11 @@ export default function BlogDetail() {
     return () => scrollContainer.removeEventListener("scroll", handleScroll);
   }, [contents]);
 
-
-
   const loadBlog = async () => {
     try {
-      const res = await axios.get(
-        API_ENDPOINTS.GET_BLOG(id)
-      );
+      const res = await axios.get(API_ENDPOINTS.GET_BLOG(id));
       setBlog(res.data.data);
-    } catch (err) {
-    }
+    } catch (err) {}
   };
 
   if (!blog) {
@@ -102,26 +91,22 @@ export default function BlogDetail() {
   }
   const currentUrl = window.location.href;
 
-
   const cleanDescription = blog
     ? (() => {
-      const tempDiv = document.createElement("div");
-      tempDiv.innerHTML = blog.description;
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = blog.description;
 
-      tempDiv.querySelectorAll("h2, h3").forEach((heading, index) => {
-        heading.id = `section-${index}`;
-        heading.style.scrollMarginTop = "140px";
-      });
+        tempDiv.querySelectorAll("h2, h3").forEach((heading, index) => {
+          heading.id = `section-${index}`;
+          heading.style.scrollMarginTop = "140px";
+        });
 
-      return tempDiv.innerHTML;
-    })()
+        return tempDiv.innerHTML;
+      })()
     : "";
-
-
 
   return (
     <div className="bg-gray-50 ">
-
       {/* Hero Section */}
       <HeroBlog blog={blog} />
       {/* MAIN BLOG LAYOUT */}
@@ -136,10 +121,11 @@ export default function BlogDetail() {
               <div
                 className="absolute left-0 w-[3px] bg-purple-600 transition-all duration-300 ease-in-out rounded-full z-10 shadow-[0_0_10px_rgba(147,51,234,0.3)] blog-active-indicator"
                 style={{
-                  top: activeId === "introduction"
-                    ? "var(--toc-offset-top, 8px)"
-                    : `calc(( ${contents.findIndex(c => c.id === activeId) + 1} * var(--toc-item-height, 52px)) + var(--toc-offset-top, 8px))`,
-                  height: "var(--toc-indicator-height, 28px)"
+                  top:
+                    activeId === "introduction"
+                      ? "var(--toc-offset-top, 8px)"
+                      : `calc(( ${contents.findIndex((c) => c.id === activeId) + 1} * var(--toc-item-height, 52px)) + var(--toc-offset-top, 8px))`,
+                  height: "var(--toc-indicator-height, 28px)",
                 }}
               />
 
@@ -148,10 +134,11 @@ export default function BlogDetail() {
                 <li className="h-11 flex items-center">
                   <a
                     href="#introduction"
-                    className={`block px-5 py-2 transition-all duration-300 text-[15px] leading-tight blog-toc-link ${activeId === "introduction"
-                      ? "font-bold text-purple-700 translate-x-1"
-                      : "text-gray-500 hover:text-black hover:translate-x-1"
-                      }`}
+                    className={`block px-5 py-2 transition-all duration-300 text-[15px] leading-tight blog-toc-link ${
+                      activeId === "introduction"
+                        ? "font-bold text-purple-700 translate-x-1"
+                        : "text-gray-500 hover:text-black hover:translate-x-1"
+                    }`}
                   >
                     Introduction
                   </a>
@@ -164,10 +151,11 @@ export default function BlogDetail() {
                       <a
                         href={`#${item.id}`}
                         onClick={() => setActiveId(item.id)}
-                        className={`block px-5 py-2 transition-all duration-300 text-[15px] leading-tight blog-toc-link ${isActive
-                          ? "font-bold text-purple-700 translate-x-1"
-                          : "text-gray-500 hover:text-black hover:translate-x-1"
-                          }`}
+                        className={`block px-5 py-2 transition-all duration-300 text-[15px] leading-tight blog-toc-link ${
+                          isActive
+                            ? "font-bold text-purple-700 translate-x-1"
+                            : "text-gray-500 hover:text-black hover:translate-x-1"
+                        }`}
                       >
                         {item.text}
                       </a>
@@ -186,12 +174,14 @@ export default function BlogDetail() {
               scrollbarWidth: "none",
             }}
           >
-
-            <style dangerouslySetInnerHTML={{
-              __html: `
+            <style
+              dangerouslySetInnerHTML={{
+                __html: `
               #blog-content-scroll::-webkit-scrollbar { display: none !important; width: 0 !important; }
               #blog-content-scroll { -ms-overflow-style: none !important; scrollbar-width: none !important; }
-            ` }} />
+            `,
+              }}
+            />
             <div className="bg-white p-6 md:p-12 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 mb-2 blog-content-card">
               {/* Blog Title */}
               <h1
@@ -207,10 +197,9 @@ export default function BlogDetail() {
 
                 <span className="flex items-center gap-1 text-sm text-gray-400">
                   <FiClock className="w-4 h-4" />
-                  {blog.readtime}  read
+                  {blog.readtime} read
                 </span>
               </p>
-
 
               {/* Social Media Share Buttons */}
               <div className="flex gap-4 mb-6 blog-share-container">
@@ -259,18 +248,14 @@ export default function BlogDetail() {
                 </a>
               </div>
 
-
-
               <div
                 className="prose prose-lg max-w-none pb-32 blog-prose-content"
                 dangerouslySetInnerHTML={{ __html: cleanDescription }}
               />
-
             </div>
           </div>
         </div>
       </div>
-
 
       {/* Banner Section */}
       <Banner />

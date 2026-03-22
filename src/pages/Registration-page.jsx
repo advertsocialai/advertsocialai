@@ -23,8 +23,7 @@ export default function RegistrationPage({ onClose }) {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const isValidEmail = (email) =>
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -47,13 +46,10 @@ export default function RegistrationPage({ onClose }) {
 
     if (!form.firstname.trim()) newErrors.firstname = "First name is required.";
     if (!form.lastname.trim()) newErrors.lastname = "Last name is required.";
-    if (!form.companyName.trim())
-      newErrors.companyName = "Company name is required.";
+    if (!form.companyName.trim()) newErrors.companyName = "Company name is required.";
 
-    if (!form.email.trim())
-      newErrors.email = "Email is required.";
-    else if (!isValidEmail(form.email))
-      newErrors.email = "Enter a valid email address.";
+    if (!form.email.trim()) newErrors.email = "Email is required.";
+    else if (!isValidEmail(form.email)) newErrors.email = "Enter a valid email address.";
 
     if (!form.phone) {
       newErrors.phone = "Phone number is required.";
@@ -61,18 +57,14 @@ export default function RegistrationPage({ onClose }) {
       newErrors.phone = "Enter a valid phone number with country code.";
     }
 
-    if (!form.password)
-      newErrors.password = "Password is required.";
-    else if (form.password.length < 6)
-      newErrors.password = "Minimum 6 characters.";
+    if (!form.password) newErrors.password = "Password is required.";
+    else if (form.password.length < 6) newErrors.password = "Minimum 6 characters.";
 
-    if (!form.confirmPassword)
-      newErrors.confirmPassword = "Confirm password is required.";
+    if (!form.confirmPassword) newErrors.confirmPassword = "Confirm password is required.";
     else if (form.password !== form.confirmPassword)
       newErrors.confirmPassword = "Passwords do not match.";
 
-    if (!form.acceptTerms)
-      newErrors.terms = "You must accept the terms & conditions.";
+    if (!form.acceptTerms) newErrors.terms = "You must accept the terms & conditions.";
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -144,7 +136,6 @@ export default function RegistrationPage({ onClose }) {
     }
   };
 
-
   return (
     <div
       className="relative w-full max-w-[720px] rounded-2xl shadow-2xl px-6 py-8 sm:px-6 sm:py-10 flex flex-col items-center registration-root"
@@ -161,15 +152,12 @@ export default function RegistrationPage({ onClose }) {
         ✕
       </button>
 
-      <h2 className="text-2xl font-bold text-center registration-title">
-        Create your account
-      </h2>
+      <h2 className="text-2xl font-bold text-center registration-title">Create your account</h2>
       <p className="mb-5 text-center text-sm text-gray-600 registration-subtitle">
         Join Advert Social AI and get started today.
       </p>
 
       <form onSubmit={handleSubmit} className="w-full flex flex-col gap-3">
-
         {[
           { name: "firstname", placeholder: "First Name" },
           { name: "lastname", placeholder: "Last Name" },
@@ -182,10 +170,11 @@ export default function RegistrationPage({ onClose }) {
               value={form[field.name]}
               onChange={handleChange}
               placeholder={errors[field.name] || field.placeholder}
-              className={`p-3 w-full rounded-xl border ${errors[field.name]
-                ? "border-red-500 placeholder-red-500 placeholder:text-xs"
-                : "border-gray-200 placeholder-gray-500"
-                } focus:outline-none focus:ring-2 focus:ring-black bg-[rgba(255,255,255,0.6)]
+              className={`p-3 w-full rounded-xl border ${
+                errors[field.name]
+                  ? "border-red-500 placeholder-red-500 placeholder:text-xs"
+                  : "border-gray-200 placeholder-gray-500"
+              } focus:outline-none focus:ring-2 focus:ring-black bg-[rgba(255,255,255,0.6)]
               font-semibold text-base registration-input`}
             />
           </div>
@@ -194,23 +183,20 @@ export default function RegistrationPage({ onClose }) {
         {/* PHONE INPUT */}
         <div className="w-full">
           <div
-            className={`rounded-xl bg-[rgba(255,255,255,0.6)] border ${errors.phone ? "border-red-500" : "border-gray-200"
-              } focus-within:ring-2 focus-within:ring-black px-3 py-2 registration-phone-container`}
+            className={`rounded-xl bg-[rgba(255,255,255,0.6)] border ${
+              errors.phone ? "border-red-500" : "border-gray-200"
+            } focus-within:ring-2 focus-within:ring-black px-3 py-2 registration-phone-container`}
           >
             <PhoneInput
               international
               defaultCountry="US"
               value={form.phone}
-              onChange={(value) =>
-                setForm((prev) => ({ ...prev, phone: value || "" }))
-              }
+              onChange={(value) => setForm((prev) => ({ ...prev, phone: value || "" }))}
               placeholder="Phone number"
               className="w-full bg-transparent outline-none text-base font-semibold"
             />
           </div>
-          {errors.phone && (
-            <p className="text-xs text-red-500 mt-1">{errors.phone}</p>
-          )}
+          {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone}</p>}
         </div>
 
         {/* PASSWORD */}
@@ -221,24 +207,19 @@ export default function RegistrationPage({ onClose }) {
             value={form.password}
             onChange={handleChange}
             placeholder={errors.password || "Password"}
-            className={`p-3 w-full rounded-xl border ${errors.password
-              ? "border-red-500 placeholder-red-500 placeholder:text-xs"
-              : "border-gray-200 placeholder-gray-500"
-              } focus:outline-none focus:ring-2 focus:ring-black bg-[rgba(255,255,255,0.6)]
+            className={`p-3 w-full rounded-xl border ${
+              errors.password
+                ? "border-red-500 placeholder-red-500 placeholder:text-xs"
+                : "border-gray-200 placeholder-gray-500"
+            } focus:outline-none focus:ring-2 focus:ring-black bg-[rgba(255,255,255,0.6)]
             font-semibold text-base registration-input`}
           />
           <img
-            src={
-              showPassword
-                ? "/assets/images/eye-open.png"
-                : "/assets/images/eye-closed.png"
-            }
+            src={showPassword ? "/assets/images/eye-open.png" : "/assets/images/eye-closed.png"}
             onClick={() => setShowPassword(!showPassword)}
             className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 cursor-pointer registration-eye-icon"
           />
-          {errors.password && (
-            <p className="text-xs text-red-500 mt-1">{errors.password}</p>
-          )}
+          {errors.password && <p className="text-xs text-red-500 mt-1">{errors.password}</p>}
         </div>
 
         {/* CONFIRM PASSWORD */}
@@ -249,27 +230,22 @@ export default function RegistrationPage({ onClose }) {
             value={form.confirmPassword}
             onChange={handleChange}
             placeholder={errors.confirmPassword || "Confirm Password"}
-            className={`p-3 w-full rounded-xl border ${errors.confirmPassword
-              ? "border-red-500 placeholder-red-500 placeholder:text-xs"
-              : "border-gray-200 placeholder-gray-500"
-              } focus:outline-none focus:ring-2 focus:ring-black bg-[rgba(255,255,255,0.6)]
+            className={`p-3 w-full rounded-xl border ${
+              errors.confirmPassword
+                ? "border-red-500 placeholder-red-500 placeholder:text-xs"
+                : "border-gray-200 placeholder-gray-500"
+            } focus:outline-none focus:ring-2 focus:ring-black bg-[rgba(255,255,255,0.6)]
             font-semibold text-base registration-input`}
           />
           <img
             src={
-              showConfirmPassword
-                ? "/assets/images/eye-open.png"
-                : "/assets/images/eye-closed.png"
+              showConfirmPassword ? "/assets/images/eye-open.png" : "/assets/images/eye-closed.png"
             }
-            onClick={() =>
-              setShowConfirmPassword(!showConfirmPassword)
-            }
+            onClick={() => setShowConfirmPassword(!showConfirmPassword)}
             className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 cursor-pointer registration-eye-icon"
           />
           {errors.confirmPassword && (
-            <p className="text-xs text-red-500 mt-1">
-              {errors.confirmPassword}
-            </p>
+            <p className="text-xs text-red-500 mt-1">{errors.confirmPassword}</p>
           )}
         </div>
 
@@ -284,9 +260,7 @@ export default function RegistrationPage({ onClose }) {
           <span>I agree to the Terms & Conditions</span>
         </label>
 
-        {errors.acceptTerms && (
-          <p className="text-xs text-black-500">{errors.acceptTerms}</p>
-        )}
+        {errors.acceptTerms && <p className="text-xs text-black-500">{errors.acceptTerms}</p>}
 
         <button
           type="submit"

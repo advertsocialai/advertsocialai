@@ -35,9 +35,7 @@ export default function LatestResearch() {
     <section className="research-section">
       {/* Title Section */}
       <div className="research-header-wrapper">
-        <h2 className="research-title">
-          Latest Research and Publications
-        </h2>
+        <h2 className="research-title">Latest Research and Publications</h2>
       </div>
 
       {/* Main Content White Card */}
@@ -59,22 +57,16 @@ export default function LatestResearch() {
                   src={BLOG_IMAGE_BASE_URL + blog.image1}
                   alt={blog.name}
                   className="research-card-image"
-                  onError={(e) =>
-                    (e.target.src = "/assets/images/default-blog-image.jpg")
-                  }
+                  onError={(e) => (e.target.src = "/assets/images/default-blog-image.jpg")}
                 />
               </div>
 
               <div className="research-card-body">
-                <h3 className="research-card-title">
-                  {blog.name}
-                </h3>
+                <h3 className="research-card-title">{blog.name}</h3>
 
                 <div className="research-card-footer">
                   <div className="flex items-center">
-                    <span className="research-card-author">
-                      Admin
-                    </span>
+                    <span className="research-card-author">Admin</span>
                   </div>
 
                   <a
@@ -85,10 +77,7 @@ export default function LatestResearch() {
                     }}
                     className="research-arrow-link"
                   >
-                    <img
-                      src="/assets/images/img_arrowright.svg"
-                      className="research-arrow-icon"
-                    />
+                    <img src="/assets/images/img_arrowright.svg" className="research-arrow-icon" />
                   </a>
                 </div>
               </div>
@@ -107,10 +96,7 @@ export default function LatestResearch() {
             className="research-btn"
           >
             Check All Posts
-            <img
-              src="/assets/images/img_arrowright_gray_900.svg"
-              className="research-btn-icon"
-            />
+            <img src="/assets/images/img_arrowright_gray_900.svg" className="research-btn-icon" />
           </a>
         </div>
       </div>

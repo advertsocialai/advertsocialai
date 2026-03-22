@@ -1,88 +1,88 @@
 /* 4K / Ultra-wide Scaling (2560px - 2700px) */
 @media (min-width: 2560px) {
-    .hiw-advertisers-section {
-        padding-top: 100px !important;
-        padding-bottom: 200px !important;
-    }
+  .hiw-advertisers-section {
+    padding-top: 100px !important;
+    padding-bottom: 200px !important;
+  }
 
-    .hiw-advertisers-container {
-        max-width: 2400px !important;
-        height: 1100px !important;
-        /* Scaled height */
-        border-radius: 40px !important;
-    }
+  .hiw-advertisers-container {
+    max-width: 2400px !important;
+    height: 1100px !important;
+    /* Scaled height */
+    border-radius: 40px !important;
+  }
 
-    .hiw-doodle-image {
-        width: 2500px !important;
-        height: 1300px !important;
-        left: -50px !important;
-        top: -150px !important;
-    }
+  .hiw-doodle-image {
+    width: 2500px !important;
+    height: 1300px !important;
+    left: -50px !important;
+    top: -150px !important;
+  }
 
-    .hiw-title-container {
-        top: 80px !important;
-        gap: 60px !important;
-    }
+  .hiw-title-container {
+    top: 80px !important;
+    gap: 60px !important;
+  }
 
-    .hiw-title-container h2 {
-        font-size: 80px !important;
-        line-height: 100px !important;
-    }
+  .hiw-title-container h2 {
+    font-size: 80px !important;
+    line-height: 100px !important;
+  }
 
-    .hiw-content-row {
-        width: 2000px !important;
-        height: 650px !important;
-        top: 360px !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        gap: 80px !important;
-    }
+  .hiw-content-row {
+    width: 2000px !important;
+    height: 650px !important;
+    top: 360px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    gap: 80px !important;
+  }
 
-    .hiw-left-image-box {
-        width: 550px !important;
-        height: 650px !important;
-        border-radius: 80px !important;
-    }
+  .hiw-left-image-box {
+    width: 550px !important;
+    height: 650px !important;
+    border-radius: 80px !important;
+  }
 
-    .hiw-text-box {
-        width: 850px !important;
-        height: 650px !important;
-        gap: 70px !important;
-    }
+  .hiw-text-box {
+    width: 850px !important;
+    height: 650px !important;
+    gap: 70px !important;
+  }
 
-    .hiw-text-paragraph {
-        font-size: 32px !important;
-        line-height: 48px !important;
-    }
+  .hiw-text-paragraph {
+    font-size: 32px !important;
+    line-height: 48px !important;
+  }
 
-    .hiw-list-container {
-        width: 850px !important;
-        height: auto !important;
-        gap: 15px !important;
-    }
+  .hiw-list-container {
+    width: 850px !important;
+    height: auto !important;
+    gap: 15px !important;
+  }
 
-    .hiw-list-item {
-        gap: 24px !important;
-    }
+  .hiw-list-item {
+    gap: 24px !important;
+  }
 
-    .hiw-icon-box {
-        width: 45px !important;
-        height: 45px !important;
-    }
+  .hiw-icon-box {
+    width: 45px !important;
+    height: 45px !important;
+  }
 
-    .hiw-icon-box img {
-        width: 18px !important;
-        height: 16px !important;
-    }
+  .hiw-icon-box img {
+    width: 18px !important;
+    height: 16px !important;
+  }
 
-    .hiw-list-text {
-        font-size: 28px !important;
-        line-height: 40px !important;
-    }
+  .hiw-list-text {
+    font-size: 28px !important;
+    line-height: 40px !important;
+  }
 
-    .hiw-right-image-box {
-        width: 350px !important;
-        height: 650px !important;
-        border-radius: 80px !important;
-    }
+  .hiw-right-image-box {
+    width: 350px !important;
+    height: 650px !important;
+    border-radius: 80px !important;
+  }
 }

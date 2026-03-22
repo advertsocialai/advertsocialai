@@ -14,7 +14,6 @@ export default function HeaderHero() {
     { type: "inventory", img: "/assets/images/Blue/HomeHeroicon6.svg", clip: "clip-1" },
   ];
 
-
   const directionMap = {
     0: { x: -80, y: 0 },
     1: { x: 0, y: -80 },
@@ -33,7 +32,7 @@ export default function HeaderHero() {
         max-lg:flex-wrap max-lg:justify-center max-lg:text-center
         max-md:py-8
       "
-      style={{ fontFamily: 'Outfit' }}
+      style={{ fontFamily: "Outfit" }}
     >
       <style>{`
         /* TABLET - 769px to 1024px */
@@ -123,9 +122,8 @@ export default function HeaderHero() {
           backgroundImage: "url('/assets/images/Img-header-left.png')",
         }}
       >
-
         <motion.h1
-          style={{ fontFamily: 'Outfit' }}
+          style={{ fontFamily: "Outfit" }}
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -140,9 +138,8 @@ export default function HeaderHero() {
           Monetize every <br /> audience type
         </motion.h1>
 
-
         <motion.p
-          style={{ fontFamily: 'Outfit' }}
+          style={{ fontFamily: "Outfit" }}
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
@@ -154,14 +151,13 @@ export default function HeaderHero() {
             max-md:text-[16px]
           "
         >
-          No matter what audience and web or mobile traffic you want to monetize,
-          we are ready to meet your expectations for outstanding balance between
-          revenue and experience for your users.
+          No matter what audience and web or mobile traffic you want to monetize, we are ready to
+          meet your expectations for outstanding balance between revenue and experience for your
+          users.
         </motion.p>
 
-
         <motion.button
-          style={{ fontFamily: 'Outfit' }}
+          style={{ fontFamily: "Outfit" }}
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
@@ -188,7 +184,6 @@ export default function HeaderHero() {
           />
         </motion.button>
       </div>
-
 
       <div
         className="

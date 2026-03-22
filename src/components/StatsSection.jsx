@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 
-
 function useCountUp(shouldStart, start = 0, end, duration = 2000) {
   const [value, setValue] = useState(start);
 
@@ -29,17 +28,14 @@ function useCountUp(shouldStart, start = 0, end, duration = 2000) {
   return value;
 }
 
-
 export default function StatsSection() {
   const sectionRef = useRef(null);
   const [inView, setInView] = useState(false);
 
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.3 }
-    );
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), {
+      threshold: 0.3,
+    });
 
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -74,7 +70,6 @@ export default function StatsSection() {
 
   return (
     <>
-
       <section
         ref={sectionRef}
         className="
@@ -85,7 +80,6 @@ export default function StatsSection() {
         "
         style={{ backgroundColor: "#161313" }}
       >
-
         <div
           className="stats-wave absolute bottom-0 left-0 w-full h-[90px] bg-cover bg-bottom bg-no-repeat"
           style={{
@@ -93,14 +87,14 @@ export default function StatsSection() {
           }}
         />
 
-
         <div className="stats-title-wrapper text-center max-w-[780px] mx-auto mb-[45px]">
-          <h2 className="stats-title text-[32px] leading-[1.4] font-[400]" style={{ fontFamily: 'Outfit' }}>
-            Reach millions of users, monetize your inventory, and reach for the
-            stars!
+          <h2
+            className="stats-title text-[32px] leading-[1.4] font-[400]"
+            style={{ fontFamily: "Outfit" }}
+          >
+            Reach millions of users, monetize your inventory, and reach for the stars!
           </h2>
         </div>
-
 
         <div
           className="
@@ -112,49 +106,44 @@ export default function StatsSection() {
           "
         >
           {stats.map((item, index) => {
-            const animatedValue = useCountUp(
-              inView,
-              item.startValue,
-              item.endValue
-            );
+            const animatedValue = useCountUp(inView, item.startValue, item.endValue);
 
             return (
               <div
                 key={index}
                 className="stats-item relative text-center flex-1 max-w-[260px] px-[10px]"
               >
-
                 {item.iconType === "border" ? (
                   <div
                     className="stats-icon-box mx-auto mb-[22px] flex items-center justify-center"
                     style={{
-                      width: '120px',
-                      height: '120px',
-                      gap: '10px',
+                      width: "120px",
+                      height: "120px",
+                      gap: "10px",
                       opacity: 1,
-                      borderRadius: '12px',
-                      padding: '24px',
-                      boxSizing: 'border-box',
+                      borderRadius: "12px",
+                      padding: "24px",
+                      boxSizing: "border-box",
                     }}
                   >
                     <div
                       style={{
-                        width: '100%',
-                        height: '100%',
-                        background: '#161313',
-                        borderRadius: '8px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
+                        width: "100%",
+                        height: "100%",
+                        background: "#161313",
+                        borderRadius: "8px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
                       }}
                     >
                       <img
                         src={item.icon}
                         alt=""
                         style={{
-                          width: '80%',
-                          height: '80%',
-                          objectFit: 'contain',
+                          width: "80%",
+                          height: "80%",
+                          objectFit: "contain",
                         }}
                       />
                     </div>
@@ -163,46 +152,45 @@ export default function StatsSection() {
                   <div
                     className="stats-icon-box mx-auto mb-[22px] flex items-center justify-center"
                     style={{
-                      width: '110px',
-                      height: '110px',
-                      gap: '10px',
+                      width: "110px",
+                      height: "110px",
+                      gap: "10px",
                       opacity: 1,
-                      borderRadius: '12px',
-                      padding: '26px',
-                      boxSizing: 'border-box',
+                      borderRadius: "12px",
+                      padding: "26px",
+                      boxSizing: "border-box",
                     }}
                   >
                     <div
                       style={{
-                        width: '90%',
-                        height: '90%',
-                        borderRadius: '8px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
+                        width: "90%",
+                        height: "90%",
+                        borderRadius: "8px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
                       }}
                     >
                       <img
                         src={item.icon}
                         alt=""
                         style={{
-                          width: '90%',
-                          height: '90%',
-                          objectFit: 'contain',
+                          width: "90%",
+                          height: "90%",
+                          objectFit: "contain",
                         }}
                       />
                     </div>
                   </div>
                 )}
 
-
                 <div
                   className="stats-number text-[36px] font-[500] mb-[10px] mx-auto"
                   style={{
-                    fontFamily: 'Outfit',
-                    textAlign: 'center',
-                    width: '200px',
-                    marginTop: '-20px',
+                    fontFamily: "Outfit",
+                    textAlign: "center",
+                    width: "200px",
+                    marginTop: "-20px",
                   }}
                 >
                   {item.number.includes("billions")
@@ -212,11 +200,12 @@ export default function StatsSection() {
                       : item.number}
                 </div>
 
-
-                <p className="stats-desc text-[16px] text-[#cfcfcf] leading-[1.6] max-w-[220px] mx-auto" style={{ fontFamily: 'Outfit' }}>
+                <p
+                  className="stats-desc text-[16px] text-[#cfcfcf] leading-[1.6] max-w-[220px] mx-auto"
+                  style={{ fontFamily: "Outfit" }}
+                >
                   {item.text}
                 </p>
-
 
                 {index !== stats.length - 1 && (
                   <div className="stats-divider absolute right-[-25px] top-1/2 -translate-y-1/2 h-[60px] w-[1px] bg-white/20 max-sm:hidden"></div>
@@ -227,11 +216,7 @@ export default function StatsSection() {
         </div>
       </section>
 
-
-      <div
-        className="relative w-full overflow-hidden"
-        style={{ backgroundColor: "#161313" }}
-      >
+      <div className="relative w-full overflow-hidden" style={{ backgroundColor: "#161313" }}>
         <img
           src="/assets/images/Vector2.png"
           alt="wave"
@@ -243,7 +228,6 @@ export default function StatsSection() {
     "
         />
       </div>
-
 
       {/* Ultra-Wide & 4K Responsive Scaling */}
       <style>

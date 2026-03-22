@@ -2,130 +2,129 @@
 
 /* 2560px - 2K Scaling */
 @media (min-width: 2560px) {
-    .verticals-section {
-        padding-top: 150px !important;
-        padding-bottom: 150px !important;
-    }
+  .verticals-section {
+    padding-top: 150px !important;
+    padding-bottom: 150px !important;
+  }
 
-    .verticals-container {
-        max-width: 2200px !important;
-        min-height: 1500px !important;
-        height: auto !important;
-        padding: 100px 100px !important;
-        background-color: transparent !important;
-        background-image: url('/assets/images/vertical-subtract.png') !important;
-        background-size: 100% 100% !important;
-        border-radius: 0 !important;
-    }
+  .verticals-container {
+    max-width: 2200px !important;
+    min-height: 1500px !important;
+    height: auto !important;
+    padding: 100px 100px !important;
+    background-color: transparent !important;
+    background-image: url("/assets/images/vertical-subtract.png") !important;
+    background-size: 100% 100% !important;
+    border-radius: 0 !important;
+  }
 
-    .verticals-content {
-        max-width: 1400px !important;
-        margin-bottom: 120px !important;
-        margin-left: 200px !important;
-        gap: 60px !important;
-    }
+  .verticals-content {
+    max-width: 1400px !important;
+    margin-bottom: 120px !important;
+    margin-left: 200px !important;
+    gap: 60px !important;
+  }
 
-    .verticals-heading {
-        font-size: 5rem !important;
-        /* Scaled from 6xl/7xl */
-        line-height: 1.1 !important;
-    }
+  .verticals-heading {
+    font-size: 5rem !important;
+    /* Scaled from 6xl/7xl */
+    line-height: 1.1 !important;
+  }
 
-    .verticals-heading br {
-        display: block !important;
-    }
+  .verticals-heading br {
+    display: block !important;
+  }
 
-    .verticals-button {
-        padding: 24px 40px !important;
-        gap: 16px !important;
-    }
+  .verticals-button {
+    padding: 24px 40px !important;
+    gap: 16px !important;
+  }
 
-    .verticals-button span {
-        font-size: 1.2rem !important;
-    }
+  .verticals-button span {
+    font-size: 1.2rem !important;
+  }
 
-    .verticals-button img {
-        width: 20px !important;
-        height: 20px !important;
-    }
+  .verticals-button img {
+    width: 20px !important;
+    height: 20px !important;
+  }
 
-    .verticals-cards-container {
-        gap: 60px !important;
-    }
+  .verticals-cards-container {
+    gap: 60px !important;
+  }
 
-    .vertical-card {
-        max-width: 600px !important;
-        height: 600px !important;
-        border-radius: 30px !important;
-    }
+  .vertical-card {
+    max-width: 600px !important;
+    height: 600px !important;
+    border-radius: 30px !important;
+  }
 
-    .vertical-card img {
-        border-radius: 30px !important;
-    }
+  .vertical-card img {
+    border-radius: 30px !important;
+  }
 
-    /* Gradient mask fix/overlay */
-    .vertical-card>div:nth-child(2) {
-        border-radius: 30px !important;
-    }
+  /* Gradient mask fix/overlay */
+  .vertical-card > div:nth-child(2) {
+    border-radius: 30px !important;
+  }
 
+  .vertical-card-icon {
+    width: 100px !important;
+    height: 100px !important;
+    top: 80px !important;
+    left: 80px !important;
+  }
 
-    .vertical-card-icon {
-        width: 100px !important;
-        height: 100px !important;
-        top: 80px !important;
-        left: 80px !important;
-    }
+  .vertical-card-text {
+    bottom: 60px !important;
+    left: 60px !important;
+    right: 60px !important;
+    gap: 40px !important;
+  }
 
-    .vertical-card-text {
-        bottom: 60px !important;
-        left: 60px !important;
-        right: 60px !important;
-        gap: 40px !important;
-    }
+  .vertical-card-text h3 {
+    font-size: 2.2rem !important;
+    margin-bottom: 16px !important;
+  }
 
-    .vertical-card-text h3 {
-        font-size: 2.2rem !important;
-        margin-bottom: 16px !important;
-    }
+  .vertical-card-text p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
 
-    .vertical-card-text p {
-        font-size: 1.4rem !important;
-        line-height: 1.6 !important;
-    }
+  /* Bottom text */
+  .verticals-bottom-text {
+    margin-left: 80px !important;
+    margin-top: 60px !important;
+  }
 
-    /* Bottom text */
-    .verticals-bottom-text {
-        margin-left: 80px !important;
-        margin-top: 60px !important;
-    }
-
-    .verticals-bottom-text p {
-        font-size: 2.7rem !important;
-    }
+  .verticals-bottom-text p {
+    font-size: 2.7rem !important;
+  }
 }
 
 /* 2700px - 4K Scaling */
 @media (min-width: 2700px) {
-    .verticals-container {
-        max-width: 2500px !important;
-        min-height: 1100px !important;
-        padding: 120px 140px !important;
-    }
+  .verticals-container {
+    max-width: 2500px !important;
+    min-height: 1100px !important;
+    padding: 120px 140px !important;
+  }
 
-    .verticals-heading {
-        font-size: 6rem !important;
-    }
+  .verticals-heading {
+    font-size: 6rem !important;
+  }
 
-    .vertical-card {
-        max-width: 700px !important;
-        height: 700px !important;
-    }
+  .vertical-card {
+    max-width: 700px !important;
+    height: 700px !important;
+  }
 
-    .vertical-card-text h3 {
-        font-size: 2.5rem !important;
-    }
+  .vertical-card-text h3 {
+    font-size: 2.5rem !important;
+  }
 
-    .vertical-card-text p {
-        font-size: 1.6rem !important;
-    }
+  .vertical-card-text p {
+    font-size: 1.6rem !important;
+  }
 }

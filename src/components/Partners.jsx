@@ -11,7 +11,10 @@ export default function Partners() {
   ];
 
   return (
-    <section className="partners-section bg-white py-6 overflow-hidden w-full max-sm:py-4" style={{ fontFamily: 'Outfit' }}>
+    <section
+      className="partners-section bg-white py-6 overflow-hidden w-full max-sm:py-4"
+      style={{ fontFamily: "Outfit" }}
+    >
       <style>{`
         /* 4K+ / 2700px Scaling */
         @media (min-width: 1801px) {

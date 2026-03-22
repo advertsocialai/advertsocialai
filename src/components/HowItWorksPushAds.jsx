@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import './HowItWorksPushAds.css';
-import './HowItWorksPushAds.mobile.css';
+import "./HowItWorksPushAds.css";
+import "./HowItWorksPushAds.mobile.css";
 
 const parentVariants = {
   hidden: {},
@@ -25,7 +25,7 @@ const HowItWorksPushAds = () => {
   return (
     <section
       className="hiw-push-section relative w-full flex justify-center bg-white overflow-visible howitworks-pushads-mobile"
-      style={{ fontFamily: "Outfit", }}
+      style={{ fontFamily: "Outfit" }}
     >
       <motion.div
         className="hiw-main-container relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-0"
@@ -82,7 +82,9 @@ const HowItWorksPushAds = () => {
           >
             How Push Ads Work
             <br />
-            <span className="hiw-title-subtext" style={{ fontWeight: 400 }}>(Web & Mobile Push Flow)</span>
+            <span className="hiw-title-subtext" style={{ fontWeight: 400 }}>
+              (Web & Mobile Push Flow)
+            </span>
           </h2>
         </motion.div>
 
@@ -196,7 +198,9 @@ const HowItWorksPushAds = () => {
                       }}
                     >
                       <span style={{ fontWeight: 700 }}>{bold}:</span>
-                      <span className="hiw-check-text-light" style={{ fontWeight: 400 }}>{rest}</span>
+                      <span className="hiw-check-text-light" style={{ fontWeight: 400 }}>
+                        {rest}
+                      </span>
                     </span>
                   </div>
                 );

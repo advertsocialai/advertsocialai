@@ -4,8 +4,6 @@ export default function BannerMarquee() {
   return (
     <section className="bg-white h-[50vh] w-full flex justify-center items-center relative font-[Outfit]">
       <div className="relative w-full max-w-[1650px] h-[250px] flex justify-center items-center">
-
-        
         <div
           className="
             absolute w-full whitespace-nowrap px-[80px] py-[20px]
@@ -26,7 +24,6 @@ export default function BannerMarquee() {
           </div>
         </div>
 
-       
         <div
           className="
             absolute w-full whitespace-nowrap px-[80px] py-[20px]
@@ -37,7 +34,6 @@ export default function BannerMarquee() {
             overflow-hidden
           "
         >
-          
           <div
             className="
               absolute top-0 left-[-50%] w-[200%] h-full pointer-events-none
@@ -46,7 +42,6 @@ export default function BannerMarquee() {
             "
           ></div>
 
-        
           <div className="flex animate-marquee gap-0">
             <span className="pr-[60px]">
               Advert Social Empowers Publishers • Advert Social Empowers Publishers •
@@ -58,7 +53,6 @@ export default function BannerMarquee() {
         </div>
       </div>
 
-      
       <style>
         {`
           @keyframes marquee {

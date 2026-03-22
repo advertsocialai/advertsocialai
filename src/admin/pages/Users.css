@@ -1,83 +1,83 @@
 /* --- GLOBAL TABLE RESET --- */
 .custom-datatable .p-datatable {
-    border-collapse: collapse !important;
-    background: #fff !important;
-    width: 100%;
-    font-family: "Inter", sans-serif;
+  border-collapse: collapse !important;
+  background: #fff !important;
+  width: 100%;
+  font-family: "Inter", sans-serif;
 }
 
 /* --- HEADER ROW (Name, Email, Company, Phone) --- */
-.custom-datatable .p-datatable-thead>tr>th {
-    background: #f9fafb !important;
-    border-bottom: 1px solid #e5e7eb !important;
-    padding: 14px 20px !important;
-    font-size: 14px;
-    font-weight: 600;
-    color: #374151;
+.custom-datatable .p-datatable-thead > tr > th {
+  background: #f9fafb !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  padding: 14px 20px !important;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
 }
 
 /* --- FILTER ROW --- */
-.custom-datatable .p-datatable-thead+.p-datatable-thead>tr>th {
-    background: #fff !important;
-    padding: 12px 20px !important;
-    border-bottom: 1px solid #e5e7eb !important;
+.custom-datatable .p-datatable-thead + .p-datatable-thead > tr > th {
+  background: #fff !important;
+  padding: 12px 20px !important;
+  border-bottom: 1px solid #e5e7eb !important;
 }
 
 /* --- FILTER INPUT (Search box) --- */
 .custom-datatable .p-column-filter {
-    display: flex;
-    align-items: center;
-    border: 1px solid #d1d5db !important;
-    background: #fff !important;
-    padding: 8px 12px !important;
-    border-radius: 7px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db !important;
+  background: #fff !important;
+  padding: 8px 12px !important;
+  border-radius: 7px;
 }
 
 .custom-datatable .p-column-filter input {
-    border: none !important;
-    outline: none !important;
-    font-size: 14px;
-    width: 100%;
+  border: none !important;
+  outline: none !important;
+  font-size: 14px;
+  width: 100%;
 }
 
 /* --- FILTER ICON --- */
 .custom-datatable .p-column-filter-icon {
-    font-size: 14px;
-    opacity: 0.6;
+  font-size: 14px;
+  opacity: 0.6;
 }
 
 /* --- DATA ROWS --- */
-.custom-datatable .p-datatable-tbody>tr>td {
-    padding: 18px 20px !important;
-    border-bottom: 1px solid #f0f0f0 !important;
-    font-size: 15px;
-    color: #374151;
+.custom-datatable .p-datatable-tbody > tr > td {
+  padding: 18px 20px !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  font-size: 15px;
+  color: #374151;
 }
 
 /* Remove hover highlight because second image is flat design */
-.custom-datatable .p-datatable-tbody>tr:hover {
-    background: #fafafa !important;
+.custom-datatable .p-datatable-tbody > tr:hover {
+  background: #fafafa !important;
 }
 
 /* WHITE CARD WRAPPER */
 .table-card {
-    background: #ffffff;
-    padding: 16px;
-    border-radius: 14px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    margin: 15px auto;
-    width: 100%;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin: 15px auto;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
-    .table-card {
-        padding: 24px 28px;
-        margin: 25px auto;
-    }
+  .table-card {
+    padding: 24px 28px;
+    margin: 25px auto;
+  }
 }
 
 /* Optional: keep table edges rounded inside card */
 .custom-datatable .p-datatable-wrapper {
-    border-radius: 10px !important;
-    overflow: hidden;
+  border-radius: 10px !important;
+  overflow: hidden;
 }

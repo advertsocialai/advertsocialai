@@ -112,7 +112,11 @@ export default function NewsletterAdmin() {
       });
 
       if (res.ok) {
-        Swal.fire("Success", `Newsletter sent to ${selectedEmails.length} subscriber(s)!`, "success");
+        Swal.fire(
+          "Success",
+          `Newsletter sent to ${selectedEmails.length} subscriber(s)!`,
+          "success"
+        );
         setSubject("");
         setContent("");
         setSelectedEmails([]);
@@ -128,21 +132,37 @@ export default function NewsletterAdmin() {
 
   // Spinner component
   const Spinner = () => (
-    <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    <svg
+      className="animate-spin h-4 w-4 text-white"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <circle
+        className="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        strokeWidth="4"
+      ></circle>
+      <path
+        className="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      ></path>
     </svg>
   );
 
   // Filter subscribers by search
   const filteredSubscribers = subscribers.filter((sub) => {
     if (!search) return true;
-    const subEmail = typeof sub === "string" ? sub : (sub.email || sub.Email || "");
+    const subEmail = typeof sub === "string" ? sub : sub.email || sub.Email || "";
     return subEmail.toLowerCase().includes(search.toLowerCase());
   });
 
   // Helper to get email string from a subscriber object
-  const getEmail = (sub) => typeof sub === "string" ? sub : (sub.email || sub.Email || "");
+  const getEmail = (sub) => (typeof sub === "string" ? sub : sub.email || sub.Email || "");
 
   const toggleSelectEmail = (emailStr) => {
     setSelectedEmails((prev) =>
@@ -162,13 +182,10 @@ export default function NewsletterAdmin() {
 
   return (
     <div className="p-4 md:p-6 bg-white rounded-lg shadow">
-      <h1 className="text-2xl font-bold text-gray-800 mb-6">
-        📬 Newsletter Admin Dashboard
-      </h1>
+      <h1 className="text-2xl font-bold text-gray-800 mb-6">📬 Newsletter Admin Dashboard</h1>
 
       {/* ACTIONS ROW */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-
         {/* Add Subscriber */}
         <div className="border rounded-lg p-4">
           <h4 className="font-semibold mb-3 text-gray-700">Add Subscriber</h4>
@@ -183,9 +200,15 @@ export default function NewsletterAdmin() {
             onClick={addSubscriber}
             disabled={subscribing}
             className="w-full text-white px-4 py-2.5 rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform"
-            style={{ background: 'linear-gradient(to right, #00E676, #6A0DAD)' }}
+            style={{ background: "linear-gradient(to right, #00E676, #6A0DAD)" }}
           >
-            {subscribing ? <><Spinner /> Subscribing...</> : "Subscribe"}
+            {subscribing ? (
+              <>
+                <Spinner /> Subscribing...
+              </>
+            ) : (
+              "Subscribe"
+            )}
           </button>
         </div>
 
@@ -203,9 +226,15 @@ export default function NewsletterAdmin() {
             onClick={removeSubscriber}
             disabled={unsubscribing}
             className="w-full text-white px-4 py-2.5 rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform"
-            style={{ background: 'linear-gradient(to right, #00E676, #6A0DAD)' }}
+            style={{ background: "linear-gradient(to right, #00E676, #6A0DAD)" }}
           >
-            {unsubscribing ? <><Spinner /> Removing...</> : "Unsubscribe"}
+            {unsubscribing ? (
+              <>
+                <Spinner /> Removing...
+              </>
+            ) : (
+              "Unsubscribe"
+            )}
           </button>
         </div>
 
@@ -235,9 +264,15 @@ export default function NewsletterAdmin() {
             onClick={sendNewsletter}
             disabled={sending || selectedEmails.length === 0}
             className="w-full text-white px-4 py-2.5 rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform"
-            style={{ background: 'linear-gradient(to right, #00E676, #6A0DAD)' }}
+            style={{ background: "linear-gradient(to right, #00E676, #6A0DAD)" }}
           >
-            {sending ? <><Spinner /> Sending...</> : `Send Newsletter (${selectedEmails.length})`}
+            {sending ? (
+              <>
+                <Spinner /> Sending...
+              </>
+            ) : (
+              `Send Newsletter (${selectedEmails.length})`
+            )}
           </button>
         </div>
       </div>
@@ -270,7 +305,10 @@ export default function NewsletterAdmin() {
                   <th className="p-3 border w-10">
                     <input
                       type="checkbox"
-                      checked={filteredSubscribers.length > 0 && filteredSubscribers.every((s) => selectedEmails.includes(getEmail(s)))}
+                      checked={
+                        filteredSubscribers.length > 0 &&
+                        filteredSubscribers.every((s) => selectedEmails.includes(getEmail(s)))
+                      }
                       onChange={toggleSelectAll}
                       className="w-4 h-4 cursor-pointer"
                     />
@@ -284,11 +322,17 @@ export default function NewsletterAdmin() {
                 {filteredSubscribers.length > 0 ? (
                   filteredSubscribers.map((sub, i) => {
                     const subEmail = getEmail(sub);
-                    const subDate = typeof sub === "object" ? (sub.created_at || sub.createdAt || sub.subscribed_at || "—") : "—";
+                    const subDate =
+                      typeof sub === "object"
+                        ? sub.created_at || sub.createdAt || sub.subscribed_at || "—"
+                        : "—";
                     const isChecked = selectedEmails.includes(subEmail);
 
                     return (
-                      <tr key={i} className={`border hover:bg-gray-50 ${isChecked ? 'bg-blue-50' : ''}`}>
+                      <tr
+                        key={i}
+                        className={`border hover:bg-gray-50 ${isChecked ? "bg-blue-50" : ""}`}
+                      >
                         <td className="p-3 border">
                           <input
                             type="checkbox"

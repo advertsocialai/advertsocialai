@@ -24,8 +24,7 @@ export default function FAQs() {
         const res = await fetch(API_ENDPOINTS.GET_ALL_FAQS);
         const data = await res.json();
         setFaqs(data);
-      } catch (err) {
-      }
+      } catch (err) {}
     }
     loadFAQs();
   }, []);
@@ -60,7 +59,6 @@ export default function FAQs() {
       setFaqs([savedFAQ, ...faqs]);
 
       setForm({ question: "", answer: "" });
-
     } catch (err) {
       alert("Error adding FAQ");
     }
@@ -83,13 +81,12 @@ export default function FAQs() {
       setFaqs(faqs.map((faq) => (faq.id === id ? updated : faq)));
 
       setEditingId(null);
-
     } catch (err) {
       alert("Error updating FAQ");
     }
   }
 
-  // DELETE 
+  // DELETE
   async function confirmDelete() {
     try {
       await fetch(API_ENDPOINTS.DELETE_FAQ(deleteId), {
@@ -97,7 +94,6 @@ export default function FAQs() {
       });
 
       setFaqs(faqs.filter((f) => f.id !== deleteId));
-
     } catch (err) {
       alert("Error deleting FAQ");
     }
@@ -113,17 +109,16 @@ export default function FAQs() {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50">
         <div className="bg-white w-[420px] rounded-xl shadow-xl p-6">
-
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold">Delete Confirmation</h2>
-            <button onClick={onClose} className="text-gray-600 hover:text-black text-xl">×</button>
+            <button onClick={onClose} className="text-gray-600 hover:text-black text-xl">
+              ×
+            </button>
           </div>
 
           <div className="flex items-center gap-3 mb-6">
             <span className="text-3xl">⚠️</span>
-            <p className="text-gray-700 text-sm">
-              Are you sure you want to delete this FAQ?
-            </p>
+            <p className="text-gray-700 text-sm">Are you sure you want to delete this FAQ?</p>
           </div>
 
           <div className="flex justify-end gap-4">
@@ -148,7 +143,6 @@ export default function FAQs() {
 
   return (
     <div className="w-full min-h-screen bg-gray-100 p-4 md:p-6 flex flex-col lg:flex-row gap-6 md:gap-10">
-
       {/* LEFT - Create FAQ */}
       <div className="bg-white p-4 md:p-6 rounded-xl shadow-lg border w-full lg:w-[40%] h-fit">
         <h2 className="text-xl font-semibold mb-4">Create a new FAQ</h2>
@@ -180,33 +174,23 @@ export default function FAQs() {
 
       {/* RIGHT - FAQ LIST */}
       <div className="w-full lg:w-[60%] flex flex-col gap-6">
-
-        {faqs.length === 0 && (
-          <p className="text-gray-500 text-lg">No FAQs added yet.</p>
-        )}
+        {faqs.length === 0 && <p className="text-gray-500 text-lg">No FAQs added yet.</p>}
 
         {faqs.map((faq) => (
-          <div
-            key={faq.id}
-            className="bg-white p-4 md:p-8 rounded-xl shadow-lg border"
-          >
+          <div key={faq.id} className="bg-white p-4 md:p-8 rounded-xl shadow-lg border">
             {editingId === faq.id ? (
               <>
                 {/* Inline Edit Fields */}
                 <input
                   type="text"
                   value={editForm.question}
-                  onChange={(e) =>
-                    setEditForm({ ...editForm, question: e.target.value })
-                  }
+                  onChange={(e) => setEditForm({ ...editForm, question: e.target.value })}
                   className="w-full p-4 border rounded-lg mb-4 text-lg"
                 />
 
                 <textarea
                   value={editForm.answer}
-                  onChange={(e) =>
-                    setEditForm({ ...editForm, answer: e.target.value })
-                  }
+                  onChange={(e) => setEditForm({ ...editForm, answer: e.target.value })}
                   className="w-full p-4 border rounded-lg h-32 mb-6"
                 />
 
@@ -271,7 +255,6 @@ export default function FAQs() {
         onClose={() => setShowDeleteModal(false)}
         onConfirm={confirmDelete}
       />
-
     </div>
   );
 }

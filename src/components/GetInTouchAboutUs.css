@@ -1,104 +1,104 @@
 /* 4K / Ultra-wide Scaling (2560px - 2700px) */
 @media (min-width: 2560px) {
-    .get-in-touch-root {
-        max-width: 2800px !important;
-        padding-top: 100px !important;
-        padding-bottom: 100px !important;
-    }
+  .get-in-touch-root {
+    max-width: 2800px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
 
-    .get-in-touch-section {
-        min-height: 1000px !important;
-        padding-top: 120px !important;
-        padding-bottom: 120px !important;
-        border-radius: 40px !important;
-    }
+  .get-in-touch-section {
+    min-height: 1000px !important;
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+    border-radius: 40px !important;
+  }
 
-    .get-in-touch-container {
-        max-width: 2400px !important;
-        gap: 150px !important;
-    }
+  .get-in-touch-container {
+    max-width: 2400px !important;
+    gap: 150px !important;
+  }
 
-    .get-in-touch-features {
-        max-width: 1000px !important;
-        gap: 100px !important;
-    }
+  .get-in-touch-features {
+    max-width: 1000px !important;
+    gap: 100px !important;
+  }
 
-    .get-in-touch-heading {
-        font-size: 80px !important;
-        line-height: 100px !important;
-    }
+  .get-in-touch-heading {
+    font-size: 80px !important;
+    line-height: 100px !important;
+  }
 
-    .get-in-touch-desc {
-        font-size: 32px !important;
-        line-height: 48px !important;
-        max-width: 1000px !important;
-    }
+  .get-in-touch-desc {
+    font-size: 32px !important;
+    line-height: 48px !important;
+    max-width: 1000px !important;
+  }
 
-    .get-in-touch-info-item {
-        gap: 24px !important;
-    }
+  .get-in-touch-info-item {
+    gap: 24px !important;
+  }
 
-    .get-in-touch-info-item h3 {
-        font-size: 32px !important;
-    }
+  .get-in-touch-info-item h3 {
+    font-size: 32px !important;
+  }
 
-    .get-in-touch-info-item p,
-    .get-in-touch-info-item a {
-        font-size: 28px !important;
-    }
+  .get-in-touch-info-item p,
+  .get-in-touch-info-item a {
+    font-size: 28px !important;
+  }
 
-    .get-in-touch-social-icon {
-        width: 80px !important;
-        height: 80px !important;
-    }
+  .get-in-touch-social-icon {
+    width: 80px !important;
+    height: 80px !important;
+  }
 
-    .get-in-touch-form-container {
-        max-width: 1000px !important;
-        padding: 80px !important;
-        border-radius: 40px !important;
-    }
+  .get-in-touch-form-container {
+    max-width: 1000px !important;
+    padding: 80px !important;
+    border-radius: 40px !important;
+  }
 
-    .get-in-touch-form-container h6 {
-        font-size: 40px !important;
-    }
+  .get-in-touch-form-container h6 {
+    font-size: 40px !important;
+  }
 
-    .get-in-touch-form-container p {
-        font-size: 28px !important;
-        line-height: 40px !important;
-    }
+  .get-in-touch-form-container p {
+    font-size: 28px !important;
+    line-height: 40px !important;
+  }
 
-    .get-in-touch-label {
-        font-size: 24px !important;
-        margin-bottom: 12px !important;
-    }
+  .get-in-touch-label {
+    font-size: 24px !important;
+    margin-bottom: 12px !important;
+  }
 
-    .get-in-touch-input,
-    .get-in-touch-phone-container,
-    .get-in-touch-service-btn {
-        height: 100px !important;
-        font-size: 24px !important;
-        border-radius: 20px !important;
-    }
+  .get-in-touch-input,
+  .get-in-touch-phone-container,
+  .get-in-touch-service-btn {
+    height: 100px !important;
+    font-size: 24px !important;
+    border-radius: 20px !important;
+  }
 
-    .get-in-touch-phone-container input {
-        font-size: 24px !important;
-    }
+  .get-in-touch-phone-container input {
+    font-size: 24px !important;
+  }
 
-    .get-in-touch-textarea {
-        height: 250px !important;
-        font-size: 24px !important;
-        border-radius: 20px !important;
-        padding: 30px !important;
-    }
+  .get-in-touch-textarea {
+    height: 250px !important;
+    font-size: 24px !important;
+    border-radius: 20px !important;
+    padding: 30px !important;
+  }
 
-    .get-in-touch-submit-btn {
-        padding: 30px 60px !important;
-        font-size: 28px !important;
-        border-radius: 60px !important;
-    }
+  .get-in-touch-submit-btn {
+    padding: 30px 60px !important;
+    font-size: 28px !important;
+    border-radius: 60px !important;
+  }
 
-    .get-in-touch-submit-btn img {
-        width: 20px !important;
-        height: 20px !important;
-    }
+  .get-in-touch-submit-btn img {
+    width: 20px !important;
+    height: 20px !important;
+  }
 }

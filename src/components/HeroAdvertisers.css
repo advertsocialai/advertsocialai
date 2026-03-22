@@ -1,82 +1,82 @@
 /* 4K / Ultra-wide Scaling (2560px - 2700px) */
 @media (min-width: 2560px) {
-    .hero-advertisers-section {
-        max-height: 1400px !important;
-        min-height: 900px !important;
-        max-width: 100% !important;
-        margin-top: -150px !important;
-        /* Move section up */
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        border-radius: 0 !important;
-    }
+  .hero-advertisers-section {
+    max-height: 1400px !important;
+    min-height: 900px !important;
+    max-width: 100% !important;
+    margin-top: -150px !important;
+    /* Move section up */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 !important;
+  }
 
-    .hero-advertisers-container {
-        max-width: 2400px !important;
-    }
+  .hero-advertisers-container {
+    max-width: 2400px !important;
+  }
 
-    .hero-push-text {
-        width: 1100px !important;
-        height: auto !important;
-        gap: 80px !important;
-        margin-left: -50px !important;
-    }
+  .hero-push-text {
+    width: 1100px !important;
+    height: auto !important;
+    gap: 80px !important;
+    margin-left: -50px !important;
+  }
 
-    .hero-push-title {
-        width: 1000px !important;
-        height: auto !important;
-        font-size: 110px !important;
-        line-height: 120px !important;
-    }
+  .hero-push-title {
+    width: 1000px !important;
+    height: auto !important;
+    font-size: 110px !important;
+    line-height: 120px !important;
+  }
 
-    .hero-push-subtitle {
-        width: 1000px !important;
-        height: auto !important;
-        font-size: 72px !important;
-        line-height: 84px !important;
-    }
+  .hero-push-subtitle {
+    width: 1000px !important;
+    height: auto !important;
+    font-size: 72px !important;
+    line-height: 84px !important;
+  }
 
-    .hero-push-desc {
-        width: 900px !important;
-        height: auto !important;
-        font-size: 28px !important;
-        line-height: 42px !important;
-    }
+  .hero-push-desc {
+    width: 900px !important;
+    height: auto !important;
+    font-size: 28px !important;
+    line-height: 42px !important;
+  }
 
-    .hero-push-btn {
-        width: 260px !important;
-        height: 90px !important;
-        padding: 30px 48px !important;
-        border-radius: 60px !important;
-    }
+  .hero-push-btn {
+    width: 260px !important;
+    height: 90px !important;
+    padding: 30px 48px !important;
+    border-radius: 60px !important;
+  }
 
-    .hero-push-btn span {
-        font-size: 24px !important;
-    }
+  .hero-push-btn span {
+    font-size: 24px !important;
+  }
 
-    .hero-push-btn img {
-        width: 20px !important;
-        height: 20px !important;
-    }
+  .hero-push-btn img {
+    width: 20px !important;
+    height: 20px !important;
+  }
 
-    .hero-push-graphic {
-        width: 1000px !important;
-        height: auto !important;
-        margin-right: -50px !important;
-    }
+  .hero-push-graphic {
+    width: 1000px !important;
+    height: auto !important;
+    margin-right: -50px !important;
+  }
 
-    .hero-breadcrumb {
-        bottom: 20px !important;
-        left: 300px !important;
-        gap: 15px !important;
-    }
+  .hero-breadcrumb {
+    bottom: 20px !important;
+    left: 300px !important;
+    gap: 15px !important;
+  }
 
-    .hero-breadcrumb span {
-        font-size: 25px !important;
-    }
+  .hero-breadcrumb span {
+    font-size: 25px !important;
+  }
 
-    .hero-breadcrumb img {
-        width: 10px !important;
-        height: 14px !important;
-    }
+  .hero-breadcrumb img {
+    width: 10px !important;
+    height: 14px !important;
+  }
 }

@@ -8,15 +8,15 @@ import Contact from "../components/Contact";
 import Research from "../components/Research";
 
 export default function InPage() {
-    return (
-        <>
-        <HeroInPage />
-        <FeaturesInPage />
-        <HowItWorksInPage />
-        <VerticalsInPage />
-        <BenefitsInPage />
-        <Contact />
-        <Research />
-        </>
-    );
+  return (
+    <>
+      <HeroInPage />
+      <FeaturesInPage />
+      <HowItWorksInPage />
+      <VerticalsInPage />
+      <BenefitsInPage />
+      <Contact />
+      <Research />
+    </>
+  );
 }

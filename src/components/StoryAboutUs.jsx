@@ -36,8 +36,6 @@ function useCounter(target, duration = 2000) {
   return { count, ref };
 }
 
-
-
 const waveVariants = {
   animate: {
     y: [0, -4, 0],
@@ -54,9 +52,7 @@ import "./StoryAboutUs.css";
 const StoryAboutUs = () => {
   return (
     <section className="story-about-root pt-6 sm:pt-8 md:pt-10 lg:pt-16 pb-12 sm:pb-16 md:pb-20 lg:pb-[120px]">
-
       <div className="story-about-container desktop px-4 sm:px-6 lg:px-0 hidden lg:block">
-
         <motion.img
           src="/assets/images/Blue/Dooodle.png"
           alt="Doodle"
@@ -72,16 +68,10 @@ const StoryAboutUs = () => {
         />
 
         <div className="story-about-title-wrapper absolute flex flex-col items-center">
-          <span className="story-about-title-text">
-            Numbers are Telling our Story
-          </span>
+          <span className="story-about-title-text">Numbers are Telling our Story</span>
         </div>
 
-        <img
-          src="/assets/images/Union.png"
-          alt="Union"
-          className="story-about-union absolute"
-        />
+        <img src="/assets/images/Union.png" alt="Union" className="story-about-union absolute" />
 
         {/* COUNTERS (Desktop) */}
         <div className="story-about-counters-wrapper absolute flex justify-center items-center">
@@ -114,7 +104,10 @@ const StoryAboutUs = () => {
 
       {/* ---------------- MOBILE---------------- */}
       <div className="w-full flex flex-col lg:hidden px-6 py-10 bg-[#f7f6ff] rounded-2xl gap-10">
-        <h2 className="text-center text-[28px] font-semibold text-[#1B1A1A] leading-tight" style={{ fontFamily: 'Outfit' }}>
+        <h2
+          className="text-center text-[28px] font-semibold text-[#1B1A1A] leading-tight"
+          style={{ fontFamily: "Outfit" }}
+        >
           Numbers are Telling our Story
         </h2>
 
@@ -125,22 +118,13 @@ const StoryAboutUs = () => {
             label="Years of Prebid Experience"
           />
 
-          <MobileCounter
-            icon="/assets/images/Icon.png"
-            number="500+"
-            label="Active Websites"
-          />
+          <MobileCounter icon="/assets/images/Icon.png" number="500+" label="Active Websites" />
         </div>
 
         <div className="flex justify-center">
-          <MobileCounter
-            icon="/assets/images/story-icon-3.png"
-            number="50"
-            label="Employees"
-          />
+          <MobileCounter icon="/assets/images/story-icon-3.png" number="50" label="Employees" />
         </div>
       </div>
-
     </section>
   );
 };
@@ -156,24 +140,16 @@ function DesktopCounter({ icon, number, label, iconWidth }) {
         className="story-about-icon-box flex justify-center items-center"
         style={{ width: iconWidth }}
       >
-        <img
-          src={icon}
-          className="w-[94px] h-[94px] object-contain"
-        />
+        <img src={icon} className="w-[94px] h-[94px] object-contain" />
       </div>
 
       <div className="flex flex-col items-center gap-4">
-        <span
-          ref={ref}
-          className="story-about-counter-number"
-        >
+        <span ref={ref} className="story-about-counter-number">
           {count}
           {number.includes("+") ? "+" : ""}
         </span>
 
-        <span className="story-about-counter-label">
-          {label}
-        </span>
+        <span className="story-about-counter-label">{label}</span>
       </div>
     </div>
   );
@@ -194,13 +170,16 @@ function MobileCounter({ icon, number, label }) {
       <span
         ref={ref}
         className="text-[48px] font-semibold text-[#1B1A1A]"
-        style={{ fontFamily: 'Outfit' }}
+        style={{ fontFamily: "Outfit" }}
       >
         {count}
         {number.includes("+") ? "+" : ""}
       </span>
 
-      <span className="text-[16px] text-[#4B4B4B] text-center leading-[22px]" style={{ fontFamily: 'Outfit' }}>
+      <span
+        className="text-[16px] text-[#4B4B4B] text-center leading-[22px]"
+        style={{ fontFamily: "Outfit" }}
+      >
         {label}
       </span>
     </div>

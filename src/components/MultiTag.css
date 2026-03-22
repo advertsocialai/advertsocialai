@@ -8,7 +8,6 @@
 
 /* Mobile styles */
 @media (max-width: 768px) {
-
   /* Hide desktop on mobile */
   .multitag-desktop {
     display: none;
@@ -62,7 +61,7 @@
     align-items: center !important;
   }
 
-  .multitag-row>div {
+  .multitag-row > div {
     width: 90% !important;
     max-width: 280px !important;
   }
@@ -96,7 +95,6 @@
    MOBILE FIX (< 550px)
    Works for iOS + Android */
 @media (max-width: 550px) {
-
   .multitag-main-layout {
     display: flex !important;
     flex-direction: column !important;
@@ -104,7 +102,7 @@
     gap: 24px !important;
   }
 
-  .multitag-main-layout>div {
+  .multitag-main-layout > div {
     position: static !important;
     transform: none !important;
     left: auto !important;
@@ -120,11 +118,9 @@
   }
 }
 
-
 /*
    SAFE MOBILE FIX (NO BLANK, NO OVERLAP) */
 @media (max-width: 768px) {
-
   /* Switch desktop → mobile */
   .multitag-desktop {
     display: none;
@@ -151,7 +147,7 @@
     min-height: auto;
   }
 
-  .hero-card-grid>div {
+  .hero-card-grid > div {
     max-width: 320px;
     width: 100%;
     margin: 0 auto;
@@ -166,7 +162,6 @@
 /* 
    MOBILE ZIG-ZAG CARD STRUCTURE */
 @media (max-width: 768px) {
-
   .hero-card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -175,14 +170,14 @@
   }
 
   /* Base card size */
-  .hero-card-grid>div {
+  .hero-card-grid > div {
     max-width: 160px;
     width: 100%;
   }
 
   /* Center single cards */
-  .hero-card-grid>div:nth-child(3),
-  .hero-card-grid>div:nth-child(4) {
+  .hero-card-grid > div:nth-child(3),
+  .hero-card-grid > div:nth-child(4) {
     grid-column: 1 / -1;
     justify-self: center;
   }
@@ -227,7 +222,7 @@
     width: 1440px !important;
     /* Lock width to desktop size */
     margin: 0 auto !important;
-    transform: scale(2.0) !important;
+    transform: scale(2) !important;
     /* Proportional scale */
     transform-origin: center top !important;
     position: relative !important;

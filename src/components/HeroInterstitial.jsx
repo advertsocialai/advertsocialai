@@ -74,8 +74,6 @@ function HeroInterstitial() {
       />
 
       <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center w-full px-4 sm:px-6 md:px-8 lg:px-[5%] max-w-[1280px] hero-interstitial-content">
-
-
         <motion.div
           className="
     hero-push-text flex flex-col
@@ -97,9 +95,7 @@ function HeroInterstitial() {
             marginLeft: "-60px",
             marginTop: "20px",
           }}
-
         >
-
           <motion.h1
             variants={childVariants}
             className="
@@ -124,7 +120,6 @@ function HeroInterstitial() {
               letterSpacing: "0%",
               color: "#FFFFFF",
             }}
-
           >
             Interstitial
           </motion.h1>
@@ -154,11 +149,9 @@ function HeroInterstitial() {
               color: "#FFFFFF",
               // marginTop: "-80px",
             }}
-
           >
             Full-Screen Engagement at Natural Breakpoints
           </motion.h2>
-
 
           <motion.p
             variants={childVariants}
@@ -184,13 +177,11 @@ function HeroInterstitial() {
               letterSpacing: "0%",
               color: "#F9F9F9",
             }}
-
           >
-
-
-            Advert Social AI’s Interstitial Ads provide full-screen ad placements that appear at natural transition
-            points—such as page loads, app opens, or content breaks—ensuring maximum attention, strong
-            engagement, and premium performance without disrupting user experience.
+            Advert Social AI’s Interstitial Ads provide full-screen ad placements that appear at
+            natural transition points—such as page loads, app opens, or content breaks—ensuring
+            maximum attention, strong engagement, and premium performance without disrupting user
+            experience.
           </motion.p>
 
           <motion.button
@@ -202,24 +193,15 @@ function HeroInterstitial() {
               gap: "8px",
               borderRadius: "40px",
               padding: "24px 32px",
-              background:
-                "linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%)",
+              background: "linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%)",
               color: "#FFFFFF",
               marginTop: "20px",
             }}
-
           >
-            <span
-              className="text-sm font-bold"
-              style={{ fontFamily: "Outfit" }}
-            >
+            <span className="text-sm font-bold" style={{ fontFamily: "Outfit" }}>
               Get Started
             </span>
-            <img
-              src="/assets/images/arrow.png"
-              alt="Arrow"
-              className="w-3 h-3"
-            />
+            <img src="/assets/images/arrow.png" alt="Arrow" className="w-3 h-3" />
           </motion.button>
         </motion.div>
 
@@ -235,7 +217,6 @@ function HeroInterstitial() {
             marginLeft: "100px",
             marginTop: "-10px",
           }}
-
           variants={rightVariants}
           initial="hidden"
           whileInView="visible"
@@ -253,10 +234,7 @@ function HeroInterstitial() {
           Home
         </span>
         <img src="/assets/images/side-arrow.png" className="w-1 h-2" />
-        <span
-          className="text-xs sm:text-sm"
-          style={{ fontFamily: "Outfit", color: "#4B4B4B" }}
-        >
+        <span className="text-xs sm:text-sm" style={{ fontFamily: "Outfit", color: "#4B4B4B" }}>
           Services
         </span>
       </div>
@@ -299,7 +277,6 @@ function HeroInterstitial() {
   }
 `}
       </style>
-
     </section>
   );
 }

@@ -4,8 +4,6 @@ export default function BannerAboutUs() {
   return (
     <section className="bg-white h-[50vh] w-full flex justify-center items-center relative font-[Outfit] min-[2000px]:h-[40vh]">
       <div className="relative w-full max-w-[1650px] h-[250px] flex justify-center items-center min-[2000px]:max-w-[2200px] min-[2000px]:h-[350px] min-[2500px]:max-w-[2700px] min-[2500px]:h-[450px]">
-
-
         <div
           className="
             absolute whitespace-nowrap px-[80px] py-[20px]
@@ -29,7 +27,6 @@ export default function BannerAboutUs() {
           </div>
         </div>
 
-
         <div
           className="
             absolute whitespace-nowrap px-[80px] py-[20px]
@@ -43,7 +40,6 @@ export default function BannerAboutUs() {
           "
           style={{ width: "100vw" }}
         >
-
           <div
             className="
               absolute top-0 left-[-50%] w-[200%] h-full pointer-events-none
@@ -51,7 +47,6 @@ export default function BannerAboutUs() {
               skew-x-[-20deg]
             "
           ></div>
-
 
           <div className="flex animate-marquee gap-0">
             <span className="pr-[60px] min-[2000px]:pr-[80px] min-[2500px]:pr-[100px]">
@@ -63,7 +58,6 @@ export default function BannerAboutUs() {
           </div>
         </div>
       </div>
-
 
       <style>
         {`
@@ -88,4 +82,4 @@ export default function BannerAboutUs() {
       </style>
     </section>
   );
-} 
+}

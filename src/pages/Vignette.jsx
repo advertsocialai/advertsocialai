@@ -8,15 +8,15 @@ import Contact from "../components/Contact";
 import Research from "../components/Research";
 
 export default function Vignette() {
-    return (
-        <>
-        <HeroVignette />
-        <FeaturesVignette />
-        <HowItWorksVignette />
-        <VerticalsVignette />
-        <BenefitsVignette />
-        <Contact />
-        <Research />
-        </>
-    );
+  return (
+    <>
+      <HeroVignette />
+      <FeaturesVignette />
+      <HowItWorksVignette />
+      <VerticalsVignette />
+      <BenefitsVignette />
+      <Contact />
+      <Research />
+    </>
+  );
 }

@@ -18,8 +18,6 @@ const cardVariants = {
 const FeaturesPublishers = () => {
   return (
     <section className="features-push-section relative w-full bg-white overflow-hidden py-10 sm:py-16 lg:py-20 font-[Outfit]">
-
-
       <div className="absolute w-[2082px] h-[1328px] top-[881px] left-[-301px] -z-10">
         <img
           src="/assets/images/Mesh-Grad.png"
@@ -30,7 +28,6 @@ const FeaturesPublishers = () => {
 
       <div className="absolute w-[1212px] h-[1088px] top-[1121px] left-[-301px] opacity-[0.05] bg-gradient-to-tr from-[#6549F6] to-[#FF611D] rotate-180 -z-10" />
       <div className="absolute w-[1212px] h-[1088px] top-[881px] left-[569px] opacity-[0.05] bg-gradient-to-tr from-[#6549F6] to-[#FF611D] -z-10" />
-
 
       <div
         className="flex flex-col items-center text-center mx-auto px-4
@@ -77,12 +74,10 @@ const FeaturesPublishers = () => {
             color: "#4B4B4B",
           }}
         >
-          Publishers are delivered to users who have explicitly opted in to receive
-          notifications, ensuring higher engagement and intent compared to
-          traditional display formats.
+          Publishers are delivered to users who have explicitly opted in to receive notifications,
+          ensuring higher engagement and intent compared to traditional display formats.
         </p>
       </div>
-
 
       <div
         className="features-pushads-desktop mx-auto mt-20 hidden lg:flex flex-col"
@@ -94,16 +89,17 @@ const FeaturesPublishers = () => {
           gap: "24px",
         }}
       >
-
-        <div
-          className="flex justify-between"
-          style={{ width: "1280px", height: "547px" }}
-        >
+        <div className="flex justify-between" style={{ width: "1280px", height: "547px" }}>
           <FeatureCardAnimated index={0}>
             <FeatureCard
               image="/assets/images/highcpm.png"
               title="High Visibility & Attention"
-              description={<span style={{ textAlign: 'center', display: 'block' }}>Always Seen, Never Buried Push ads appear as notification-style messages that stand out from page layouts and content clutter.</span>}
+              description={
+                <span style={{ textAlign: "center", display: "block" }}>
+                  Always Seen, Never Buried Push ads appear as notification-style messages that
+                  stand out from page layouts and content clutter.
+                </span>
+              }
               height="427px"
             />
           </FeatureCardAnimated>
@@ -113,13 +109,18 @@ const FeaturesPublishers = () => {
               <FeatureCard
                 image="/assets/images/adblock.png"
                 title="Fast Testing & Precise Targeting"
-                description={<span style={{ textAlign: 'left', display: 'block' }}>Test, Learn, and Optimize Quickly Push creatives are lightweight and quick to deploy. Combined with precise targeting—geo, device, OS, language, behavior—you can test multiple angles in a single day and double down on winners.</span>}
+                description={
+                  <span style={{ textAlign: "left", display: "block" }}>
+                    Test, Learn, and Optimize Quickly Push creatives are lightweight and quick to
+                    deploy. Combined with precise targeting—geo, device, OS, language, behavior—you
+                    can test multiple angles in a single day and double down on winners.
+                  </span>
+                }
                 height="547px"
               />
             </div>
           </FeatureCardAnimated>
         </div>
-
 
         <div
           className="flex mx-auto"
@@ -134,7 +135,15 @@ const FeaturesPublishers = () => {
             <FeatureCard
               image="/assets/images/extraspace.png"
               title="Permissioned & Trust-Based Reach"
-              description={<span style={{ textAlign: 'left', display: 'block' }}>Users Opted In to Receive Messages <br /> Web Push and App Push are delivered only to users who have explicitly granted permission, while In-Page Push uses native placements without subscriptions.<br />This creates a trust-based channel with stronger intent.</span>}
+              description={
+                <span style={{ textAlign: "left", display: "block" }}>
+                  Users Opted In to Receive Messages <br /> Web Push and App Push are delivered only
+                  to users who have explicitly granted permission, while In-Page Push uses native
+                  placements without subscriptions.
+                  <br />
+                  This creates a trust-based channel with stronger intent.
+                </span>
+              }
               height="571px"
             />
           </FeatureCardAnimated>
@@ -144,7 +153,13 @@ const FeaturesPublishers = () => {
               <FeatureCard
                 image="/assets/images/impression.png"
                 title="Performance-Friendly Economics"
-                description={<span style={{ textAlign: 'left', display: 'block' }}>Pay for Clicks, Not Guesswork Push ads are typically bought on a CPC model, allowing advertisers to start small, control spend, and scale only what converts.</span>}
+                description={
+                  <span style={{ textAlign: "left", display: "block" }}>
+                    Pay for Clicks, Not Guesswork Push ads are typically bought on a CPC model,
+                    allowing advertisers to start small, control spend, and scale only what
+                    converts.
+                  </span>
+                }
                 height="451px"
               />
             </div>
@@ -177,11 +192,7 @@ const FeaturesPublishers = () => {
           },
         ].map((card, i) => (
           <FeatureCardAnimated key={i} index={i}>
-            <FeatureCardResponsive
-              image={card.img}
-              title={card.title}
-              description={card.desc}
-            />
+            <FeatureCardResponsive image={card.img} title={card.title} description={card.desc} />
           </FeatureCardAnimated>
         ))}
       </div>
@@ -214,7 +225,8 @@ const FeatureCardResponsive = ({ image, title, description }) => {
     text-left 
     flex flex-col items-center text-center
     gap-3 sm:gap-4
-  "      style={{
+  "
+      style={{
         background: hover
           ? "linear-gradient(#ffffff,#ffffff) padding-box, linear-gradient(69.88deg,#6549F6, #FF611D) border-box"
           : "#FFFFFF",
@@ -223,7 +235,7 @@ const FeatureCardResponsive = ({ image, title, description }) => {
       onMouseLeave={() => setHover(false)}
     >
       <img src={image} alt={title} className="w-10 h-10 sm:w-12 sm:h-12" />
-      <h3 className="text-[16px] sm:text-[18px] leading-[22px] sm:leading-[26px] font-medium text-[#1B1A1A]" >
+      <h3 className="text-[16px] sm:text-[18px] leading-[22px] sm:leading-[26px] font-medium text-[#1B1A1A]">
         {title}
       </h3>
       <p className="text-[14px] sm:text-[15px] leading-[20px] sm:leading-[22px] text-[#4B4B4B]">
@@ -259,7 +271,10 @@ const FeatureCard = ({ image, title, description, height }) => {
     >
       <img src={image} alt={title} style={{ width: 46, height: 46 }} />
       <div style={{ maxWidth: "206px" }}>
-        <h3 className="text-[16px] sm:text-[18px] leading-[22px] sm:leading-[26px] font-medium text-[#1B1A1A]" style={{ marginBottom: "16px" }}>
+        <h3
+          className="text-[16px] sm:text-[18px] leading-[22px] sm:leading-[26px] font-medium text-[#1B1A1A]"
+          style={{ marginBottom: "16px" }}
+        >
           {title}
         </h3>
         <p className="text-[14px] sm:text-[15px] leading-[20px] sm:leading-[22px] text-[#4B4B4B]">
@@ -267,9 +282,7 @@ const FeatureCard = ({ image, title, description, height }) => {
         </p>
       </div>
     </div>
-
   );
-
 };
 <style>
   {`
@@ -326,7 +339,6 @@ const FeatureCard = ({ image, title, description, height }) => {
 
 
 `}
-</style>
-
+</style>;
 
 export default FeaturesPublishers;

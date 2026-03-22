@@ -17,7 +17,23 @@ export default function BlogUpdate() {
   const quillModules = {
     toolbar: [
       [{ header: [1, 2, 3, false] }],
-      [{ size: ["12px", "14px", "16px", "18px", "20px", "24px", "26px", "28px", "30px", "32px", "36px"] }],
+      [
+        {
+          size: [
+            "12px",
+            "14px",
+            "16px",
+            "18px",
+            "20px",
+            "24px",
+            "26px",
+            "28px",
+            "30px",
+            "32px",
+            "36px",
+          ],
+        },
+      ],
       ["bold", "italic", "underline", "strike"],
       [{ color: [] }, { background: [] }],
       [{ list: "ordered" }, { list: "bullet" }],
@@ -40,9 +56,7 @@ export default function BlogUpdate() {
     "bullet",
     "align",
     "link",
-
   ];
-
 
   const [form, setForm] = useState({
     name: "",
@@ -53,7 +67,7 @@ export default function BlogUpdate() {
     shortDesc: "",
     status: "",
     image1: "",
-    image2: ""
+    image2: "",
   });
 
   const [newImage1, setNewImage1] = useState(null);
@@ -68,12 +82,9 @@ export default function BlogUpdate() {
     fetchBlog();
   }, []);
 
-
   const fetchBlog = async () => {
     try {
-      const res = await axios.get(
-        API_ENDPOINTS.GET_BLOG(id)
-      );
+      const res = await axios.get(API_ENDPOINTS.GET_BLOG(id));
 
       const blog = res.data?.data;
 
@@ -83,11 +94,11 @@ export default function BlogUpdate() {
           category: blog.category || "",
           description: blog.description || "",
           url: blog.blogurl || "",
-          readtime: blog.readtime || "",   // ✅ ADD THIS
+          readtime: blog.readtime || "", // ✅ ADD THIS
           shortDesc: blog.shortdescription || "",
           status: blog.status || "",
           image1: blog.image1 || "",
-          image2: blog.image2 || ""
+          image2: blog.image2 || "",
         });
       }
 
@@ -98,25 +109,20 @@ export default function BlogUpdate() {
     }
   };
 
-
   const validate = () => {
-    if (!form.name.trim())
-      return Swal.fire("Required!", "Blog name is required", "warning");
+    if (!form.name.trim()) return Swal.fire("Required!", "Blog name is required", "warning");
 
-    if (!form.category.trim())
-      return Swal.fire("Required!", "Category is required", "warning");
+    if (!form.category.trim()) return Swal.fire("Required!", "Category is required", "warning");
 
     if (!form.description || form.description === "<p><br></p>")
       return Swal.fire("Required!", "Description cannot be empty", "warning");
 
-    if (!form.url.trim())
-      return Swal.fire("Required!", "Blog URL is required", "warning");
+    if (!form.url.trim()) return Swal.fire("Required!", "Blog URL is required", "warning");
 
     if (!form.shortDesc.trim())
       return Swal.fire("Required!", "Short description is required", "warning");
 
-    if (!form.status)
-      return Swal.fire("Required!", "Please select a status", "warning");
+    if (!form.status) return Swal.fire("Required!", "Please select a status", "warning");
 
     const maxSize = 2 * 1024 * 1024; // 2 MB
 
@@ -133,13 +139,11 @@ export default function BlogUpdate() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-
   const handleUpdate = async () => {
     if (validate() !== true) return;
 
     try {
       const formData = new FormData();
-
 
       formData.append("name", form.name);
       formData.append("category", form.category);
@@ -150,7 +154,6 @@ export default function BlogUpdate() {
 
       formData.append("status", form.status);
       formData.append("readtime", form.readtime);
-
 
       if (newImage1) {
         formData.append("image1", newImage1);
@@ -164,21 +167,14 @@ export default function BlogUpdate() {
         formData.append("existing_image2", form.image2);
       }
 
-      await axios.post(
-        API_ENDPOINTS.UPDATE_BLOG(id),
-        formData,
-        { headers: { "Content-Type": "multipart/form-data" } }
-      );
+      await axios.post(API_ENDPOINTS.UPDATE_BLOG(id), formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
 
       Swal.fire("Success!", "Blog updated successfully", "success");
       navigate("/admin/bloglist");
-
     } catch (err) {
-      Swal.fire(
-        "Update Failed!",
-        err.response?.data?.message || "Something went wrong.",
-        "error"
-      );
+      Swal.fire("Update Failed!", err.response?.data?.message || "Something went wrong.", "error");
     }
   };
 
@@ -187,9 +183,7 @@ export default function BlogUpdate() {
   return (
     <div className="w-full min-h-screen p-4 md:p-10 bg-[#f7f7f7]">
       <div className="bg-white p-6 md:p-10 rounded-2xl shadow-lg w-full">
-
         <h1 className="text-3xl font-bold text-center mb-10">UPDATE BLOG</h1>
-
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-8">
           <div>
@@ -215,17 +209,14 @@ export default function BlogUpdate() {
           </div>
         </div>
 
-
         <div className="mb-10">
           <label className="font-semibold text-lg mb-2 block">Description:</label>
           <ReactQuill
             theme="snow"
             value={form.description}
-            onChange={(value) =>
-              setForm({ ...form, description: value })
-            }
-            modules={quillModules}     // ✅ added
-            formats={quillFormats}     // ✅ added
+            onChange={(value) => setForm({ ...form, description: value })}
+            modules={quillModules} // ✅ added
+            formats={quillFormats} // ✅ added
             style={{ height: "250px", marginBottom: "80px" }}
           />
 
@@ -236,7 +227,6 @@ export default function BlogUpdate() {
             style={{ height: "250px", marginBottom: "80px" }}
           /> */}
         </div>
-
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-8">
           <div>
@@ -263,7 +253,6 @@ export default function BlogUpdate() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 max-w-[600px]">
-
           {/* Read Time */}
           <div>
             <label className="font-semibold text-lg block">Read Time:</label>
@@ -292,13 +281,9 @@ export default function BlogUpdate() {
               <option value="archived">Archived</option>
             </select>
           </div>
-
         </div>
 
-
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-10">
-
           <div>
             <label className="font-semibold text-lg">Image 1:</label>
             <input
@@ -318,7 +303,6 @@ export default function BlogUpdate() {
               </div>
             )}
           </div>
-
 
           <div>
             <label className="font-semibold text-lg">Image 2:</label>
@@ -341,7 +325,6 @@ export default function BlogUpdate() {
           </div>
         </div>
 
-
         <div className="text-center">
           <button
             onClick={handleUpdate}
@@ -350,7 +333,6 @@ export default function BlogUpdate() {
             Update Blog
           </button>
         </div>
-
       </div>
     </div>
   );

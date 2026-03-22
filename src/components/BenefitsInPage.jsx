@@ -2,14 +2,37 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const items = [
-  { icon: "/assets/images/selfservice.png", title: "High CTR Performance", desc: "Push-style creatives drive strong engagement compared to standard banners." },
-  { icon: "/assets/images/traffic.png", title: "Works in Cookieless Environments", desc: "No reliance on cookies or user permissions." },
-  { icon: "/assets/images/rtb.png", title: "Flexible Placements", desc: "Can be placed within content, sidebars, or feed-style layouts." },
-  { icon: "/assets/images/api.png", title: "Performance-Friendly Pricing", desc: "Run campaigns on CPC or CPM, optimized for efficiency and scale." },
-  { icon: "/assets/images/campaign.png", title: "Experienced campaign management", desc: "Full transparency and detailed reporting. Our expert managers successfully run worldwide-reach campaigns for direct advertisers and agencies." },
-  { icon: "/assets/images/live.png", title: "Live support and dedicated managers", desc: "Our multilingual managers assist in campaigns launch and advise on creatives, sources whitelists, and top performing offers." }
+  {
+    icon: "/assets/images/selfservice.png",
+    title: "High CTR Performance",
+    desc: "Push-style creatives drive strong engagement compared to standard banners.",
+  },
+  {
+    icon: "/assets/images/traffic.png",
+    title: "Works in Cookieless Environments",
+    desc: "No reliance on cookies or user permissions.",
+  },
+  {
+    icon: "/assets/images/rtb.png",
+    title: "Flexible Placements",
+    desc: "Can be placed within content, sidebars, or feed-style layouts.",
+  },
+  {
+    icon: "/assets/images/api.png",
+    title: "Performance-Friendly Pricing",
+    desc: "Run campaigns on CPC or CPM, optimized for efficiency and scale.",
+  },
+  {
+    icon: "/assets/images/campaign.png",
+    title: "Experienced campaign management",
+    desc: "Full transparency and detailed reporting. Our expert managers successfully run worldwide-reach campaigns for direct advertisers and agencies.",
+  },
+  {
+    icon: "/assets/images/live.png",
+    title: "Live support and dedicated managers",
+    desc: "Our multilingual managers assist in campaigns launch and advise on creatives, sources whitelists, and top performing offers.",
+  },
 ];
-
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -38,24 +61,15 @@ const CardAnimated = ({ index, children }) => {
   );
 };
 
-
 export default function BenefitsInPage() {
   return (
-    <div
-      className="w-full min-h-screen pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-12 sm:pb-16 md:pb-18 lg:pb-20 relative mx-auto flex flex-col items-center justify-center gap-12 sm:gap-14 md:gap-16 lg:gap-[72px] overflow-hidden px-4 sm:px-6 lg:px-8 font-[Outfit]"
-    >
-      <section
-        className="flex flex-col justify-center items-center w-full max-w-7xl"
-      >
-        <h2
-          className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-bold text-[#1B1A1A] mb-10 sm:mb-12 md:mb-14 lg:mb-16 max-w-5xl px-4 sm:px-6"
-        >
+    <div className="w-full min-h-screen pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-12 sm:pb-16 md:pb-18 lg:pb-20 relative mx-auto flex flex-col items-center justify-center gap-12 sm:gap-14 md:gap-16 lg:gap-[72px] overflow-hidden px-4 sm:px-6 lg:px-8 font-[Outfit]">
+      <section className="flex flex-col justify-center items-center w-full max-w-7xl">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-bold text-[#1B1A1A] mb-10 sm:mb-12 md:mb-14 lg:mb-16 max-w-5xl px-4 sm:px-6">
           Benefits of Monetization & Performance
         </h2>
 
-
         <div className="w-full max-w-6xl">
-
           <div className="grid grid-cols-1 gap-8 sm:gap-10 md:hidden">
             {items.map((item, index) => (
               <CardAnimated index={index} key={item.title}>
@@ -63,7 +77,6 @@ export default function BenefitsInPage() {
               </CardAnimated>
             ))}
           </div>
-
 
           <div className="hidden md:grid lg:hidden grid-cols-2 gap-8 lg:gap-12">
             {items.map((item, index) => (
@@ -73,9 +86,7 @@ export default function BenefitsInPage() {
             ))}
           </div>
 
-
           <div className="hidden lg:block">
-
             <div className="grid grid-cols-3 gap-12 xl:gap-16 mb-12">
               {items.slice(0, 3).map((item, index) => (
                 <CardAnimated index={index} key={item.title}>
@@ -89,9 +100,7 @@ export default function BenefitsInPage() {
               ))}
             </div>
 
-
             <div className="w-full max-w-4xl h-px bg-[#EAEAEA] mx-auto mb-12" />
-
 
             <div className="grid grid-cols-3 gap-12 xl:gap-16">
               {items.slice(3, 6).map((item, index) => (
@@ -111,7 +120,6 @@ export default function BenefitsInPage() {
     </div>
   );
 }
-
 
 const BenefitCard = ({ item }) => {
   return (

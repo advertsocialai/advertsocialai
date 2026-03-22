@@ -33,8 +33,10 @@ const waveVariants = {
 
 const HowItWorksInPage = () => {
   return (
-    <section className="hiwip-section relative w-full flex justify-center pt-6 sm:pt-8 md:pt-10 lg:pt-16 pb-12 sm:pb-16 md:pb-20 lg:pb-[20px] overflow-visible bg-white" style={{ fontFamily: 'Outfit' }}>
-
+    <section
+      className="hiwip-section relative w-full flex justify-center pt-6 sm:pt-8 md:pt-10 lg:pt-16 pb-12 sm:pb-16 md:pb-20 lg:pb-[20px] overflow-visible bg-white"
+      style={{ fontFamily: "Outfit" }}
+    >
       <motion.div
         className="hiwip-wrapper relative z-10 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-0"
         style={{
@@ -47,7 +49,6 @@ const HowItWorksInPage = () => {
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
       >
-
         <motion.img
           src="/assets/images/Blue/Dooodle.png"
           alt="Doodle"
@@ -64,13 +65,11 @@ const HowItWorksInPage = () => {
           animate="animate"
         />
 
-
         <img
           src="/assets/images/howitworks.png"
           alt="How it works background"
           className="hiwip-bg-img absolute inset-0 w-full h-full object-cover rounded-[20px] z-2"
         />
-
 
         <motion.div
           className="hiwip-header absolute top-8 sm:top-12 lg:top-[67px] left-4 sm:left-8 lg:left-[182px] w-[90%] sm:w-[80%] lg:w-[916px] px-4 sm:px-0 z-10"
@@ -78,13 +77,13 @@ const HowItWorksInPage = () => {
         >
           <h2
             className="hiwip-title text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-[48px] font-bold text-[#1B1A1A] text-center lg:text-center leading-tight sm:leading-tight md:leading-tight xl:leading-[61px]"
-            style={{ fontFamily: 'Outfit' }}
+            style={{ fontFamily: "Outfit" }}
           >
-            <span className="font-bold" style={{ fontFamily: 'Outfit' }}>
+            <span className="font-bold" style={{ fontFamily: "Outfit" }}>
               How In-Page Push Ads Work
             </span>
             <br className="hidden sm:block" />
-            <span className="font-normal" style={{ fontFamily: 'Outfit' }}>
+            <span className="font-normal" style={{ fontFamily: "Outfit" }}>
               (Native Push Flow)
             </span>
           </h2>
@@ -92,14 +91,17 @@ const HowItWorksInPage = () => {
 
         {/* MOBILE AND TABLET LAYOUT */}
         <div className="block lg:hidden absolute inset-0 flex flex-col items-start justify-center gap-6 sm:gap-8 pt-36 sm:pt-44 md:pt-48 pb-12 px-2 sm:px-4 ml-2 sm:ml-4">
-
           {/* LEFT IMAGE - Mobile/Tablet */}
           <motion.div
             className="w-full max-w-sm sm:max-w-md flex-shrink-0"
             variants={childVariants}
           >
             <div className="relative w-full" style={{ aspectRatio: "447/385" }}>
-              <img src="/assets/images/Play Reel.png" className="w-full h-full object-contain" alt="Play Reel" />
+              <img
+                src="/assets/images/Play Reel.png"
+                className="w-full h-full object-contain"
+                alt="Play Reel"
+              />
               <img
                 src="/assets/images/media-video.png"
                 className="absolute w-8 h-8 sm:w-10 sm:h-10"
@@ -114,8 +116,15 @@ const HowItWorksInPage = () => {
           </motion.div>
 
           {/* RIGHT TEXT - Mobile/Tablet */}
-          <motion.div className="w-full max-w-lg flex-shrink-0 text-center" variants={childVariants}>
-            <motion.p className="text-sm sm:text-base leading-relaxed text-[#333] mb-4" style={{ fontFamily: 'Outfit' }} variants={childVariants}>
+          <motion.div
+            className="w-full max-w-lg flex-shrink-0 text-center"
+            variants={childVariants}
+          >
+            <motion.p
+              className="text-sm sm:text-base leading-relaxed text-[#333] mb-4"
+              style={{ fontFamily: "Outfit" }}
+              variants={childVariants}
+            >
               Vignette banners are time-bound, skippable, and UX-compliant.
             </motion.p>
 
@@ -145,7 +154,7 @@ const HowItWorksInPage = () => {
 
                   <span
                     className="font-bold text-sm sm:text-base text-[#222] leading-relaxed text-left"
-                    style={{ fontFamily: 'Outfit' }}
+                    style={{ fontFamily: "Outfit" }}
                   >
                     {item}
                   </span>
@@ -193,9 +202,12 @@ const HowItWorksInPage = () => {
             }}
             variants={childVariants}
           >
-            <motion.p className="hiwip-desc text-[16px] leading-[28px] text-[#4B4B4B] mb-[16px]" style={{ fontFamily: 'Outfit' }} variants={childVariants}>
-              Vignette banners are time-bound, skippable, and UX-<br>
-              </br>compliant.
+            <motion.p
+              className="hiwip-desc text-[16px] leading-[28px] text-[#4B4B4B] mb-[16px]"
+              style={{ fontFamily: "Outfit" }}
+              variants={childVariants}
+            >
+              Vignette banners are time-bound, skippable, and UX-<br></br>compliant.
             </motion.p>
 
             {/* <motion.p className="text-[16px] leading-[28px] text-[#333]" style={{ fontFamily: 'Outfit' }} variants={childVariants}>
@@ -222,10 +234,9 @@ const HowItWorksInPage = () => {
                     />
                   </span>
 
-
                   <span
                     className="hiwip-item-text font-normal text-[15px] text-[#282828] leading-[32px]"
-                    style={{ fontFamily: 'Outfit' }}
+                    style={{ fontFamily: "Outfit" }}
                   >
                     {item}
                   </span>
@@ -240,4 +251,3 @@ const HowItWorksInPage = () => {
 };
 
 export default HowItWorksInPage;
-

@@ -40,9 +40,7 @@ export default function PageUpdate() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await axios.get(
-          API_ENDPOINTS.GET_SERVICE(id)
-        );
+        const res = await axios.get(API_ENDPOINTS.GET_SERVICE(id));
 
         // Backend might return either the object directly or { data: {...} }
         let data = res.data;
@@ -144,11 +142,9 @@ export default function PageUpdate() {
       }
 
       // PUT to update endpoint
-      await axios.put(
-        API_ENDPOINTS.UPDATE_SERVICE(id),
-        formData,
-        { headers: { "Content-Type": "multipart/form-data" } }
-      );
+      await axios.put(API_ENDPOINTS.UPDATE_SERVICE(id), formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
 
       alert("Page updated successfully!");
       navigate("/admin/all-pages");
@@ -317,11 +313,7 @@ export default function PageUpdate() {
             <div className="mb-6">
               <label className="block font-medium mb-2">Profile Photo</label>
               {existingImages.profilePhoto && (
-                <img
-                  src={existingImages.profilePhoto}
-                  alt="old"
-                  className="w-40 rounded mb-3"
-                />
+                <img src={existingImages.profilePhoto} alt="old" className="w-40 rounded mb-3" />
               )}
               <input type="file" name="profilePhoto" onChange={handleFileChange} />
             </div>
@@ -330,11 +322,7 @@ export default function PageUpdate() {
             <div className="mb-6">
               <label className="block font-medium mb-2">Banner Image</label>
               {existingImages.bannerImage && (
-                <img
-                  src={existingImages.bannerImage}
-                  alt="old"
-                  className="w-40 rounded mb-3"
-                />
+                <img src={existingImages.bannerImage} alt="old" className="w-40 rounded mb-3" />
               )}
               <input type="file" name="bannerImage" onChange={handleFileChange} />
             </div>
@@ -343,11 +331,7 @@ export default function PageUpdate() {
             <div className="mb-6">
               <label className="block font-medium mb-2">Icon Image</label>
               {existingImages.iconImage && (
-                <img
-                  src={existingImages.iconImage}
-                  alt="old"
-                  className="w-20 rounded mb-3"
-                />
+                <img src={existingImages.iconImage} alt="old" className="w-20 rounded mb-3" />
               )}
               <input type="file" name="iconImage" onChange={handleFileChange} />
             </div>
@@ -362,12 +346,7 @@ export default function PageUpdate() {
                 ))}
               </div>
 
-              <input
-                type="file"
-                multiple
-                name="multipleImages"
-                onChange={handleFileChange}
-              />
+              <input type="file" multiple name="multipleImages" onChange={handleFileChange} />
             </div>
           </div>
 

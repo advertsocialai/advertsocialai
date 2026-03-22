@@ -79,8 +79,7 @@ export default function PagesTable() {
     );
   });
 
-  const getPageId = (page) =>
-    page.Serviceid ?? page.serviceid ?? page.serviceId ?? page.id ?? null;
+  const getPageId = (page) => page.Serviceid ?? page.serviceid ?? page.serviceId ?? page.id ?? null;
 
   const formatValue = (value) => {
     if (value === null || value === undefined || value === "" || value === "null") {
@@ -164,9 +163,7 @@ export default function PagesTable() {
       }
 
       setPages((prev) =>
-        Array.isArray(prev)
-          ? prev.filter((p) => String(getPageId(p)) !== String(realId))
-          : prev
+        Array.isArray(prev) ? prev.filter((p) => String(getPageId(p)) !== String(realId)) : prev
       );
 
       Swal.fire({

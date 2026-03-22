@@ -1,105 +1,105 @@
 /* VerticalsInPage 4K Scaling Overrides 休 */
 @media (min-width: 2560px) {
-    .vip-section {
-        padding-top: 100px !important;
-        padding-bottom: 100px !important;
-    }
+  .vip-section {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
 
-    .vip-wrapper {
-        max-width: 2280px !important;
-        height: 1645px !important;
-        padding: 150px 120px !important;
-        border-radius: 40px !important;
-    }
+  .vip-wrapper {
+    max-width: 2280px !important;
+    height: 1645px !important;
+    padding: 150px 120px !important;
+    border-radius: 40px !important;
+  }
 
-    .vip-header {
-        max-width: 1520px !important;
-        margin-top: 40px !important;
-        margin-left: 20px !important;
-        gap: 40px !important;
-    }
+  .vip-header {
+    max-width: 1520px !important;
+    margin-top: 40px !important;
+    margin-left: 20px !important;
+    gap: 40px !important;
+  }
 
-    .vip-title {
-        font-size: 108px !important;
-        line-height: 110px !important;
-        margin-left: -48px !important;
-    }
+  .vip-title {
+    font-size: 108px !important;
+    line-height: 110px !important;
+    margin-left: -48px !important;
+  }
 
-    .vip-button {
-        padding: 24px 48px !important;
-        margin-left: -48px !important;
-    }
+  .vip-button {
+    padding: 24px 48px !important;
+    margin-left: -48px !important;
+  }
 
-    .vip-button-text {
-        font-size: 20px !important;
-        line-height: 24px !important;
-    }
+  .vip-button-text {
+    font-size: 20px !important;
+    line-height: 24px !important;
+  }
 
-    .vip-button-icon {
-        width: 22px !important;
-        height: 20px !important;
-    }
+  .vip-button-icon {
+    width: 22px !important;
+    height: 20px !important;
+  }
 
-    .vip-grid-container {
-        gap: 60px !important;
-    }
+  .vip-grid-container {
+    gap: 60px !important;
+  }
 
-    .vip-card-motion {
-        margin-top: -48px !important;
-    }
+  .vip-card-motion {
+    margin-top: -48px !important;
+  }
 
-    .vip-card {
-        max-width: 600px !important;
-        height: 600px !important;
-        border-radius: 24px !important;
-    }
+  .vip-card {
+    max-width: 600px !important;
+    height: 600px !important;
+    border-radius: 24px !important;
+  }
 
-    .vip-card-bg-shape,
-    .vip-card-hover-bg {
-        border-radius: 24px !important;
-    }
+  .vip-card-bg-shape,
+  .vip-card-hover-bg {
+    border-radius: 24px !important;
+  }
 
-    .vip-card-content {
-        left: 85px !important;
-        right: 85px !important;
-        gap: 48px !important;
-        bottom: 60px !important;
-    }
+  .vip-card-content {
+    left: 85px !important;
+    right: 85px !important;
+    gap: 48px !important;
+    bottom: 60px !important;
+  }
 
-    .vip-card-title {
-        font-size: 30px !important;
-        line-height: 38px !important;
-    }
+  .vip-card-title {
+    font-size: 30px !important;
+    line-height: 38px !important;
+  }
 
-    .vip-card-desc {
-        width: 430px !important;
-    }
+  .vip-card-desc {
+    width: 430px !important;
+  }
 
-    .vip-card-desc-item {
-        font-size: 24px !important;
-        line-height: 36px !important;
-        width: 430px !important;
-        margin-bottom: 3px !important;
-    }
+  .vip-card-desc-item {
+    font-size: 24px !important;
+    line-height: 36px !important;
+    width: 430px !important;
+    margin-bottom: 3px !important;
+  }
 
-    .vip-card-icon-box {
-        top: 99px !important;
-        left: 99px !important;
-        width: 99px !important;
-        height: 99px !important;
-    }
+  .vip-card-icon-box {
+    top: 99px !important;
+    left: 99px !important;
+    width: 99px !important;
+    height: 99px !important;
+  }
 
-    .vip-footer-row {
-        margin-top: 90px !important;
-        margin-left: 60px !important;
-    }
+  .vip-footer-row {
+    margin-top: 90px !important;
+    margin-left: 60px !important;
+  }
 
-    .vip-footer-text {
-        font-size: 45px !important;
-        line-height: 1.1 !important;
-    }
+  .vip-footer-text {
+    font-size: 45px !important;
+    line-height: 1.1 !important;
+  }
 
-    .vip-footer-text-white {
-        /* font-normal preserved */
-    }
+  .vip-footer-text-white {
+    /* font-normal preserved */
+  }
 }

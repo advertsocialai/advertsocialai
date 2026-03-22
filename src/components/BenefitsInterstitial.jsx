@@ -3,12 +3,36 @@ import { motion } from "framer-motion";
 import "./BenefitsInterstitial.css";
 
 const items = [
-  { icon: "/assets/images/traffic.png", title: "High Click-Through Rates", desc: "Push Ads consistently outperform many display formats due to notification-style delivery." },
-  { icon: "/assets/images/selfservice.png", title: "Opt-In, Permission-Based Traffic", desc: "All impressions come from users who have consented to receive notifications." },
-  { icon: "/assets/images/live.png", title: "Works Without Website Visits", desc: "Ads are delivered even when users are not actively browsing your site." },
-  { icon: "/assets/images/campaign.png", title: "Granular Targeting Capabilities", desc: "Advertisers can precisely target users based on geography, device and operating system, language, interests, behavior, and activity levels to ensure relevance and performance." },
-  { icon: "/assets/images/rtb.png", title: "Rapid Testing & Optimization Cycles", desc: "Push creatives are lightweight and fast to deploy, enabling multiple variations to be tested in a short timeframe. Winning messages can be identified and scaled within hours rather than days." },
-  { icon: "/assets/images/api.png", title: "Scalable Monetization Across Formats", desc: "Push ads support Web Push, In-Page Push, and App Push formats, providing consistent global volume and stable monetization across desktop, mobile web, iOS browsers, and mobile applications." }
+  {
+    icon: "/assets/images/traffic.png",
+    title: "High Click-Through Rates",
+    desc: "Push Ads consistently outperform many display formats due to notification-style delivery.",
+  },
+  {
+    icon: "/assets/images/selfservice.png",
+    title: "Opt-In, Permission-Based Traffic",
+    desc: "All impressions come from users who have consented to receive notifications.",
+  },
+  {
+    icon: "/assets/images/live.png",
+    title: "Works Without Website Visits",
+    desc: "Ads are delivered even when users are not actively browsing your site.",
+  },
+  {
+    icon: "/assets/images/campaign.png",
+    title: "Granular Targeting Capabilities",
+    desc: "Advertisers can precisely target users based on geography, device and operating system, language, interests, behavior, and activity levels to ensure relevance and performance.",
+  },
+  {
+    icon: "/assets/images/rtb.png",
+    title: "Rapid Testing & Optimization Cycles",
+    desc: "Push creatives are lightweight and fast to deploy, enabling multiple variations to be tested in a short timeframe. Winning messages can be identified and scaled within hours rather than days.",
+  },
+  {
+    icon: "/assets/images/api.png",
+    title: "Scalable Monetization Across Formats",
+    desc: "Push ads support Web Push, In-Page Push, and App Push formats, providing consistent global volume and stable monetization across desktop, mobile web, iOS browsers, and mobile applications.",
+  },
 ];
 
 const cardVariants = {
@@ -40,15 +64,9 @@ const CardAnimated = ({ index, children }) => {
 
 export default function BenefitsInterstitial() {
   return (
-    <div
-      className="benefits-interstitial-section w-full min-h-screen pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-12 sm:pb-16 md:pb-18 lg:pb-20 relative mx-auto flex flex-col items-center justify-center gap-12 sm:gap-14 md:gap-16 lg:gap-[72px] overflow-hidden px-4 sm:px-6 lg:px-8 font-[Outfit]"
-    >
-      <section
-        className="flex flex-col justify-center items-center w-full max-w-[1440px]"
-      >
-        <h2
-          className="benefits-interstitial-title text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-bold text-[#1B1A1A] mb-10 sm:mb-12 md:mb-14 lg:mb-16 max-w-5xl px-4 sm:px-6"
-        >
+    <div className="benefits-interstitial-section w-full min-h-screen pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-12 sm:pb-16 md:pb-18 lg:pb-20 relative mx-auto flex flex-col items-center justify-center gap-12 sm:gap-14 md:gap-16 lg:gap-[72px] overflow-hidden px-4 sm:px-6 lg:px-8 font-[Outfit]">
+      <section className="flex flex-col justify-center items-center w-full max-w-[1440px]">
+        <h2 className="benefits-interstitial-title text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-bold text-[#1B1A1A] mb-10 sm:mb-12 md:mb-14 lg:mb-16 max-w-5xl px-4 sm:px-6">
           Benefits of Monetization & Performance
         </h2>
 

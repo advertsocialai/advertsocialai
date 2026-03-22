@@ -1,271 +1,271 @@
 /* Base styles and mobile overrides from JSX internal style */
 
 .features-push-section {
-    position: relative;
-    width: 100%;
-    background-color: white;
-    overflow: hidden;
-    font-family: 'Outfit', sans-serif;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  font-family: "Outfit", sans-serif;
 }
 
 .features-header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 916px;
-    max-width: 100%;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 916px;
+  max-width: 100%;
+  gap: 40px;
 }
 
 .features-header-title {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 60px;
-    color: #1B1A1A;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+  color: #1b1a1a;
 }
 
 .features-header-subtitle {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 28px;
-    color: #4B4B4B;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #4b4b4b;
 }
 
 .features-header-desc {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    color: #4B4B4B;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #4b4b4b;
 }
 
 .features-pushads-desktop {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 80px;
-    display: none;
-    /* Hidden by default, shown in lg */
-    flex-direction: column;
-    width: 1280px;
-    height: 785px;
-    gap: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  display: none;
+  /* Hidden by default, shown in lg */
+  flex-direction: column;
+  width: 1280px;
+  height: 785px;
+  gap: 24px;
 }
 
 @media (min-width: 1024px) {
-    .features-pushads-desktop {
-        display: flex;
-    }
+  .features-pushads-desktop {
+    display: flex;
+  }
 }
 
 .feature-grid-row-1 {
-    display: flex;
-    justify-content: space-between;
-    width: 1280px;
-    height: 547px;
+  display: flex;
+  justify-content: space-between;
+  width: 1280px;
+  height: 547px;
 }
 
 .feature-grid-row-2 {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 628px;
-    height: 571px;
-    gap: 24px;
-    margin-top: -420px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 628px;
+  height: 571px;
+  gap: 24px;
+  margin-top: -420px;
 }
 
 /* Base staggered margins */
 .staggered-col-1 {
-    margin-top: -40px !important;
+  margin-top: -40px !important;
 }
 
 .staggered-col-2 {
-    margin-top: 50px !important;
+  margin-top: 50px !important;
 }
 
 .feature-card-main {
-    width: 302px;
-    padding: 64px 48px;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 48px;
-    transition: all 0.3s ease;
+  width: 302px;
+  padding: 64px 48px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 48px;
+  transition: all 0.3s ease;
 }
 
 /* Base heights for standard desktop */
 .card-height-v1 {
-    height: 427px;
+  height: 427px;
 }
 
 .card-height-v2 {
-    height: 547px;
+  height: 547px;
 }
 
 .card-height-v3 {
-    height: 571px;
+  height: 571px;
 }
 
 .card-height-v4 {
-    height: 451px;
+  height: 451px;
 }
 
 .feature-card-icon {
-    width: 46px;
-    height: 46px;
+  width: 46px;
+  height: 46px;
 }
 
 .feature-card-title {
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 500;
-    color: #1B1A1A;
-    margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #1b1a1a;
+  margin-bottom: 16px;
 }
 
 .feature-card-desc {
-    font-size: 15px;
-    line-height: 22px;
-    color: #4B4B4B;
+  font-size: 15px;
+  line-height: 22px;
+  color: #4b4b4b;
 }
 
 /* 4K / Ultra-wide Scaling (2560px - 2700px) */
 @media (min-width: 2560px) {
-    .features-push-section {
-        padding-top: 150px !important;
-        padding-bottom: 150px !important;
-    }
+  .features-push-section {
+    padding-top: 150px !important;
+    padding-bottom: 150px !important;
+  }
 
-    .features-header-container {
-        width: 1500px !important;
-        max-width: 1500px !important;
-        gap: 60px !important;
-    }
+  .features-header-container {
+    width: 1500px !important;
+    max-width: 1500px !important;
+    gap: 60px !important;
+  }
 
-    .features-header-title {
-        font-size: 80px !important;
-        line-height: 100px !important;
-    }
+  .features-header-title {
+    font-size: 80px !important;
+    line-height: 100px !important;
+  }
 
-    .features-header-subtitle,
-    .features-header-desc {
-        font-size: 32px !important;
-        line-height: 48px !important;
-    }
+  .features-header-subtitle,
+  .features-header-desc {
+    font-size: 32px !important;
+    line-height: 48px !important;
+  }
 
-    .features-pushads-desktop {
-        width: 2200px !important;
-        height: auto !important;
-        margin-top: 150px !important;
-        gap: 40px !important;
-    }
+  .features-pushads-desktop {
+    width: 2200px !important;
+    height: auto !important;
+    margin-top: 150px !important;
+    gap: 40px !important;
+  }
 
-    .feature-grid-row-1 {
-        width: 2200px !important;
-        height: 1000px !important;
-        gap: 40px !important;
-    }
+  .feature-grid-row-1 {
+    width: 2200px !important;
+    height: 1000px !important;
+    gap: 40px !important;
+  }
 
-    .feature-grid-row-2 {
-        width: 1100px !important;
-        height: 1000px !important;
-        gap: 40px !important;
-        margin-top: -800px !important;
-    }
+  .feature-grid-row-2 {
+    width: 1100px !important;
+    height: 1000px !important;
+    gap: 40px !important;
+    margin-top: -800px !important;
+  }
 
-    /* Scaled staggered margins for 4K */
-    .staggered-col-1 {
-        margin-top: -80px !important;
-    }
+  /* Scaled staggered margins for 4K */
+  .staggered-col-1 {
+    margin-top: -80px !important;
+  }
 
-    .staggered-col-2 {
-        margin-top: 100px !important;
-    }
+  .staggered-col-2 {
+    margin-top: 100px !important;
+  }
 
-    .feature-card-main {
-        width: 520px !important;
-        padding: 80px 60px !important;
-        gap: 60px !important;
-        border-radius: 30px !important;
-    }
+  .feature-card-main {
+    width: 520px !important;
+    padding: 80px 60px !important;
+    gap: 60px !important;
+    border-radius: 30px !important;
+  }
 
-    /* Scaled heights for 4K (approx 1.7x - 1.8x) */
-    .card-height-v1 {
-        height: 750px !important;
-    }
+  /* Scaled heights for 4K (approx 1.7x - 1.8x) */
+  .card-height-v1 {
+    height: 750px !important;
+  }
 
-    .card-height-v2 {
-        height: 950px !important;
-    }
+  .card-height-v2 {
+    height: 950px !important;
+  }
 
-    .card-height-v3 {
-        height: 980px !important;
-    }
+  .card-height-v3 {
+    height: 980px !important;
+  }
 
-    .card-height-v4 {
-        height: 780px !important;
-    }
+  .card-height-v4 {
+    height: 780px !important;
+  }
 
-    .feature-card-icon {
-        width: 100px !important;
-        height: 100px !important;
-    }
+  .feature-card-icon {
+    width: 100px !important;
+    height: 100px !important;
+  }
 
-    .feature-card-title {
-        font-size: 36px !important;
-        line-height: 48px !important;
-        margin-bottom: 24px !important;
-    }
+  .feature-card-title {
+    font-size: 36px !important;
+    line-height: 48px !important;
+    margin-bottom: 24px !important;
+  }
 
-    .feature-card-desc {
-        font-size: 30px !important;
-        line-height: 46px !important;
-    }
+  .feature-card-desc {
+    font-size: 30px !important;
+    line-height: 46px !important;
+  }
 }
 
 /* Media Query overrides from internal JSX style */
 @media (max-width: 1024px) {
-    .features-pushads-desktop {
-        display: none !important;
-    }
+  .features-pushads-desktop {
+    display: none !important;
+  }
 
-    .features-push-section {
-        overflow: visible !important;
-    }
+  .features-push-section {
+    overflow: visible !important;
+  }
 
-    .feature-card-mobile {
-        background: #ffffff;
-        border-radius: 16px;
-        padding: 24px;
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-    }
+  .feature-card-mobile {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  }
 }
 
 @media (max-width: 768px) {
-    .features-push-section {
-        padding-top: 40px !important;
-        padding-bottom: 40px !important;
-    }
+  .features-push-section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
 
-    .feature-card-mobile {
-        padding: 20px !important;
-        gap: 12px !important;
-    }
+  .feature-card-mobile {
+    padding: 20px !important;
+    gap: 12px !important;
+  }
 
-    .feature-card-mobile h3 {
-        font-size: 16px !important;
-        line-height: 22px !important;
-    }
+  .feature-card-mobile h3 {
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
 
-    .feature-card-mobile p {
-        font-size: 14px !important;
-        line-height: 20px !important;
-    }
+  .feature-card-mobile p {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
 }

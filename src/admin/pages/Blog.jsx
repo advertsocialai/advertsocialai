@@ -21,14 +21,12 @@ export default function Blog() {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
-
   const validateForm = () => {
     let newErrors = {};
 
     if (!form.name.trim()) newErrors.name = "Blog Name is required";
     if (!form.category.trim()) newErrors.category = "Category is required";
-    if (!form.shortdescription.trim())
-      newErrors.shortdescription = "Short description is required";
+    if (!form.shortdescription.trim()) newErrors.shortdescription = "Short description is required";
     if (!form.blogurl.trim()) newErrors.blogurl = "Blog URL is required";
 
     if (!form.description.trim() || form.description === "<p><br></p>")
@@ -36,7 +34,6 @@ export default function Blog() {
 
     if (!form.image1) newErrors.image1 = "Image 1 is required";
     if (!form.image2) newErrors.image2 = "Image 2 is required";
-
 
     const maxSize = 2 * 1024 * 1024;
 
@@ -97,9 +94,7 @@ export default function Blog() {
       Swal.fire({
         icon: "error",
         title: "Failed!",
-        text:
-          err.response?.data?.message ||
-          "Something went wrong while adding the blog.",
+        text: err.response?.data?.message || "Something went wrong while adding the blog.",
       });
     }
 
@@ -115,9 +110,7 @@ export default function Blog() {
       <div className="bg-white p-6 md:p-10 rounded-2xl shadow-lg w-full">
         <h1 className="text-3xl font-bold text-center mb-10">ADD BLOG</h1>
 
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-10">
-
           <div>
             <label className="font-semibold text-lg">Blog Name:</label>
             <input
@@ -125,14 +118,10 @@ export default function Blog() {
               name="name"
               value={form.name}
               onChange={handleChange}
-              className={`w-full p-3 border rounded-lg mt-2 ${errors.name ? "border-red-500" : ""
-                }`}
+              className={`w-full p-3 border rounded-lg mt-2 ${errors.name ? "border-red-500" : ""}`}
             />
-            {errors.name && (
-              <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-            )}
+            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
           </div>
-
 
           <div>
             <label className="font-semibold text-lg">Category:</label>
@@ -141,14 +130,12 @@ export default function Blog() {
               name="category"
               value={form.category}
               onChange={handleChange}
-              className={`w-full p-3 border rounded-lg mt-2 ${errors.category ? "border-red-500" : ""
-                }`}
+              className={`w-full p-3 border rounded-lg mt-2 ${
+                errors.category ? "border-red-500" : ""
+              }`}
             />
-            {errors.category && (
-              <p className="text-red-500 text-sm mt-1">{errors.category}</p>
-            )}
+            {errors.category && <p className="text-red-500 text-sm mt-1">{errors.category}</p>}
           </div>
-
 
           <div>
             <label className="font-semibold text-lg">Blog URL:</label>
@@ -157,12 +144,11 @@ export default function Blog() {
               name="blogurl"
               value={form.blogurl}
               onChange={handleChange}
-              className={`w-full p-3 border rounded-lg mt-2 ${errors.blogurl ? "border-red-500" : ""
-                }`}
+              className={`w-full p-3 border rounded-lg mt-2 ${
+                errors.blogurl ? "border-red-500" : ""
+              }`}
             />
-            {errors.blogurl && (
-              <p className="text-red-500 text-sm mt-1">{errors.blogurl}</p>
-            )}
+            {errors.blogurl && <p className="text-red-500 text-sm mt-1">{errors.blogurl}</p>}
           </div>
 
           <div>
@@ -172,24 +158,23 @@ export default function Blog() {
               name="shortdescription"
               value={form.shortdescription}
               onChange={handleChange}
-              className={`w-full p-3 border rounded-lg mt-2 ${errors.shortdescription ? "border-red-500" : ""
-                }`}
+              className={`w-full p-3 border rounded-lg mt-2 ${
+                errors.shortdescription ? "border-red-500" : ""
+              }`}
             />
             {errors.shortdescription && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.shortdescription}
-              </p>
+              <p className="text-red-500 text-sm mt-1">{errors.shortdescription}</p>
             )}
           </div>
         </div>
-
 
         <div className="mb-6">
           <label className="font-semibold text-lg block mb-2">Description:</label>
 
           <div
-            className={`border rounded-lg overflow-hidden ${errors?.description ? "border-red-500" : "border-gray-300"
-              }`}
+            className={`border rounded-lg overflow-hidden ${
+              errors?.description ? "border-red-500" : "border-gray-300"
+            }`}
           >
             <ReactQuill
               theme="snow"
@@ -199,43 +184,34 @@ export default function Blog() {
             />
           </div>
 
-          {errors?.description && (
-            <p className="text-red-500 text-sm mt-1">{errors.description}</p>
-          )}
+          {errors?.description && <p className="text-red-500 text-sm mt-1">{errors.description}</p>}
         </div>
 
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-10">
-
           <div>
             <label className="font-semibold text-lg block mb-2">Image 1:</label>
             <input
               type="file"
               onChange={(e) => setForm({ ...form, image1: e.target.files[0] })}
-              className={`w-full p-2 border rounded-lg ${errors?.image1 ? "border-red-500" : "border-gray-300"
-                }`}
+              className={`w-full p-2 border rounded-lg ${
+                errors?.image1 ? "border-red-500" : "border-gray-300"
+              }`}
             />
-            {errors?.image1 && (
-              <p className="text-red-500 text-sm mt-1">{errors.image1}</p>
-            )}
+            {errors?.image1 && <p className="text-red-500 text-sm mt-1">{errors.image1}</p>}
           </div>
-
 
           <div>
             <label className="font-semibold text-lg block mb-2">Image 2:</label>
             <input
               type="file"
               onChange={(e) => setForm({ ...form, image2: e.target.files[0] })}
-              className={`w-full p-2 border rounded-lg ${errors?.image2 ? "border-red-500" : "border-gray-300"
-                }`}
+              className={`w-full p-2 border rounded-lg ${
+                errors?.image2 ? "border-red-500" : "border-gray-300"
+              }`}
             />
-            {errors?.image2 && (
-              <p className="text-red-500 text-sm mt-1">{errors.image2}</p>
-            )}
+            {errors?.image2 && <p className="text-red-500 text-sm mt-1">{errors.image2}</p>}
           </div>
         </div>
-
-
 
         <div className="w-[300px] mb-10">
           <label className="font-semibold text-lg">Status:</label>
@@ -250,7 +226,6 @@ export default function Blog() {
             <option value="archived">Archived</option>
           </select>
         </div>
-
 
         <div className="text-center">
           <button

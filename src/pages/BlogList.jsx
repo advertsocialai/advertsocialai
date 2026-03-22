@@ -21,16 +21,15 @@ export default function BlogList() {
 
   return (
     <div>
-
       <HeroBlog />
 
-      <div className="bloglist-container max-w-[1400px] mx-auto px-5 md:px-10 py-3
+      <div
+        className="bloglist-container max-w-[1400px] mx-auto px-5 md:px-10 py-3
   mt-4
   sm:-mt-[60px]
-  md:-mt-[100px]" >
-        <h1 className="bloglist-heading text-3xl md:text-4xl font-bold mb-10">
-          Latest Blogs
-        </h1>
+  md:-mt-[100px]"
+      >
+        <h1 className="bloglist-heading text-3xl md:text-4xl font-bold mb-10">Latest Blogs</h1>
 
         <div className="bloglist-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((blog) => (
@@ -43,10 +42,7 @@ export default function BlogList() {
                   src={BLOG_IMAGE_BASE_URL + blog.image1}
                   alt={blog.name}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  onError={(e) =>
-                  (e.target.src =
-                    "/assets/images/default-blog-image.jpg")
-                  }
+                  onError={(e) => (e.target.src = "/assets/images/default-blog-image.jpg")}
                 />
               </div>
 
@@ -54,30 +50,21 @@ export default function BlogList() {
                 {blog.name}
               </h2>
 
-              <p className="blog-card-desc text-gray-600 text-sm mb-10">
-                {blog.shortdescription}
-              </p>
+              <p className="blog-card-desc text-gray-600 text-sm mb-10">{blog.shortdescription}</p>
 
               <button
-                onClick={() => navigate(`/blog/${blog.id}`)} className="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center 
+                onClick={() => navigate(`/blog/${blog.id}`)}
+                className="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center 
                 border border-gray-300 rounded-full text-xl 
                 hover:bg-black hover:text-white hover:border-black transition-all"
               >
                 ➜
               </button>
             </div>
-
           ))}
-
         </div>
       </div>
       <Banner />
-
     </div>
-
   );
-
-
 }
-
-

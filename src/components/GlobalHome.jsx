@@ -13,8 +13,8 @@ const GlobalHome = () => {
         </h2>
 
         <p className="global-description">
-          Headquartered in the US and serving globally, we operate where digital
-          commerce happens without borders, boundaries, or limitations.
+          Headquartered in the US and serving globally, we operate where digital commerce happens
+          without borders, boundaries, or limitations.
           <br />
           <br />
           Growth is global. So are we.
@@ -23,11 +23,7 @@ const GlobalHome = () => {
 
       {/* Right Image */}
       <div className="global-right-image-wrapper">
-        <img
-          src="/assets/images/Globe.svg"
-          alt="Global Presence"
-          className="global-globe-image"
-        />
+        <img src="/assets/images/Globe.svg" alt="Global Presence" className="global-globe-image" />
       </div>
     </div>
   );

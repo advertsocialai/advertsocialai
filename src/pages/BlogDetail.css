@@ -1,104 +1,104 @@
 /* 4K / Ultra-wide Scaling (2560px - 2700px) */
 @media (min-width: 2560px) {
-    :root {
-        --toc-item-height: 88px;
-        /* Approximately 1.7x of 52px */
-        --toc-offset-top: 14px;
-        /* Approximately 1.7x of 8px */
-        --toc-indicator-height: 48px;
-        /* Approximately 1.7x of 28px */
-    }
+  :root {
+    --toc-item-height: 88px;
+    /* Approximately 1.7x of 52px */
+    --toc-offset-top: 14px;
+    /* Approximately 1.7x of 8px */
+    --toc-indicator-height: 48px;
+    /* Approximately 1.7x of 28px */
+  }
 
-    .blog-detail-layout {
-        max-width: 2400px !important;
-        padding-top: 100px !important;
-    }
+  .blog-detail-layout {
+    max-width: 2400px !important;
+    padding-top: 100px !important;
+  }
 
-    .blog-detail-sidebar {
-        width: 480px !important;
-        top: 200px !important;
-        margin-top: 40px !important;
-    }
+  .blog-detail-sidebar {
+    width: 480px !important;
+    top: 200px !important;
+    margin-top: 40px !important;
+  }
 
-    .blog-progress-line {
-        width: 4px !important;
-    }
+  .blog-progress-line {
+    width: 4px !important;
+  }
 
-    .blog-active-indicator {
-        width: 6px !important;
-    }
+  .blog-active-indicator {
+    width: 6px !important;
+  }
 
-    .blog-toc-link {
-        font-size: 24px !important;
-        padding: 15px 40px !important;
-        line-height: 1.2 !important;
-    }
+  .blog-toc-link {
+    font-size: 24px !important;
+    padding: 15px 40px !important;
+    line-height: 1.2 !important;
+  }
 
-    .blog-detail-sidebar ul {
-        gap: 20px !important;
-    }
+  .blog-detail-sidebar ul {
+    gap: 20px !important;
+  }
 
-    .blog-detail-sidebar li {
-        height: var(--toc-item-height) !important;
-    }
+  .blog-detail-sidebar li {
+    height: var(--toc-item-height) !important;
+  }
 
-    .blog-content-card {
-        padding: 80px 100px !important;
-        border-radius: 60px !important;
-    }
+  .blog-content-card {
+    padding: 80px 100px !important;
+    border-radius: 60px !important;
+  }
 
-    .blog-detail-title {
-        font-size: 80px !important;
-        line-height: 100px !important;
-        margin-bottom: 40px !important;
-        scroll-margin-top: 200px !important;
-    }
+  .blog-detail-title {
+    font-size: 80px !important;
+    line-height: 100px !important;
+    margin-bottom: 40px !important;
+    scroll-margin-top: 200px !important;
+  }
 
-    .blog-detail-meta {
-        font-size: 28px !important;
-        margin-bottom: 40px !important;
-        gap: 40px !important;
-    }
+  .blog-detail-meta {
+    font-size: 28px !important;
+    margin-bottom: 40px !important;
+    gap: 40px !important;
+  }
 
-    .blog-detail-meta span svg {
-        width: 30px !important;
-        height: 30px !important;
-    }
+  .blog-detail-meta span svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
 
-    .blog-share-container {
-        gap: 30px !important;
-        margin-bottom: 60px !important;
-    }
+  .blog-share-container {
+    gap: 30px !important;
+    margin-bottom: 60px !important;
+  }
 
-    .blog-share-container a {
-        padding: 24px !important;
-    }
+  .blog-share-container a {
+    padding: 24px !important;
+  }
 
-    .blog-share-container a svg {
-        font-size: 32px !important;
-    }
+  .blog-share-container a svg {
+    font-size: 32px !important;
+  }
 
-    .blog-prose-content {
-        font-size: 28px !important;
-        line-height: 44px !important;
-    }
+  .blog-prose-content {
+    font-size: 28px !important;
+    line-height: 44px !important;
+  }
 
-    /* Scaling inner HTML tags from dangerouslySetInnerHTML if needed */
-    .blog-prose-content h2 {
-        font-size: 48px !important;
-        margin-top: 80px !important;
-        margin-bottom: 30px !important;
-        scroll-margin-top: 200px !important;
-    }
+  /* Scaling inner HTML tags from dangerouslySetInnerHTML if needed */
+  .blog-prose-content h2 {
+    font-size: 48px !important;
+    margin-top: 80px !important;
+    margin-bottom: 30px !important;
+    scroll-margin-top: 200px !important;
+  }
 
-    .blog-prose-content h3 {
-        font-size: 40px !important;
-        margin-top: 60px !important;
-        margin-bottom: 24px !important;
-        scroll-margin-top: 200px !important;
-    }
+  .blog-prose-content h3 {
+    font-size: 40px !important;
+    margin-top: 60px !important;
+    margin-bottom: 24px !important;
+    scroll-margin-top: 200px !important;
+  }
 
-    .blog-prose-content p {
-        margin-bottom: 30px !important;
-    }
+  .blog-prose-content p {
+    margin-bottom: 30px !important;
+  }
 }

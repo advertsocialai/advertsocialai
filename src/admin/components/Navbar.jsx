@@ -83,20 +83,25 @@ export default function Navbar({ toggleSidebar }) {
 
           <div className="hidden sm:flex flex-col items-start leading-tight">
             <span className="font-bold text-gray-800 text-sm">Hello Admin</span>
-            <span className="text-[10px] text-gray-400 font-medium uppercase tracking-wider">Super Admin</span>
+            <span className="text-[10px] text-gray-400 font-medium uppercase tracking-wider">
+              Super Admin
+            </span>
           </div>
 
           <FiChevronDown
             size={16}
-            className={`text-gray-400 transition-transform duration-200 ${open ? "rotate-180" : ""
-              }`}
+            className={`text-gray-400 transition-transform duration-200 ${
+              open ? "rotate-180" : ""
+            }`}
           />
         </button>
 
         {open && (
           <div className="absolute right-0 mt-3 w-56 bg-white border border-gray-100 rounded-2xl shadow-2xl py-2 z-50 animate-in fade-in zoom-in duration-200">
             <div className="px-4 py-3 border-b border-gray-50 mb-1">
-              <p className="text-xs text-gray-400 font-semibold mb-1 uppercase tracking-wider">Account</p>
+              <p className="text-xs text-gray-400 font-semibold mb-1 uppercase tracking-wider">
+                Account
+              </p>
               <p className="text-sm font-bold text-gray-700 truncate">admin@advertsocial.ai</p>
             </div>
 

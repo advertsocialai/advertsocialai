@@ -1,104 +1,104 @@
 .header-container {
-    width: 100%;
-    max-width: 1568px;
-    /* Original max-width */
-    margin: 0 auto;
-    transition: all 0.3s ease;
+  width: 100%;
+  max-width: 1568px;
+  /* Original max-width */
+  margin: 0 auto;
+  transition: all 0.3s ease;
 }
 
 /* LAPTOP L - 1440px */
 @media (min-width: 1440px) {
-    .header-container {
-        max-width: 1800px;
-        /* Allow more width for Laptop L */
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
+  .header-container {
+    max-width: 1800px;
+    /* Allow more width for Laptop L */
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 
-    .nav-btn {
-        gap: 12px !important;
-    }
+  .nav-btn {
+    gap: 12px !important;
+  }
 }
 
 /* 4K - 2560px */
 @media (min-width: 1601px) {
-    .header-container {
-        max-width: 2400px;
-        /* Wider container for 4K */
-        padding-top: 2rem !important;
-        padding-bottom: 2rem !important;
-    }
+  .header-container {
+    max-width: 2400px;
+    /* Wider container for 4K */
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
 
-    .header-logo {
-        width: 350px !important;
-        height: 100px !important;
-    }
+  .header-logo {
+    width: 350px !important;
+    height: 100px !important;
+  }
 
-    .nav-text {
-        font-size: 1.5rem !important;
-        width: auto !important;
-    }
+  .nav-text {
+    font-size: 1.5rem !important;
+    width: auto !important;
+  }
 
-    .nav-btn {
-        width: auto !important;
-        height: auto !important;
-        gap: 24px !important;
-    }
+  .nav-btn {
+    width: auto !important;
+    height: auto !important;
+    gap: 24px !important;
+  }
 
-    .lg\:flex {
-        gap: 6rem !important;
-        /* Increase gap between nav and "Get Started" */
-    }
+  .lg\:flex {
+    gap: 6rem !important;
+    /* Increase gap between nav and "Get Started" */
+  }
 
-    .flex.items-center.justify-center.gap-4.xl\:gap-8 {
-        gap: 4rem !important;
-        /* Increase gap between nav items */
-    }
+  .flex.items-center.justify-center.gap-4.xl\:gap-8 {
+    gap: 4rem !important;
+    /* Increase gap between nav items */
+  }
 
-    .get-started-btn {
-        width: 250px !important;
-        height: 70px !important;
-        font-size: 1.5rem !important;
-        border-radius: 40px !important;
-    }
+  .get-started-btn {
+    width: 250px !important;
+    height: 70px !important;
+    font-size: 1.5rem !important;
+    border-radius: 40px !important;
+  }
 
-    /* Verticals Dropdown Scaling for 4K */
-    .verticals-dropdown {
-        width: 1200px !important;
-        top: 100px !important;
-        /* Adjusted for better spacing */
-        padding: 40px !important;
-        border-radius: 40px !important;
-    }
+  /* Verticals Dropdown Scaling for 4K */
+  .verticals-dropdown {
+    width: 1200px !important;
+    top: 100px !important;
+    /* Adjusted for better spacing */
+    padding: 40px !important;
+    border-radius: 40px !important;
+  }
 
-    .verticals-list {
-        gap: 40px !important;
-    }
+  .verticals-list {
+    gap: 40px !important;
+  }
 
-    .vertical-item {
-        padding: 20px 30px !important;
-        gap: 12px !important;
-        border-radius: 24px !important;
-    }
+  .vertical-item {
+    padding: 20px 30px !important;
+    gap: 12px !important;
+    border-radius: 24px !important;
+  }
 
-    .vertical-item-title {
-        font-size: 1.8rem !important;
-    }
+  .vertical-item-title {
+    font-size: 1.8rem !important;
+  }
 
-    .vertical-item-desc {
-        font-size: 1.2rem !important;
-        max-width: 500px !important;
-    }
+  .vertical-item-desc {
+    font-size: 1.2rem !important;
+    max-width: 500px !important;
+  }
 
-    .dropdown-bridge {
-        height: 250px !important;
-        /* Proportional increase for 4K spacing */
-        width: 1400px !important;
-        top: 0 !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        background: transparent !important;
-        z-index: 1000 !important;
-        /* Above nav, below dropdown items */
-    }
+  .dropdown-bridge {
+    height: 250px !important;
+    /* Proportional increase for 4K spacing */
+    width: 1400px !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background: transparent !important;
+    z-index: 1000 !important;
+    /* Above nav, below dropdown items */
+  }
 }

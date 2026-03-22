@@ -3,14 +3,37 @@ import { motion } from "framer-motion";
 import "./Benefits.css";
 
 const items = [
-  { icon: "/assets/images/selfservice.png", title: "Self-Service Platform", desc: "An advanced control center. Launch campaigns, fine-tune bids, tweak targeting, and enhance your campaigns' efficiency." },
-  { icon: "/assets/images/traffic.png", title: "Bids and traffic optimization", desc: "Smart tools like Smart CPM, CPA Goal help save money and allocate budgets wisely." },
-  { icon: "/assets/images/rtb.png", title: "RTB algorithm", desc: "Optimize your budgets with automatic auctions for traffic (RTB)." },
-  { icon: "/assets/images/api.png", title: "API & Conversion tracking", desc: "Use API to export data & statistics. Add your Voluum, Binom, Bemob or other tracker to control all CPA conversions." },
-  { icon: "/assets/images/campaign.png", title: "Experienced campaign management", desc: "Full transparency and detailed reporting. Our expert managers successfully run worldwide-reach campaigns for direct advertisers and agencies." },
-  { icon: "/assets/images/live.png", title: "Live support and dedicated managers", desc: "Our multilingual managers assist in campaigns launch and advise on creatives, sources whitelists, and top performing offers." }
+  {
+    icon: "/assets/images/selfservice.png",
+    title: "Self-Service Platform",
+    desc: "An advanced control center. Launch campaigns, fine-tune bids, tweak targeting, and enhance your campaigns' efficiency.",
+  },
+  {
+    icon: "/assets/images/traffic.png",
+    title: "Bids and traffic optimization",
+    desc: "Smart tools like Smart CPM, CPA Goal help save money and allocate budgets wisely.",
+  },
+  {
+    icon: "/assets/images/rtb.png",
+    title: "RTB algorithm",
+    desc: "Optimize your budgets with automatic auctions for traffic (RTB).",
+  },
+  {
+    icon: "/assets/images/api.png",
+    title: "API & Conversion tracking",
+    desc: "Use API to export data & statistics. Add your Voluum, Binom, Bemob or other tracker to control all CPA conversions.",
+  },
+  {
+    icon: "/assets/images/campaign.png",
+    title: "Experienced campaign management",
+    desc: "Full transparency and detailed reporting. Our expert managers successfully run worldwide-reach campaigns for direct advertisers and agencies.",
+  },
+  {
+    icon: "/assets/images/live.png",
+    title: "Live support and dedicated managers",
+    desc: "Our multilingual managers assist in campaigns launch and advise on creatives, sources whitelists, and top performing offers.",
+  },
 ];
-
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -39,24 +62,15 @@ const CardAnimated = ({ index, children }) => {
   );
 };
 
-
 export default function Benefits() {
   return (
-    <div
-      className="benefits-container w-full min-h-screen pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-12 sm:pb-16 md:pb-18 lg:pb-20 relative mx-auto flex flex-col items-center justify-center gap-12 sm:gap-14 md:gap-16 lg:gap-[72px] overflow-hidden px-4 sm:px-6 lg:px-8 font-[Outfit]"
-    >
-      <section
-        className="benefits-section flex flex-col justify-center items-center w-full max-w-7xl"
-      >
-        <h2
-          className="benefits-heading text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-bold text-[#1B1A1A] mb-10 sm:mb-12 md:mb-14 lg:mb-16 max-w-5xl px-4 sm:px-6"
-        >
+    <div className="benefits-container w-full min-h-screen pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-12 sm:pb-16 md:pb-18 lg:pb-20 relative mx-auto flex flex-col items-center justify-center gap-12 sm:gap-14 md:gap-16 lg:gap-[72px] overflow-hidden px-4 sm:px-6 lg:px-8 font-[Outfit]">
+      <section className="benefits-section flex flex-col justify-center items-center w-full max-w-7xl">
+        <h2 className="benefits-heading text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-bold text-[#1B1A1A] mb-10 sm:mb-12 md:mb-14 lg:mb-16 max-w-5xl px-4 sm:px-6">
           Benefits of Advertsocial Popunder ads for advertisers and publishers
         </h2>
 
-
         <div className="benefits-grid-container w-full max-w-6xl">
-
           <div className="grid grid-cols-1 gap-8 sm:gap-10 md:hidden">
             {items.map((item, index) => (
               <CardAnimated index={index} key={item.title}>
@@ -64,7 +78,6 @@ export default function Benefits() {
               </CardAnimated>
             ))}
           </div>
-
 
           <div className="hidden md:grid lg:hidden grid-cols-2 gap-8 lg:gap-12">
             {items.map((item, index) => (
@@ -74,9 +87,7 @@ export default function Benefits() {
             ))}
           </div>
 
-
           <div className="hidden lg:block">
-
             <div className="grid grid-cols-3 gap-12 xl:gap-16 mb-12">
               {items.slice(0, 3).map((item, index) => (
                 <CardAnimated index={index} key={item.title}>
@@ -90,9 +101,7 @@ export default function Benefits() {
               ))}
             </div>
 
-
             <div className="benefit-divider-horizontal w-full max-w-4xl h-px bg-[#EAEAEA] mx-auto mb-12" />
-
 
             <div className="grid grid-cols-3 gap-12 xl:gap-16">
               {items.slice(3, 6).map((item, index) => (
@@ -112,7 +121,6 @@ export default function Benefits() {
     </div>
   );
 }
-
 
 const BenefitCard = ({ item }) => {
   return (

@@ -99,8 +99,7 @@ export default function App() {
                 <>
                   <Header setIsVerticalsOpen={setIsVerticalsOpen} />
                   <main
-                    className={`transition-all duration-200 ${isVerticalsOpen ? "app-blur" : ""
-                      }`}
+                    className={`transition-all duration-200 ${isVerticalsOpen ? "app-blur" : ""}`}
                   >
                     <Routes>
                       <Route path="/" element={<HomePage />} />

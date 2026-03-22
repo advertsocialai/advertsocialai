@@ -16,7 +16,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
     { name: "Newsletter", path: "/admin/newsletter" },
     { name: "JobPosts", path: "/admin/jobpost" },
     { name: "Jobs", path: "/admin/jobstable" },
-    { name: "RegisteredUsers", path: "/admin/registertable" }
+    { name: "RegisteredUsers", path: "/admin/registertable" },
   ];
 
   return (
@@ -46,13 +46,17 @@ export default function Sidebar({ isOpen, setIsOpen }) {
               onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
                 `px-4 py-3.5 block rounded-xl transition-all duration-200 border border-transparent
-                ${isActive
-                  ? "bg-gradient-to-r from-[#00E676]/20 to-[#6A0DAD]/20 border-white/10 text-white font-bold shadow-lg"
-                  : "text-white/60 hover:text-white hover:bg-white/5"}`
+                ${
+                  isActive
+                    ? "bg-gradient-to-r from-[#00E676]/20 to-[#6A0DAD]/20 border-white/10 text-white font-bold shadow-lg"
+                    : "text-white/60 hover:text-white hover:bg-white/5"
+                }`
               }
             >
               <div className="flex items-center gap-3">
-                <span className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${isOpen ? 'scale-100' : 'scale-0'}`} />
+                <span
+                  className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${isOpen ? "scale-100" : "scale-0"}`}
+                />
                 {item.name}
               </div>
             </NavLink>

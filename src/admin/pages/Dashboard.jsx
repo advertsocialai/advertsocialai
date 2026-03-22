@@ -6,7 +6,7 @@ import {
   FiLayers,
   FiUsers,
   FiPlus,
-  FiArrowRight
+  FiArrowRight,
 } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { API_ENDPOINTS } from "../../lib/api";
@@ -17,7 +17,7 @@ export default function Dashboard() {
     blogs: 0,
     faqs: 0,
     pages: 0,
-    contacts: 0
+    contacts: 0,
   });
   const [loading, setLoading] = useState(true);
   const user = JSON.parse(localStorage.getItem("user") || "{}");
@@ -36,7 +36,7 @@ export default function Dashboard() {
           blogs: blogsRes.data?.length || 0,
           faqs: faqsRes.length || 0,
           pages: pagesRes.data?.length || pagesRes.length || 0,
-          contacts: contactsRes.data?.length || 0
+          contacts: contactsRes.data?.length || 0,
         });
       } catch (err) {
       } finally {
@@ -47,16 +47,51 @@ export default function Dashboard() {
   }, []);
 
   const statCards = [
-    { label: "Total Blogs", value: stats.blogs, icon: <FiFileText />, color: "from-green-400 to-emerald-600" },
-    { label: "Total FAQs", value: stats.faqs, icon: <FiMessageSquare />, color: "from-purple-400 to-indigo-600" },
-    { label: "Total Jobs", value: stats.pages, icon: <FiLayers />, color: "from-blue-400 to-cyan-600" },
-    { label: "Total Contacts", value: stats.contacts, icon: <FiUsers />, color: "from-pink-400 to-rose-600" },
+    {
+      label: "Total Blogs",
+      value: stats.blogs,
+      icon: <FiFileText />,
+      color: "from-green-400 to-emerald-600",
+    },
+    {
+      label: "Total FAQs",
+      value: stats.faqs,
+      icon: <FiMessageSquare />,
+      color: "from-purple-400 to-indigo-600",
+    },
+    {
+      label: "Total Jobs",
+      value: stats.pages,
+      icon: <FiLayers />,
+      color: "from-blue-400 to-cyan-600",
+    },
+    {
+      label: "Total Contacts",
+      value: stats.contacts,
+      icon: <FiUsers />,
+      color: "from-pink-400 to-rose-600",
+    },
   ];
 
   const quickActions = [
-    { title: "Create Blog", desc: "Write and publish a new blog post", path: "/admin/blog", icon: <FiPlus /> },
-    { title: "Add New Page", desc: "Build a new service or info page", path: "/admin/pages", icon: <FiPlus /> },
-    { title: "View Contacts", desc: "Check recent leads and inquiries", path: "/admin/users", icon: <FiArrowRight /> },
+    {
+      title: "Create Blog",
+      desc: "Write and publish a new blog post",
+      path: "/admin/blog",
+      icon: <FiPlus />,
+    },
+    {
+      title: "Add New Page",
+      desc: "Build a new service or info page",
+      path: "/admin/pages",
+      icon: <FiPlus />,
+    },
+    {
+      title: "View Contacts",
+      desc: "Check recent leads and inquiries",
+      path: "/admin/users",
+      icon: <FiArrowRight />,
+    },
   ];
 
   return (
@@ -69,7 +104,10 @@ export default function Dashboard() {
       >
         <div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
-            Welcome back, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E676] to-[#6A0DAD]">{user.name || "Admin"}</span>
+            Welcome back,{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E676] to-[#6A0DAD]">
+              {user.name || "Admin"}
+            </span>
           </h1>
           <p className="text-gray-500 mt-2">Here's what's happening today in your ecosystem.</p>
         </div>
@@ -90,13 +128,19 @@ export default function Dashboard() {
             transition={{ delay: idx * 0.1 }}
             className="group relative p-6 bg-white border border-gray-100 shadow-xl shadow-gray-200/50 rounded-2xl overflow-hidden"
           >
-            <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${stat.color} opacity-10 blur-3xl group-hover:opacity-20 transition-opacity`} />
+            <div
+              className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${stat.color} opacity-10 blur-3xl group-hover:opacity-20 transition-opacity`}
+            />
 
             <div className="relative z-10">
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center text-white text-xl shadow-lg mb-4`}>
+              <div
+                className={`w-12 h-12 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center text-white text-xl shadow-lg mb-4`}
+              >
                 {stat.icon}
               </div>
-              <p className="text-gray-500 text-sm font-medium uppercase tracking-wider">{stat.label}</p>
+              <p className="text-gray-500 text-sm font-medium uppercase tracking-wider">
+                {stat.label}
+              </p>
               <h3 className="text-3xl font-bold text-gray-900 mt-1">
                 {loading ? "..." : stat.value}
               </h3>
@@ -130,7 +174,6 @@ export default function Dashboard() {
       </div>
 
       {/* Recent Banner/Promo */}
-
     </div>
   );
 }

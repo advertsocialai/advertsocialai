@@ -19,7 +19,6 @@ const cardVariants = {
 const FeaturesVignette = () => {
   return (
     <section className="fv-section relative w-full bg-white overflow-hidden py-10 sm:py-16 md:py-20 lg:py-20 pb-6 sm:pb-8 md:pb-10 lg:pb-12 font-[Outfit]">
-
       <div className="fv-mesh-bg absolute w-[1500px] sm:w-[1800px] lg:w-[2082px] h-[800px] sm:h-[1000px] lg:h-[1328px] top-[400px] sm:top-[600px] lg:top-[881px] left-[-150px] sm:left-[-200px] lg:left-[-301px] opacity-100 -z-10">
         <img
           src="/assets/images/Mesh-Grad.png"
@@ -28,10 +27,8 @@ const FeaturesVignette = () => {
         />
       </div>
 
-
       <div className="fv-mesh-blob1 absolute w-[800px] sm:w-[1000px] lg:w-[1212px] h-[600px] sm:h-[800px] lg:h-[1088px] top-[500px] sm:top-[800px] lg:top-[1121px] left-[-150px] sm:left-[-200px] lg:left-[-301px] opacity-[0.05] bg-gradient-to-tr from-[#6549F6] to-[#FF611D] rotate-180 -z-10"></div>
       <div className="fv-mesh-blob2 absolute w-[800px] sm:w-[1000px] lg:w-[1212px] h-[600px] sm:h-[800px] lg:h-[1088px] top-[400px] sm:top-[600px] lg:top-[881px] left-[300px] sm:left-[400px] lg:left-[569px] opacity-[0.05] bg-gradient-to-tr from-[#6549F6] to-[#FF611D] -z-10"></div>
-
 
       <div className="fv-header-block flex flex-col items-center text-center gap-6 sm:gap-8 lg:gap-10 max-w-[90%] sm:max-w-[600px] lg:max-w-[916px] mx-auto mb-12 sm:mb-16 lg:mb-20 px-4">
         <h2 className="fv-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-[#1B1A1A] font-Outfit">
@@ -39,16 +36,13 @@ const FeaturesVignette = () => {
         </h2>
 
         <p className="fv-description text-sm sm:text-base lg:text-lg leading-relaxed text-[#4B4B4B]  font-Outfit">
-          Vignette banners appear between page loads or during navigation breaks, ensuring users see the ad
-          at the right moment—when attention is highest.
+          Vignette banners appear between page loads or during navigation breaks, ensuring users see
+          the ad at the right moment—when attention is highest.
         </p>
       </div>
 
-
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="fv-inner-wrapper max-w-7xl mx-auto">
-
-
           <div className="grid grid-cols-1 gap-6 sm:gap-8 md:hidden">
             <FeatureCardAnimated index={0}>
               <FeatureCardResponsive
@@ -83,7 +77,6 @@ Works seamlessly on mobile and desktop"
               />
             </FeatureCardAnimated>
           </div>
-
 
           <div className="hidden md:grid lg:hidden grid-cols-2 gap-6 max-w-4xl mx-auto">
             <FeatureCardAnimated index={0}>
@@ -120,11 +113,14 @@ Works seamlessly on mobile and desktop"
             </FeatureCardAnimated>
           </div>
 
-
-          <div className="fv-grid-wrapper hidden lg:block relative max-w-[1280px] mx-auto" style={{ height: "445px" }}>
-
-
-            <div className="fv-top-row flex justify-between items-center" style={{ width: "1280px", height: "375px" }}>
+          <div
+            className="fv-grid-wrapper hidden lg:block relative max-w-[1280px] mx-auto"
+            style={{ height: "445px" }}
+          >
+            <div
+              className="fv-top-row flex justify-between items-center"
+              style={{ width: "1280px", height: "375px" }}
+            >
               <FeatureCardAnimated index={0}>
                 <FeatureCard
                   image="/assets/images/highcpm.png"
@@ -146,7 +142,6 @@ Works seamlessly on mobile and desktop"
               </div>
             </div>
 
-
             <div
               className="fv-center-block"
               style={{
@@ -162,7 +157,6 @@ Works seamlessly on mobile and desktop"
                 zIndex: 1,
               }}
             >
-
               <div style={{ marginTop: "32px" }}>
                 <FeatureCardAnimated index={2}>
                   <FeatureCard
@@ -174,8 +168,6 @@ Works seamlessly on mobile and desktop"
                   />
                 </FeatureCardAnimated>
               </div>
-
-
 
               <FeatureCardAnimated index={3}>
                 <FeatureCard
@@ -191,12 +183,9 @@ Works seamlessly on mobile and desktop"
           </div>
         </div>
       </div>
-
-
     </section>
   );
 };
-
 
 const FeatureCardAnimated = ({ index, children }) => {
   return (
@@ -212,7 +201,6 @@ const FeatureCardAnimated = ({ index, children }) => {
     </motion.div>
   );
 };
-
 
 const FeatureCardResponsive = ({ image, title, description }) => {
   const [hover, setHover] = useState(false);
@@ -242,7 +230,6 @@ const FeatureCardResponsive = ({ image, title, description }) => {
   );
 };
 
-
 const FeatureCard = ({ image, title, description, height, textGap }) => {
   const [hover, setHover] = useState(false);
 
@@ -262,11 +249,11 @@ const FeatureCard = ({ image, title, description, height, textGap }) => {
     boxShadow: hover ? "0 10px 25px rgba(0,0,0,0.08)" : "none",
     ...(hover
       ? {
-        border: "1px solid transparent",
-        background:
-          "linear-gradient(#ffffff,#ffffff) padding-box, linear-gradient(69.88deg,#6549F6, #FF611D) border-box",
-        backgroundClip: "padding-box, border-box",
-      }
+          border: "1px solid transparent",
+          background:
+            "linear-gradient(#ffffff,#ffffff) padding-box, linear-gradient(69.88deg,#6549F6, #FF611D) border-box",
+          backgroundClip: "padding-box, border-box",
+        }
       : { border: "1px solid #EAEAEA" }),
   };
 
@@ -279,13 +266,14 @@ const FeatureCard = ({ image, title, description, height, textGap }) => {
     >
       <img className="fv-card-icon" src={image} alt={title} style={{ width: 46, height: 46 }} />
 
-      <div className="fv-card-text-block" style={{ display: "flex", flexDirection: "column", gap: textGap || "32px", maxWidth: 206 }}>
+      <div
+        className="fv-card-text-block"
+        style={{ display: "flex", flexDirection: "column", gap: textGap || "32px", maxWidth: 206 }}
+      >
         <h3 className="fv-card-title text-[20px] leading-[28px] text-[#1B1A1A] font-medium">
           {title}
         </h3>
-        <p className="fv-card-desc text-[16px] leading-[24px] text-[#4B4B4B]">
-          {description}
-        </p>
+        <p className="fv-card-desc text-[16px] leading-[24px] text-[#4B4B4B]">{description}</p>
       </div>
     </div>
   );

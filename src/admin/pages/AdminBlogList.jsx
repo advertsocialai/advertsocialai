@@ -11,7 +11,7 @@ export default function BlogList() {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
-  // Prevent duplicate API calls 
+  // Prevent duplicate API calls
   const effectRan = useRef(false);
 
   useEffect(() => {
@@ -25,15 +25,12 @@ export default function BlogList() {
     try {
       const res = await axios.get(API_ENDPOINTS.GET_ALL_BLOGS);
       setBlogs(res.data.data || []);
-    } catch (err) {
-    }
+    } catch (err) {}
   };
 
   // DELETE FUNCTION
   const handleDelete = async (id) => {
-    const confirmDelete = window.confirm(
-      "Are you sure you want to delete this blog?"
-    );
+    const confirmDelete = window.confirm("Are you sure you want to delete this blog?");
 
     if (!confirmDelete) return;
 
@@ -47,13 +44,10 @@ export default function BlogList() {
     }
   };
 
-  const filtered = blogs.filter((b) =>
-    b.name?.toLowerCase().includes(search.toLowerCase())
-  );
+  const filtered = blogs.filter((b) => b.name?.toLowerCase().includes(search.toLowerCase()));
 
   return (
     <div className="w-full min-h-screen p-4 md:p-8 bg-[#f7f7f7]">
-
       {/* SEARCH BAR */}
       <div className="bg-white p-4 md:p-6 rounded-xl shadow-lg mb-6">
         <input
@@ -67,7 +61,6 @@ export default function BlogList() {
 
       {/* TABLE */}
       <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-
         <table className="w-full">
           <thead className="bg-gray-100 border-b">
             <tr>
@@ -82,7 +75,6 @@ export default function BlogList() {
           <tbody>
             {filtered.map((blog) => (
               <tr key={blog.id} className="border-b hover:bg-gray-50">
-
                 {/* NAME */}
                 <td className="p-4 text-lg">{blog.name}</td>
 
@@ -116,13 +108,11 @@ export default function BlogList() {
                     className="text-red-600 cursor-pointer hover:text-red-800"
                   />
                 </td>
-
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-
     </div>
   );
 }

@@ -1,6 +1,5 @@
 /* Mobile-only fixes */
 @media (max-width: 768px) {
-
   .howitworks-pushads-mobile {
     margin-top: 0 !important;
     padding: 0 !important;
@@ -25,8 +24,8 @@
   }
 
   /* Hide side phone images on mobile */
-  .howitworks-pushads-mobile .hiw-content>div:first-child,
-  .howitworks-pushads-mobile .hiw-content>div:last-child {
+  .howitworks-pushads-mobile .hiw-content > div:first-child,
+  .howitworks-pushads-mobile .hiw-content > div:last-child {
     display: none !important;
   }
 
@@ -48,7 +47,6 @@
 
 /* REAL MOBILE FIX – iOS & Android */
 @media (max-width: 768px) {
-
   /* Let section grow naturally */
   .howitworks-pushads-mobile {
     height: auto !important;
@@ -70,7 +68,7 @@
 
 /* MOBILE ONLY – DO NOT AFFECT DESKTOP */
 @media (max-width: 768px) {
-  .howitworks-pushads-mobile>div {
+  .howitworks-pushads-mobile > div {
     height: auto !important;
     min-height: unset !important;
   }
@@ -78,7 +76,7 @@
 
 /* 🔒 Mobile-only fix — desktop untouched */
 @media (max-width: 768px) {
-  .howitworks-pushads-mobile>div {
+  .howitworks-pushads-mobile > div {
     height: auto !important;
     min-height: unset !important;
   }
@@ -86,7 +84,6 @@
 
 /* FIX title overlap on small phones ONLY */
 @media (max-width: 480px) {
-
   .howitworks-pushads-mobile .hiw-title {
     position: relative !important;
     top: 0 !important;
@@ -95,7 +92,6 @@
 
     margin-bottom: 24px !important;
   }
-
 }
 
 /* =========================================
@@ -103,7 +99,6 @@
    DOES NOT TOUCH DESKTOP
    ========================================= */
 @media (max-width: 768px) {
-
   /* Reset section spacing */
   .howitworks-pushads-mobile {
     margin-top: 0 !important;
@@ -112,7 +107,7 @@
   }
 
   /* Remove fixed heights that cause blank space */
-  .howitworks-pushads-mobile>div {
+  .howitworks-pushads-mobile > div {
     height: auto !important;
     min-height: unset !important;
   }
@@ -177,7 +172,6 @@
    Desktop untouched
    ========================================= */
 @media (max-width: 768px) {
-
   /* 1️⃣ Hide ALL images safely (no text affected) */
   .howitworks-pushads-mobile img {
     display: none !important;
@@ -189,7 +183,7 @@
   }
 
   /* 3️⃣ Remove fixed height causing blank space */
-  .howitworks-pushads-mobile>div {
+  .howitworks-pushads-mobile > div {
     height: auto !important;
     min-height: unset !important;
   }
@@ -223,7 +217,6 @@
 }
 
 @media (max-width: 768px) {
-
   /* Hide desktop absolute layout */
   .howitworks-pushads-mobile .hiw-content {
     display: none !important;
@@ -242,7 +235,7 @@
   }
 
   /* Remove fixed height */
-  .howitworks-pushads-mobile>div {
+  .howitworks-pushads-mobile > div {
     height: auto !important;
     min-height: unset !important;
   }
@@ -262,7 +255,6 @@
 }
 
 @media (max-width: 768px) {
-
   /* 1️⃣ Cancel desktop negative margin */
   .howitworks-pushads-mobile {
     margin-top: 0 !important;
@@ -270,7 +262,7 @@
   }
 
   /* 2️⃣ Remove fixed height container */
-  .howitworks-pushads-mobile>div {
+  .howitworks-pushads-mobile > div {
     height: auto !important;
     min-height: unset !important;
   }
@@ -296,7 +288,6 @@
 
 /* ===================================== STEP 2 — MOBILE ONLY (DESKTOP SAFE) ===================================== */
 @media (max-width: 1023px) {
-
   /* Hide desktop absolute layout on mobile */
   .howitworks-pushads-mobile .hiw-content {
     display: none !important;
@@ -319,7 +310,6 @@
 
 /* MOBILE ONLY FIX */
 @media (max-width: 1024px) {
-
   /* Hide doodle */
   .howitworks-pushads-mobile img[alt="Doodle"] {
     display: none !important;
@@ -379,7 +369,6 @@
 }
 
 @media (max-width: 1024px) {
-
   /* Force same desktop bg image on mobile */
   .howitworks-pushads-mobile > div {
     min-height: 100vh;

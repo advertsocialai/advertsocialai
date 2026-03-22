@@ -8,15 +8,15 @@ import Contact from "../components/Contact";
 import Research from "../components/Research";
 
 export default function SmartLink() {
-    return (
-        <>
-            <HeroSmartLink />
-            <FeaturesSmartLink />
-            <HowItWorksSmartLink />
-            <VerticalsSmartLink />
-             <BenefitsSmartLink /> 
-            <Contact />
-            <Research />
-        </>
-    );
+  return (
+    <>
+      <HeroSmartLink />
+      <FeaturesSmartLink />
+      <HowItWorksSmartLink />
+      <VerticalsSmartLink />
+      <BenefitsSmartLink />
+      <Contact />
+      <Research />
+    </>
+  );
 }

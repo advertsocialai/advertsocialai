@@ -1,346 +1,326 @@
 .footer-bg-image {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: fill !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: fill !important;
 }
 
 /* 2560px - 2K Scaling */
 @media (min-width: 2560px) {
-    .footer-root {
-        max-width: 2432px !important;
-        height: 850px !important;
-        border-radius: 40px !important;
-        background-color: #000 !important;
-    }
+  .footer-root {
+    max-width: 2432px !important;
+    height: 850px !important;
+    border-radius: 40px !important;
+    background-color: #000 !important;
+  }
 
+  .footer-scaling-content {
+    top: 160px !important;
+    gap: 80px !important;
+    width: 1520px !important;
+  }
 
-    .footer-scaling-content {
-        top: 160px !important;
-        gap: 80px !important;
-        width: 1520px !important;
-    }
+  .footer-root h4 {
+    font-size: 1.4rem !important;
+  }
 
-    .footer-root h4 {
-        font-size: 1.4rem !important;
-    }
+  .footer-root span,
+  .footer-root p,
+  .footer-root input {
+    font-size: 1.2rem !important;
+  }
 
-    .footer-root span,
-    .footer-root p,
-    .footer-root input {
-        font-size: 1.2rem !important;
-    }
+  .footer-root .text-base {
+    font-size: 1.3rem !important;
+  }
 
-    .footer-root .text-base {
-        font-size: 1.3rem !important;
-    }
+  .footer-root img[alt="social"] {
+    width: 28px !important;
+    height: 28px !important;
+  }
 
-    .footer-root img[alt="social"] {
-        width: 28px !important;
-        height: 28px !important;
-    }
+  .footer-root img[alt="AdvertSocial"] {
+    width: 160px !important;
+  }
 
-    .footer-root img[alt="AdvertSocial"] {
-        width: 160px !important;
-    }
+  .footer-root .footer-brand-container {
+    max-width: 280px !important;
+    gap: 24px !important;
+  }
 
-    .footer-root .footer-brand-container {
-        max-width: 280px !important;
-        gap: 24px !important;
-    }
+  .footer-root .footer-input-container {
+    max-width: 500px !important;
+    height: 80px !important;
+  }
 
-    .footer-root .footer-input-container {
-        max-width: 500px !important;
-        height: 80px !important;
-    }
+  .footer-root .footer-input-container button {
+    width: 60px !important;
+    height: 40px !important;
+    margin-left: -60px !important;
+  }
 
-    .footer-root .footer-input-container button {
-        width: 60px !important;
-        height: 40px !important;
-        margin-left: -60px !important;
-    }
+  .footer-root .flex.flex-col.gap-8.col-span-3 {
+    gap: 40px !important;
+  }
 
-    .footer-root .flex.flex-col.gap-8.col-span-3 {
-        gap: 40px !important;
-    }
+  .footer-root .flex.flex-col.gap-4 {
+    gap: 20px !important;
+  }
 
-    .footer-root .flex.flex-col.gap-4 {
-        gap: 20px !important;
-    }
+  .footer-root .flex.gap-4 {
+    gap: 20px !important;
+  }
 
-    .footer-root .flex.gap-4 {
-        gap: 20px !important;
-    }
+  .footer-root .grid-cols-10 {
+    gap: 40px !important;
+  }
 
-    .footer-root .grid-cols-10 {
-        gap: 40px !important;
-    }
-
-
-    .footer-root .footer-bottom-bar {
-        bottom: -110px !important;
-        width: 1520px !important;
-        font-size: 1.15rem !important;
-    }
+  .footer-root .footer-bottom-bar {
+    bottom: -110px !important;
+    width: 1520px !important;
+    font-size: 1.15rem !important;
+  }
 }
-
-
 
 /* 2700px - Scaling to Full Width for >2700px (4K precursor) */
 @media (min-width: 2700px) {
-    .footer-root {
-        max-width: 100% !important;
-        width: 100% !important;
-        height: 1100px !important;
-        border-radius: 0 !important;
-        background-color: #000 !important;
-    }
+  .footer-root {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 1100px !important;
+    border-radius: 0 !important;
+    background-color: #000 !important;
+  }
 
-    .footer-scaling-content {
-        top: 220px !important;
-        gap: 200px !important;
-        width: 90% !important;
-        max-width: 2500px !important;
-    }
+  .footer-scaling-content {
+    top: 220px !important;
+    gap: 200px !important;
+    width: 90% !important;
+    max-width: 2500px !important;
+  }
 
-    .footer-root h4 {
-        font-size: 1.95rem !important;
-        margin-bottom: 40px !important;
-    }
+  .footer-root h4 {
+    font-size: 1.95rem !important;
+    margin-bottom: 40px !important;
+  }
 
-    .footer-root span,
-    .footer-root p,
-    .footer-root input {
-        font-size: 1.6rem !important;
-    }
+  .footer-root span,
+  .footer-root p,
+  .footer-root input {
+    font-size: 1.6rem !important;
+  }
 
-    .footer-root .text-base {
-        font-size: 1.8rem !important;
-    }
+  .footer-root .text-base {
+    font-size: 1.8rem !important;
+  }
 
-    .footer-root img[alt="social"] {
-        width: 46px !important;
-        height: 46px !important;
-    }
+  .footer-root img[alt="social"] {
+    width: 46px !important;
+    height: 46px !important;
+  }
 
-    .footer-root img[alt="AdvertSocial"] {
-        width: 230px !important;
-        height: auto !important;
-    }
+  .footer-root img[alt="AdvertSocial"] {
+    width: 230px !important;
+    height: auto !important;
+  }
 
-    .footer-root .footer-brand-container {
-        max-width: 440px !important;
-        gap: 40px !important;
-    }
+  .footer-root .footer-brand-container {
+    max-width: 440px !important;
+    gap: 40px !important;
+  }
 
-    .footer-root .footer-input-container {
-        max-width: 800px !important;
-        height: 110px !important;
-        margin-top: 32px !important;
-        margin-bottom: 32px !important;
-    }
+  .footer-root .footer-input-container {
+    max-width: 800px !important;
+    height: 110px !important;
+    margin-top: 32px !important;
+    margin-bottom: 32px !important;
+  }
 
-    .footer-root .footer-input-container button {
-        width: 90px !important;
-        height: 60px !important;
-        margin-left: -85px !important;
-    }
+  .footer-root .footer-input-container button {
+    width: 90px !important;
+    height: 60px !important;
+    margin-left: -85px !important;
+  }
 
-    .footer-root .footer-input-container button img {
-        width: 28px !important;
-        height: 28px !important;
-    }
+  .footer-root .footer-input-container button img {
+    width: 28px !important;
+    height: 28px !important;
+  }
 
-    .footer-root .flex.flex-col.gap-8.col-span-3 {
-        gap: 90px !important;
-    }
+  .footer-root .flex.flex-col.gap-8.col-span-3 {
+    gap: 90px !important;
+  }
 
-    /* Target Resources column margin-left scaling */
-    .footer-root .grid-cols-10>div[style*="marginLeft: 50px"] {
-        margin-left: 90px !important;
-    }
+  /* Target Resources column margin-left scaling */
+  .footer-root .grid-cols-10 > div[style*="marginLeft: 50px"] {
+    margin-left: 90px !important;
+  }
 
-    .footer-root .flex.flex-col.gap-4 {
-        gap: 50px !important;
-    }
+  .footer-root .flex.flex-col.gap-4 {
+    gap: 50px !important;
+  }
 
-    .footer-root .flex.gap-4 {
-        gap: 40px !important;
-    }
+  .footer-root .flex.gap-4 {
+    gap: 40px !important;
+  }
 
-    .footer-root .grid-cols-10 {
-        gap: 90px !important;
-    }
+  .footer-root .grid-cols-10 {
+    gap: 90px !important;
+  }
 
-    .footer-root .footer-bottom-bar {
-        bottom: -280px !important;
-        width: 90% !important;
-        max-width: 2500px !important;
-        font-size: 1.6rem !important;
-    }
+  .footer-root .footer-bottom-bar {
+    bottom: -280px !important;
+    width: 90% !important;
+    max-width: 2500px !important;
+    font-size: 1.6rem !important;
+  }
 }
-
 
 /* 3840px - 4K Scaling */
 @media (min-width: 3840px) {
-    .footer-root {
-        max-width: 100% !important;
-        width: 100% !important;
-        height: 1200px !important;
-        border-radius: 0 !important;
-        background-color: #000 !important;
-    }
+  .footer-root {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 1200px !important;
+    border-radius: 0 !important;
+    background-color: #000 !important;
+  }
 
-    /* Hide the background image "Subtract" shape at 4K to avoid white gaps */
-    .footer-bg-image {
-        display: none !important;
-    }
+  /* Hide the background image "Subtract" shape at 4K to avoid white gaps */
+  .footer-bg-image {
+    display: none !important;
+  }
 
-    .footer-scaling-content {
-        top: 240px !important;
-        gap: 320px !important;
-        width: 90% !important;
-        max-width: 3400px !important;
-    }
+  .footer-scaling-content {
+    top: 240px !important;
+    gap: 320px !important;
+    width: 90% !important;
+    max-width: 3400px !important;
+  }
 
-    .footer-root h4 {
-        font-size: 2.8rem !important;
-        font-weight: 500 !important;
-        line-height: 1.5 !important;
-        margin-bottom: 60px !important;
-    }
+  .footer-root h4 {
+    font-size: 2.8rem !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    margin-bottom: 60px !important;
+  }
 
-    .footer-root .footer-newsletter-text {
-        color: #fff !important;
-        font-size: 2.2rem !important;
-        max-width: 1000px !important;
-        font-weight: 300 !important;
-        line-height: 1.6 !important;
-        text-transform: none !important;
-        /* Keep case natural */
-    }
+  .footer-root .footer-newsletter-text {
+    color: #fff !important;
+    font-size: 2.2rem !important;
+    max-width: 1000px !important;
+    font-weight: 300 !important;
+    line-height: 1.6 !important;
+    text-transform: none !important;
+    /* Keep case natural */
+  }
 
-    .footer-root span,
-    .footer-root p,
-    .footer-root input {
-        font-size: 2rem !important;
-        font-weight: 300 !important;
-        line-height: 1.6 !important;
-    }
+  .footer-root span,
+  .footer-root p,
+  .footer-root input {
+    font-size: 2rem !important;
+    font-weight: 300 !important;
+    line-height: 1.6 !important;
+  }
 
-    .footer-root .text-base {
-        font-size: 2.4rem !important;
-        line-height: 1.4 !important;
-    }
+  .footer-root .text-base {
+    font-size: 2.4rem !important;
+    line-height: 1.4 !important;
+  }
 
-    .footer-root img[alt="social"] {
-        width: 60px !important;
-        height: 60px !important;
-    }
+  .footer-root img[alt="social"] {
+    width: 60px !important;
+    height: 60px !important;
+  }
 
-    .footer-root img[alt="arrow"],
-    .footer-root img[alt="arrow-up"] {
-        width: 40px !important;
-        height: 35px !important;
-    }
+  .footer-root img[alt="arrow"],
+  .footer-root img[alt="arrow-up"] {
+    width: 40px !important;
+    height: 35px !important;
+  }
 
-    .footer-root img[alt="AdvertSocial"] {
-        width: 320px !important;
-    }
+  .footer-root img[alt="AdvertSocial"] {
+    width: 320px !important;
+  }
 
-    .footer-root .footer-brand-container {
-        max-width: 600px !important;
-        gap: 60px !important;
-    }
+  .footer-root .footer-brand-container {
+    max-width: 600px !important;
+    gap: 60px !important;
+  }
 
-    .footer-root .footer-input-container {
-        max-width: 1100px !important;
-        height: 150px !important;
-        margin-top: 50px !important;
-        margin-bottom: 50px !important;
-        padding: 0 40px !important;
-    }
+  .footer-root .footer-input-container {
+    max-width: 1100px !important;
+    height: 150px !important;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    padding: 0 40px !important;
+  }
 
-    .footer-root .footer-input-container button {
-        width: 120px !important;
-        height: 80px !important;
-        margin-left: -110px !important;
-    }
+  .footer-root .footer-input-container button {
+    width: 120px !important;
+    height: 80px !important;
+    margin-left: -110px !important;
+  }
 
-    .footer-root .flex.flex-col.gap-8.col-span-3 {
-        gap: 120px !important;
-    }
+  .footer-root .flex.flex-col.gap-8.col-span-3 {
+    gap: 120px !important;
+  }
 
-    /* Target Resources column margin-left scaling */
-    .footer-root .grid-cols-10>div[style*="marginLeft: 50px"] {
-        margin-left: 150px !important;
-    }
+  /* Target Resources column margin-left scaling */
+  .footer-root .grid-cols-10 > div[style*="marginLeft: 50px"] {
+    margin-left: 150px !important;
+  }
 
-    .footer-root .flex.flex-col.gap-4 {
-        gap: 60px !important;
-    }
+  .footer-root .flex.flex-col.gap-4 {
+    gap: 60px !important;
+  }
 
-    .footer-root .flex.gap-4 {
-        gap: 60px !important;
-    }
+  .footer-root .flex.gap-4 {
+    gap: 60px !important;
+  }
 
-    .footer-root .grid-cols-10 {
-        gap: 100px !important;
-    }
+  .footer-root .grid-cols-10 {
+    gap: 100px !important;
+  }
 
-    .footer-root .footer-bottom-bar {
-        bottom: -350px !important;
-        width: 90% !important;
-        max-width: 3400px !important;
-        font-size: 2.2rem !important;
-    }
+  .footer-root .footer-bottom-bar {
+    bottom: -350px !important;
+    width: 90% !important;
+    max-width: 3400px !important;
+    font-size: 2.2rem !important;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Scaling Fixed Scroll to Top Button for 4K */
 @media (min-width: 2560px) {
+  footer + button,
+  footer ~ button {
+    width: 80px !important;
+    height: 110px !important;
+    bottom: 80px !important;
+    right: 120px !important;
+    padding-top: 40px !important;
+  }
 
-    footer+button,
-    footer~button {
-        width: 80px !important;
-        height: 110px !important;
-        bottom: 80px !important;
-        right: 120px !important;
-        padding-top: 40px !important;
-    }
-
-    footer+button img,
-    footer~button img {
-        width: 28px !important;
-        height: 30px !important;
-    }
+  footer + button img,
+  footer ~ button img {
+    width: 28px !important;
+    height: 30px !important;
+  }
 }
 
 @media (min-width: 3840px) {
+  footer + button,
+  footer ~ button {
+    width: 92px !important;
+    height: 126px !important;
+    bottom: 100px !important;
+    right: 150px !important;
+    padding-top: 48px !important;
+  }
 
-    footer+button,
-    footer~button {
-        width: 92px !important;
-        height: 126px !important;
-        bottom: 100px !important;
-        right: 150px !important;
-        padding-top: 48px !important;
-    }
-
-    footer+button img,
-    footer~button img {
-        width: 32px !important;
-        height: 34px !important;
-    }
+  footer + button img,
+  footer ~ button img {
+    width: 32px !important;
+    height: 34px !important;
+  }
 }

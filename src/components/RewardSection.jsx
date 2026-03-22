@@ -12,8 +12,6 @@ export default function RewardSection() {
       }}
     >
       <div className="relative z-[2] mx-auto max-w-[1600px] px-8 lg:px-12 xl:px-16 reward-wrapper">
-
-
         <div
           className="
             max-w-[700px] ml-[60px] mb-[60px]
@@ -35,7 +33,6 @@ export default function RewardSection() {
           </h2>
         </div>
 
-
         <div
           className="
             flex justify-between mt-[60px] gap-[60px] px-[5%]
@@ -43,7 +40,6 @@ export default function RewardSection() {
             reward-content
           "
         >
-
           <div
             className="
               flex flex-col justify-center flex-[0.25]
@@ -69,48 +65,43 @@ export default function RewardSection() {
                 hover:scale-[1.05] transition-all font-Outfit
               "
               style={{
-                paddingTop: '48px',
-                paddingRight: '32px',
-                paddingBottom: '48px',
-                paddingLeft: '32px',
-                background: 'linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%)',
+                paddingTop: "48px",
+                paddingRight: "32px",
+                paddingBottom: "48px",
+                paddingLeft: "32px",
+                background: "linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%)",
                 opacity: 1,
-                borderRadius: '70px',
+                borderRadius: "70px",
               }}
             >
               <span
                 style={{
-                  width: '80px',
-                  height: '26px',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#FFFFFF',
-                  fontFamily: 'Outfit',
+                  width: "80px",
+                  height: "26px",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#FFFFFF",
+                  fontFamily: "Outfit",
                   fontWeight: 700,
-                  fontStyle: 'bold',
-                  fontSize: '14px',
-                  lineHeight: '16px',
+                  fontStyle: "bold",
+                  fontSize: "14px",
+                  lineHeight: "16px",
                   letterSpacing: 0,
-                  textAlign: 'center',
-                  verticalAlign: 'middle',
-                  borderRadius: '8px',
-                  boxSizing: 'border-box',
+                  textAlign: "center",
+                  verticalAlign: "middle",
+                  borderRadius: "8px",
+                  boxSizing: "border-box",
                   opacity: 1,
                 }}
               >
                 Get <br /> Started
               </span>
-              <img
-                src="/assets/images/img_arrowright.svg"
-                className="w-[14px] h-[14px] mt-[6px]"
-              />
+              <img src="/assets/images/img_arrowright.svg" className="w-[14px] h-[14px] mt-[6px]" />
             </a>
           </div>
 
-
           <div className="flex flex-1 justify-between gap-[40px] max-lg:flex-col reward-features">
-
             <div
               className="
                 flex-1 pl-[40px] border-r border-white/20
@@ -119,9 +110,7 @@ export default function RewardSection() {
                 reward-feature
               "
             >
-              <h4 className="text-[18px] font-[600] mb-[16px] font-Outfit">
-                Priority Program
-              </h4>
+              <h4 className="text-[18px] font-[600] mb-[16px] font-Outfit">Priority Program</h4>
 
               <div className="mb-[16px] flex max-lg:justify-center">
                 <img
@@ -131,8 +120,8 @@ export default function RewardSection() {
               </div>
 
               <p className="text-[#cfcfcf] text-[16px] leading-[1.6] max-w-[360px] max-lg:mx-auto font-Outfit">
-                All our publishers enjoy unlimited possibilities with our priority
-                program, thoughtfully tailored to your needs.
+                All our publishers enjoy unlimited possibilities with our priority program,
+                thoughtfully tailored to your needs.
               </p>
             </div>
 
@@ -144,9 +133,7 @@ export default function RewardSection() {
                 reward-feature
               "
             >
-              <h4 className="text-[18px] font-[600] mb-[16px] font-Outfit">
-                Referral Program
-              </h4>
+              <h4 className="text-[18px] font-[600] mb-[16px] font-Outfit">Referral Program</h4>
 
               <div className="mb-[16px] flex max-lg:justify-center">
                 <img
@@ -161,7 +148,6 @@ export default function RewardSection() {
             </div>
           </div>
         </div>
-
 
         <div
           className="partners-box relative w-[85%] mx-auto mt-[180px] rounded-[24px] px-16 py-20"
@@ -195,9 +181,7 @@ export default function RewardSection() {
             </div>
           </div>
         </div>
-
       </div>
-
 
       <style>
         {`
@@ -231,7 +215,6 @@ export default function RewardSection() {
           
         `}
       </style>
-
 
       <style>
         {`
@@ -464,7 +447,6 @@ export default function RewardSection() {
 .partners-box { background-size: 100% 100% !important; background-repeat: no-repeat !important; }
         `}
       </style>
-
     </section>
   );
 }

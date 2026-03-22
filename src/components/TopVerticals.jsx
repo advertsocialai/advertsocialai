@@ -11,10 +11,8 @@ export default function Verticals() {
           const target = entry.target;
 
           if (entry.isIntersecting) {
-
             target.classList.add("opacity-100", "translate-y-0");
           } else {
-
             target.classList.remove("opacity-100", "translate-y-0");
           }
         });
@@ -38,25 +36,22 @@ export default function Verticals() {
   return (
     <section className="verticals-section bg-white pt-[25px] pb-[100px]">
       <div className="verticals-wrapper w-full px-[60px] max-lg:px-[40px] max-md:px-[20px] mx-auto">
-
-
         <div className="text-center mb-[30px] max-md:mb-[20px]">
           <h2
             className="verticals-title text-[72px] leading-[80px] text-[#1B1A1A] max-lg:text-[54px] max-lg:leading-[60px] max-md:text-[42px] max-sm:text-[32px]"
-            style={{ fontFamily: 'Outfit' }}
+            style={{ fontFamily: "Outfit" }}
           >
             Top verticals
           </h2>
 
           <p
             className="verticals-desc text-[18px] font-[500] text-[#4B4B4B] max-w-[800px] mx-auto mt-[8px] max-md:text-[16px] max-sm:text-[14px]"
-            style={{ fontFamily: 'Outfit' }}
+            style={{ fontFamily: "Outfit" }}
           >
             Advert Social AI knows how to crush it in top verticals like adult, dating, gaming, etc.
             helping you get the engagement and conversions you need.
           </p>
         </div>
-
 
         <div
           className="

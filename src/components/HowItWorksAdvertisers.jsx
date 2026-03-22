@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import './HowItWorksPushAds.mobile.css';
-import './HowItWorksAdvertisers.css';
+import "./HowItWorksPushAds.mobile.css";
+import "./HowItWorksAdvertisers.css";
 
 const parentVariants = {
   hidden: {},
@@ -25,7 +25,7 @@ const HowItWorksAdvertisers = () => {
   return (
     <section
       className="relative w-full flex justify-center bg-white overflow-visible howitworks-pushads-mobile hiw-advertisers-section"
-      style={{ fontFamily: "Outfit", }}
+      style={{ fontFamily: "Outfit" }}
     >
       <motion.div
         className="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-0 hiw-advertisers-container"

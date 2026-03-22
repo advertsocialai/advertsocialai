@@ -15,14 +15,11 @@ const PublishersSection = () => {
     <div className="publishers-container">
       <div className="publishers-content">
         {/* Title */}
-        <h2 className="publishers-title">
-          Publishers: Monetize Without Complexity
-        </h2>
+        <h2 className="publishers-title">Publishers: Monetize Without Complexity</h2>
 
         {/* Description */}
         <p className="publishers-description">
-          Small and mid-size publishers deserve the same access to premium demand
-          as media giants.
+          Small and mid-size publishers deserve the same access to premium demand as media giants.
           <br />
           <br />
           We make it possible through:

@@ -74,8 +74,6 @@ function HeroPublishers() {
       />
 
       <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center w-full px-4 sm:px-6 md:px-8 lg:px-[5%] max-w-[1280px] hero-publishers-content-container">
-
-
         <motion.div
           className="
     hero-push-text flex flex-col
@@ -95,7 +93,6 @@ function HeroPublishers() {
             marginLeft: "-40px",
           }}
         >
-
           <motion.h1
             variants={childVariants}
             className="
@@ -150,7 +147,6 @@ function HeroPublishers() {
             Direct Engagement at Scale
           </motion.h2>
 
-
           <motion.p
             variants={childVariants}
             className="
@@ -175,12 +171,10 @@ function HeroPublishers() {
               color: "#F9F9F9",
             }}
           >
-
-
-            Advert Social AI delivers performance-driven Push Advertising solutions
-            that enable advertisers to reach opted-in users directly on their
-            devices. Push Ads offer immediate visibility, strong click-through
-            rates, and scalable global reach across desktop and mobile.
+            Advert Social AI delivers performance-driven Push Advertising solutions that enable
+            advertisers to reach opted-in users directly on their devices. Push Ads offer immediate
+            visibility, strong click-through rates, and scalable global reach across desktop and
+            mobile.
           </motion.p>
 
           <motion.button
@@ -192,22 +186,14 @@ function HeroPublishers() {
               gap: "8px",
               borderRadius: "40px",
               padding: "24px 32px",
-              background:
-                "linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%)",
+              background: "linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%)",
               color: "#FFFFFF",
             }}
           >
-            <span
-              className="text-sm font-bold"
-              style={{ fontFamily: "Outfit" }}
-            >
+            <span className="text-sm font-bold" style={{ fontFamily: "Outfit" }}>
               Get Started
             </span>
-            <img
-              src="/assets/images/arrow.png"
-              alt="Arrow"
-              className="w-3 h-3"
-            />
+            <img src="/assets/images/arrow.png" alt="Arrow" className="w-3 h-3" />
           </motion.button>
         </motion.div>
 
@@ -238,10 +224,7 @@ function HeroPublishers() {
           Home
         </span>
         <img src="/assets/images/side-arrow.png" className="w-1 h-2" />
-        <span
-          className="text-xs sm:text-sm"
-          style={{ fontFamily: "Outfit", color: "#4B4B4B" }}
-        >
+        <span className="text-xs sm:text-sm" style={{ fontFamily: "Outfit", color: "#4B4B4B" }}>
           Services
         </span>
       </div>
@@ -283,7 +266,6 @@ function HeroPublishers() {
   }
 `}
       </style>
-
     </section>
   );
 }

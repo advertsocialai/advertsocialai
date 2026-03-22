@@ -1,22 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Contact.css";
-import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import { motion } from "framer-motion";
-import PhoneInput from 'react-phone-number-input';
-import { isValidPhoneNumber } from 'react-phone-number-input';
+import PhoneInput from "react-phone-number-input";
+import { isValidPhoneNumber } from "react-phone-number-input";
 import { API_ENDPOINTS } from "../lib/api";
 
-
 const MySwal = withReactContent(Swal);
-
 
 export default function Contact() {
   const navigate = useNavigate();
   const [serviceOpen, setServiceOpen] = useState(false);
   const [form, setForm] = useState({
-
     name: "",
     email: "",
     company: "",
@@ -44,22 +41,26 @@ export default function Contact() {
     e.preventDefault();
     const newErrors = {};
     if (!form.name.trim()) {
-      newErrors.name = 'Name is required.';
+      newErrors.name = "Name is required.";
     }
     if (!form.email.trim()) {
-      newErrors.email = 'Email is required.';
-    } else if (!/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@\"]+\.)+(com|net|org|edu|gov|mil|int|co|io|ai|in|us|uk|ca|de|fr|au|jp|cn|ru|br|za|info|biz|me|tv|xyz|site|online|store|tech|app|pro|dev|cloud|digital|group|media|solutions|systems|world|today|news|live|center|company|consulting|design|events|finance|health|marketing|network|partners|services|space|support|technology|ventures|zone))$/i.test(form.email)) {
-      newErrors.email = 'Please enter a valid email address with a recognized domain.';
+      newErrors.email = "Email is required.";
+    } else if (
+      !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@"]+\.)+(com|net|org|edu|gov|mil|int|co|io|ai|in|us|uk|ca|de|fr|au|jp|cn|ru|br|za|info|biz|me|tv|xyz|site|online|store|tech|app|pro|dev|cloud|digital|group|media|solutions|systems|world|today|news|live|center|company|consulting|design|events|finance|health|marketing|network|partners|services|space|support|technology|ventures|zone))$/i.test(
+        form.email
+      )
+    ) {
+      newErrors.email = "Please enter a valid email address with a recognized domain.";
     }
     if (!form.phone) {
-      newErrors.phone = 'Phone number is required.';
+      newErrors.phone = "Phone number is required.";
     } else if (!isValidPhoneNumber(form.phone)) {
-      newErrors.phone = 'Enter a valid phone number.';
-    }
-    else {
-      const digitsOnly = form.phone.replace(/\D/g, '');
+      newErrors.phone = "Enter a valid phone number.";
+    } else {
+      const digitsOnly = form.phone.replace(/\D/g, "");
       if (!validatePhoneNumber(form.phone) || digitsOnly.length < 10) {
-        newErrors.phone = 'Enter a valid phone number with country code (if any) and at least 10 digits.';
+        newErrors.phone =
+          "Enter a valid phone number with country code (if any) and at least 10 digits.";
       }
     }
     if (Object.keys(newErrors).length > 0) {
@@ -68,7 +69,6 @@ export default function Contact() {
     }
     setErrors({});
     setLoading(true);
-
 
     const payload = {
       Firstname: form.name,
@@ -79,9 +79,9 @@ export default function Contact() {
     };
 
     fetch(API_ENDPOINTS.ADD_CONTACT, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(payload),
     })
@@ -90,39 +90,35 @@ export default function Contact() {
         setLoading(false);
 
         if (data.status === true) {
-
           MySwal.fire({
-            icon: 'success',
-            title: 'Thank you!',
-            text: 'Thank you for your submission! We will get back to you soon.',
+            icon: "success",
+            title: "Thank you!",
+            text: "Thank you for your submission! We will get back to you soon.",
           });
 
           setForm({
-            name: '',
-            email: '',
-            company: '',
-            phone: '',
-            service: '',
-            message: '',
+            name: "",
+            email: "",
+            company: "",
+            phone: "",
+            service: "",
+            message: "",
           });
         } else {
+          let errorMessage = data.message || "Submission failed";
 
-          let errorMessage = data.message || 'Submission failed';
-
-
-          if (data.error && typeof data.error === 'object') {
-            errorMessage = Object.values(data.error).flat().join('\n');
+          if (data.error && typeof data.error === "object") {
+            errorMessage = Object.values(data.error).flat().join("\n");
           }
 
           MySwal.fire({
-            icon: 'error',
-            title: 'Submission Failed',
+            icon: "error",
+            title: "Submission Failed",
             text: errorMessage,
           });
         }
-      })
+      });
   }
-
 
   const featuresParent = {
     hidden: {},
@@ -143,7 +139,6 @@ export default function Contact() {
   };
 
   return (
-
     <div
       className="px-4 sm:px-6 lg:px-8 xl:px-[20px] mx-auto max-w-[1520px] contact-root-container"
       style={{ fontFamily: "Outfit, sans-serif" }}
@@ -171,14 +166,8 @@ export default function Contact() {
               zIndex: 2,
             }}
           >
-
-            <div
-              className="flex flex-col justify-between w-full xl:w-auto xl:max-w-[550px] text-center xl:text-left gap-8 sm:gap-10 lg:gap-12"
-            >
-
-              <div
-                className="flex flex-col gap-6 sm:gap-7 md:gap-8 lg:gap-[40px]"
-              >
+            <div className="flex flex-col justify-between w-full xl:w-auto xl:max-w-[550px] text-center xl:text-left gap-8 sm:gap-10 lg:gap-12">
+              <div className="flex flex-col gap-6 sm:gap-7 md:gap-8 lg:gap-[40px]">
                 <h3
                   className="contact-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-normal px-2 sm:px-0"
                   style={{
@@ -199,20 +188,16 @@ export default function Contact() {
                     color: "#4B4B4B",
                   }}
                 >
-                  Buy and sell worldwide premium traffic in just a few clicks. Our
-                  platform is easy-to-use for both beginners and expert media buyers.
+                  Buy and sell worldwide premium traffic in just a few clicks. Our platform is
+                  easy-to-use for both beginners and expert media buyers.
                 </p>
 
-
-                <div
-                  className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 md:gap-6 justify-center xl:justify-start"
-                >
+                <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 md:gap-6 justify-center xl:justify-start">
                   <button
                     onClick={() => navigate("/contact")}
                     className="flex items-center justify-center px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-[40px] text-sm font-bold transition-transform hover:scale-105 w-full sm:w-auto whitespace-nowrap"
                     style={{
-                      background:
-                        "linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%)",
+                      background: "linear-gradient(69.88deg, #00E676 2.47%, #6A0DAD 78.28%)",
                       color: "#FFFFFF",
                       fontFamily: "Outfit",
                       fontSize: "18px", // Set font size to 18px
@@ -246,7 +231,6 @@ export default function Contact() {
                 </div>
               </div>
 
-
               <motion.div
                 className="contact-features flex flex-col gap-8 sm:gap-9 md:gap-10 lg:gap-12"
                 variants={featuresParent}
@@ -254,8 +238,10 @@ export default function Contact() {
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.3 }}
               >
-
-                <motion.div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8" variants={featureChild}>
+                <motion.div
+                  className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8"
+                  variants={featureChild}
+                >
                   <img
                     src="/assets/images/Blue/icon-robot.svg"
                     alt="icon-robot"
@@ -280,14 +266,16 @@ export default function Contact() {
                         color: "#4B4B4B",
                       }}
                     >
-                      Design beautiful artwork, digital sketches, or illustrations
-                      that match your style while boosting creativity.
+                      Design beautiful artwork, digital sketches, or illustrations that match your
+                      style while boosting creativity.
                     </p>
                   </div>
                 </motion.div>
 
-
-                <motion.div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8" variants={featureChild}>
+                <motion.div
+                  className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8"
+                  variants={featureChild}
+                >
                   <img
                     src="/assets/images/Blue/icon-eye.svg"
                     alt="icon-eye"
@@ -312,8 +300,8 @@ export default function Contact() {
                         color: "#4B4B4B",
                       }}
                     >
-                      Erase distractions, adjust dimensions and finesse every detail
-                      of your designs quickly all under one roof with full control.
+                      Erase distractions, adjust dimensions and finesse every detail of your designs
+                      quickly all under one roof with full control.
                     </p>
                   </div>
                 </motion.div>
@@ -321,9 +309,7 @@ export default function Contact() {
             </div>
 
             {/* --- RIGHT SIDE: Contact Form --- */}
-            <div
-              className="contact-form-box bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 xl:p-14 w-full xl:w-auto xl:max-w-[620px]"
-            >
+            <div className="contact-form-box bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 xl:p-14 w-full xl:w-auto xl:max-w-[620px]">
               <div className="flex flex-col gap-6">
                 <h6
                   className="contact-form-title text-xl sm:text-2xl font-medium"
@@ -342,14 +328,11 @@ export default function Contact() {
                     color: "#282828",
                   }}
                 >
-                  Just fill out the form and our global experts will be in touch
-                  right away with package and price solution to help you!
+                  Just fill out the form and our global experts will be in touch right away with
+                  package and price solution to help you!
                 </p>
 
-                <form
-                  onSubmit={handleSubmit}
-                  className="flex flex-col gap-4 sm:gap-6 mt-4"
-                >
+                <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-6 mt-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="flex flex-col w-full">
                       <label className="text-sm font-medium text-gray-700 mb-1">
@@ -360,7 +343,7 @@ export default function Contact() {
                         value={form.name}
                         onChange={handleChange}
                         placeholder="Your Name"
-                        className={`h-12 sm:h-14 px-4 sm:px-6 rounded-xl bg-[#F6F6F6] border ${errors.name ? 'border-red-500' : 'border-[#F6F6F6]'} hover:border-[#282828] focus:border-[#6549F6] outline-none transition-colors placeholder-[#282828]/60`}
+                        className={`h-12 sm:h-14 px-4 sm:px-6 rounded-xl bg-[#F6F6F6] border ${errors.name ? "border-red-500" : "border-[#F6F6F6]"} hover:border-[#282828] focus:border-[#6549F6] outline-none transition-colors placeholder-[#282828]/60`}
                       />
                       {errors.name && (
                         <span className="text-red-500 text-xs mt-1">{errors.name}</span>
@@ -376,7 +359,7 @@ export default function Contact() {
                         onChange={handleChange}
                         type="email"
                         placeholder="Email Address"
-                        className={`h-12 sm:h-14 px-4 sm:px-6 rounded-xl bg-[#F6F6F6] border ${errors.email ? 'border-red-500' : 'border-[#F6F6F6]'} hover:border-[#282828] focus:border-[#6549F6] outline-none transition-colors placeholder-[#282828]/60`}
+                        className={`h-12 sm:h-14 px-4 sm:px-6 rounded-xl bg-[#F6F6F6] border ${errors.email ? "border-red-500" : "border-[#F6F6F6]"} hover:border-[#282828] focus:border-[#6549F6] outline-none transition-colors placeholder-[#282828]/60`}
                       />
                       {errors.email && (
                         <span className="text-red-500 text-xs mt-1">{errors.email}</span>
@@ -386,9 +369,7 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="flex flex-col w-full">
-                      <label className="text-sm font-medium text-gray-700 mb-1">
-                        Company
-                      </label>
+                      <label className="text-sm font-medium text-gray-700 mb-1">Company</label>
                       <input
                         name="company"
                         value={form.company}
@@ -403,7 +384,7 @@ export default function Contact() {
                       </label>
                       <div
                         className={`h-12 sm:h-14 rounded-xl bg-[#F6F6F6] px-4 sm:px-6 flex items-center
-                                    border ${errors.phone ? 'border-red-500' : 'border-[#F6F6F6]'}
+                                    border ${errors.phone ? "border-red-500" : "border-[#F6F6F6]"}
                                     hover:border-[#282828] focus-within:border-[#6549F6]`}
                       >
                         <PhoneInput
@@ -414,13 +395,10 @@ export default function Contact() {
                             preferredCountries: ["US", "IN", "GB", "AE", "CA"],
                           }}
                           value={form.phone}
-                          onChange={(value) =>
-                            setForm((f) => ({ ...f, phone: value || "" }))
-                          }
+                          onChange={(value) => setForm((f) => ({ ...f, phone: value || "" }))}
                           placeholder="Phone number"
                           className="w-full bg-transparent outline-none text-sm"
                         />
-
                       </div>
                       {errors.phone && (
                         <span className="text-red-500 text-xs mt-1">{errors.phone}</span>
@@ -429,12 +407,9 @@ export default function Contact() {
                   </div>
 
                   <div className="flex flex-col w-full">
-                    <label className="text-sm font-medium text-gray-700 mb-1">
-                      Service
-                    </label>
+                    <label className="text-sm font-medium text-gray-700 mb-1">Service</label>
 
                     <div className="relative">
-
                       <button
                         type="button"
                         onClick={() => setServiceOpen((p) => !p)}
@@ -447,19 +422,16 @@ export default function Contact() {
                         {form.service || "Service"}
                       </button>
 
-
                       <img
                         src="/assets/images/arrow-down.png"
                         alt="dropdown arrow"
-                        className={`pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 w-4 h-2 opacity-70 transition-transform ${serviceOpen ? "rotate-180" : ""
-                          }`}
+                        className={`pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 w-4 h-2 opacity-70 transition-transform ${
+                          serviceOpen ? "rotate-180" : ""
+                        }`}
                       />
 
-
                       {serviceOpen && (
-                        <div
-                          className=" absolute z-50 mt-2 w-full bg-white rounded-xl shadow-lg border border-[#EAEAEA] max-h-60 overflow-y-auto sm:max-h-none sm:overflow-visible"
-                        >
+                        <div className=" absolute z-50 mt-2 w-full bg-white rounded-xl shadow-lg border border-[#EAEAEA] max-h-60 overflow-y-auto sm:max-h-none sm:overflow-visible">
                           {[
                             "AI Integration solutions",
                             "Chatbot Integration",
@@ -498,16 +470,32 @@ export default function Contact() {
                     <button
                       type="submit"
                       className="contact-submit flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-[40px] bg-black text-white font-bold text-xs sm:text-sm transition-transform hover:scale-105 hover:bg-gray-800"
-                      style={{ fontFamily: 'Outfit' }}
+                      style={{ fontFamily: "Outfit" }}
                       disabled={loading}
                     >
                       {loading ? (
-                        <svg className="animate-spin h-5 w-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                        <svg
+                          className="animate-spin h-5 w-5 mr-2 text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          ></circle>
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                          ></path>
                         </svg>
                       ) : (
-                        'Submit Request'
+                        "Submit Request"
                       )}
                       {!loading && (
                         <img

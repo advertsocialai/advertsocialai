@@ -43,8 +43,7 @@ const Performance = () => {
                 left: "-35px",
                 transform: "rotate(0deg)",
                 opacity: 1,
-                backgroundImage:
-                  "url('/assets/images/performance-card.svg')",
+                backgroundImage: "url('/assets/images/performance-card.svg')",
               }}
             >
               <h3
@@ -81,14 +80,14 @@ const Performance = () => {
                       className="performance-check-text font-outfit text-[17px] font-semibold leading-[22px] tracking-[-0.43px] text-white"
                       style={
                         item === "Smarter optimization, not just more inventory" ||
-                          item === "Richer creative, not just generic banners" ||
-                          item === "Faster execution, not endless campaign cycles"
+                        item === "Richer creative, not just generic banners" ||
+                        item === "Faster execution, not endless campaign cycles"
                           ? {
-                            width: "285px",
-                            height: "34px",
-                            transform: "rotate(0deg)",
-                            opacity: 1,
-                          }
+                              width: "285px",
+                              height: "34px",
+                              transform: "rotate(0deg)",
+                              opacity: 1,
+                            }
                           : {}
                       }
                     >
@@ -128,9 +127,11 @@ const Performance = () => {
                     lineHeight: "16px",
                     letterSpacing: "0%",
                     verticalAlign: "middle",
-                    color: "var(--Colors-White, #FFFFFF)"
+                    color: "var(--Colors-White, #FFFFFF)",
                   }}
-                >Start Monetizing Smarter</span>
+                >
+                  Start Monetizing Smarter
+                </span>
               </button>
             </div>
             {/* CTA (mobile only, outside card) */}
@@ -164,9 +165,11 @@ const Performance = () => {
                   lineHeight: "16px",
                   letterSpacing: "0%",
                   verticalAlign: "middle",
-                  color: "var(--Colors-White, #FFFFFF)"
+                  color: "var(--Colors-White, #FFFFFF)",
                 }}
-              >Start Monetizing Smarter</span>
+              >
+                Start Monetizing Smarter
+              </span>
             </button>
 
             {/* Right Gradient Box */}
@@ -185,13 +188,10 @@ const Performance = () => {
           </div>
           {/* Bottom Text */}
           <div className="mt-[-50px] text-center ml-[120px] performance-bottom-mobile">
-            <p className="font-outfit text-[36px] text-white">
-              We design for:
-            </p>
+            <p className="font-outfit text-[36px] text-white">We design for:</p>
             <p className="mt-4 font-outfit text-[40px] font-medium text-white">
-              Revenue <span className="font-bold">.</span> ROAS{" "}
-              <span className="font-bold">.</span> RPM{" "}
-              <span className="font-bold">.</span> CAC efficiency{" "}
+              Revenue <span className="font-bold">.</span> ROAS <span className="font-bold">.</span>{" "}
+              RPM <span className="font-bold">.</span> CAC efficiency{" "}
               <span className="font-bold">.</span> Yield
             </p>
           </div>
@@ -204,7 +204,6 @@ const Performance = () => {
         />
       </div>
     </section>
-
   );
 };
 

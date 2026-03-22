@@ -21,7 +21,6 @@ export default function Result() {
           px-4 sm:px-6 md:px-10
         "
       >
-
         <div className="result-about-left w-full lg:w-[600px] flex justify-center lg:justify-start">
           <motion.img
             src="/assets/images/Results.png"
@@ -44,10 +43,7 @@ export default function Result() {
           />
         </div>
 
-
         <div className="result-about-right flex flex-col w-full lg:w-[550px] gap-10">
-
-
           <div className="flex flex-col gap-4">
             <h2 className="result-about-title text-[#1B1A1A] font-normal">
               <span className="block text-[32px] leading-[40px] sm:text-[40px] lg:text-[48px] lg:leading-[60px] font-Outfit ">
@@ -59,10 +55,7 @@ export default function Result() {
             </h2>
           </div>
 
-
           <div className="result-about-buttons flex flex-col sm:flex-row items-center gap-4 sm:gap-5">
-
-
             <button
               className="
                 result-about-btn-primary
@@ -85,7 +78,6 @@ export default function Result() {
               <img src="/assets/images/arrow.png" alt="arrow" className="ml-2 w-3 h-3" />
             </button>
 
-
             <div className="flex justify-start">
               <button
                 className="result-about-btn-secondary gradient-btn"
@@ -100,18 +92,14 @@ export default function Result() {
                   whiteSpace: "nowrap",
                   fontFamily: "Outfit",
                 }}
-                onClick={() => window.location.href = '/about'}
+                onClick={() => (window.location.href = "/about")}
               >
                 <span>Learn More</span>
               </button>
             </div>
-
           </div>
 
-
           <div className="result-about-checklist flex flex-col gap-5">
-
-
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -124,19 +112,14 @@ export default function Result() {
               />
             </motion.div>
 
-
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
             >
-              <CheckItem
-                textBold="Environment"
-                textNormal="– finding personal development path"
-              />
+              <CheckItem textBold="Environment" textNormal="– finding personal development path" />
             </motion.div>
-
 
             <motion.div
               className="result-about-check-item-3 hidden lg:flex items-start gap-3 whitespace-nowrap"
@@ -157,10 +140,10 @@ export default function Result() {
                   lineHeight: "24px",
                 }}
               >
-                <span className="font-semibold">Time & Trust</span> – flexibility in all aspects, reliable and efficient
+                <span className="font-semibold">Time & Trust</span> – flexibility in all aspects,
+                reliable and efficient
               </p>
             </motion.div>
-
 
             <motion.div
               className="lg:hidden"
@@ -174,7 +157,6 @@ export default function Result() {
                 textNormal="– flexibility in all aspects, reliable and efficient"
               />
             </motion.div>
-
           </div>
         </div>
       </div>
@@ -186,7 +168,10 @@ function CheckItem({ textBold, textNormal }) {
   return (
     <div className="flex items-start gap-3">
       <div className="result-about-check-icon-container w-6 h-6 sm:w-7 sm:h-7 bg-[#6A0DAD] rounded-full flex items-center justify-center flex-shrink-0">
-        <img src="/assets/images/tick.png" className="result-about-check-icon w-2 h-2 sm:w-2.5 sm:h-2.5" />
+        <img
+          src="/assets/images/tick.png"
+          className="result-about-check-icon w-2 h-2 sm:w-2.5 sm:h-2.5"
+        />
       </div>
 
       <p

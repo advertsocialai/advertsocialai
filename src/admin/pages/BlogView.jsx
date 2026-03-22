@@ -18,9 +18,7 @@ export default function BlogView() {
 
       const found = res.data.data.find((b) => String(b.id) === id);
       setBlog(found || null);
-
-    } catch (err) {
-    }
+    } catch (err) {}
   };
 
   if (!blog) return <div className="p-10">Loading...</div>;
@@ -28,7 +26,6 @@ export default function BlogView() {
   return (
     <div className="p-4 md:p-10 bg-[#f7f7f7] w-full min-h-screen">
       <div className="bg-white p-6 md:p-10 rounded-2xl shadow-lg">
-
         <h1 className="text-3xl font-bold mb-6">{blog.name}</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-10">
@@ -61,7 +58,9 @@ export default function BlogView() {
                 src={`${BLOG_IMAGE_BASE_URL}${blog.image1}`}
                 className="w-full max-w-xs rounded-xl shadow"
               />
-            ) : "No Image"}
+            ) : (
+              "No Image"
+            )}
           </div>
 
           <div>
@@ -69,14 +68,16 @@ export default function BlogView() {
             {blog.image2 ? (
               <img
                 src={`${BLOG_IMAGE_BASE_URL}${blog.image2}`}
-
                 className="w-full max-w-xs rounded-xl shadow"
               />
-            ) : "No Image"}
+            ) : (
+              "No Image"
+            )}
           </div>
         </div>
 
-        <div className="prose max-w-full bg-gray-50 p-6 rounded-xl"
+        <div
+          className="prose max-w-full bg-gray-50 p-6 rounded-xl"
           dangerouslySetInnerHTML={{ __html: blog.description }}
         />
 
@@ -86,10 +87,7 @@ export default function BlogView() {
         >
           Back
         </button>
-
       </div>
     </div>
   );
 }
-
-

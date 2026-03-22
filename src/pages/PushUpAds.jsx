@@ -10,13 +10,13 @@ import Research from "../components/Research";
 export default function PushUpAds() {
   return (
     <>
-    <HeroPushAds />
-    <FeaturesPushAds />
-    <HowItWorksPushAds />
-    <VerticalsPushAds />
-    <BenefitsPushAds />
-    <Contact />
-    <Research />
+      <HeroPushAds />
+      <FeaturesPushAds />
+      <HowItWorksPushAds />
+      <VerticalsPushAds />
+      <BenefitsPushAds />
+      <Contact />
+      <Research />
     </>
   );
 }

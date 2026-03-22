@@ -12,8 +12,8 @@ const CreativeHome = () => {
         <p className="creative-paragraph">
           Creative isn’t decoration it’s conversion infrastructure.
           <br />
-          Our enriched formats are built to capture attention, communicate value,
-          and drive measurable action.
+          Our enriched formats are built to capture attention, communicate value, and drive
+          measurable action.
         </p>
 
         {/* Whitespace span (as per Figma) */}
@@ -21,8 +21,7 @@ const CreativeHome = () => {
 
         {/* Final line */}
         <p className="creative-paragraph">
-          From enriched media to interactive storytelling, creativity is our
-          multiplier.
+          From enriched media to interactive storytelling, creativity is our multiplier.
         </p>
       </div>
     </div>

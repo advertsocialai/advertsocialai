@@ -2,169 +2,167 @@
 
 /* 2560px - 2K Scaling */
 @media (min-width: 2560px) {
-    .features-section {
-        padding-top: 120px !important;
-        padding-bottom: 80px !important;
-    }
+  .features-section {
+    padding-top: 120px !important;
+    padding-bottom: 80px !important;
+  }
 
-    .features-bg-mesh {
-        width: 2500px !important;
-        height: 1600px !important;
-        top: 1000px !important;
-        left: -400px !important;
-    }
+  .features-bg-mesh {
+    width: 2500px !important;
+    height: 1600px !important;
+    top: 1000px !important;
+    left: -400px !important;
+  }
 
-    .features-bg-gradient-1 {
-        width: 1500px !important;
-        height: 1300px !important;
-        top: 1300px !important;
-        left: -400px !important;
-    }
+  .features-bg-gradient-1 {
+    width: 1500px !important;
+    height: 1300px !important;
+    top: 1300px !important;
+    left: -400px !important;
+  }
 
-    .features-bg-gradient-2 {
-        width: 1500px !important;
-        height: 1300px !important;
-        top: 1000px !important;
-        left: 700px !important;
-    }
+  .features-bg-gradient-2 {
+    width: 1500px !important;
+    height: 1300px !important;
+    top: 1000px !important;
+    left: 700px !important;
+  }
 
-    .features-header {
-        max-width: 1400px !important;
-        gap: 60px !important;
-        margin-bottom: 120px !important;
-    }
+  .features-header {
+    max-width: 1400px !important;
+    gap: 60px !important;
+    margin-bottom: 120px !important;
+  }
 
-    .features-header h2 {
-        font-size: 4rem !important;
-        /* Scaled 5xl */
-    }
+  .features-header h2 {
+    font-size: 4rem !important;
+    /* Scaled 5xl */
+  }
 
-    .features-header p {
-        font-size: 1.8rem !important;
+  .features-header p {
+    font-size: 1.8rem !important;
+  }
 
-    }
+  .features-card-container-lg {
+    max-width: 2400px !important;
+    height: 750px !important;
+    padding: 0 !important;
+  }
 
-    .features-card-container-lg {
-        max-width: 2400px !important;
-        height: 750px !important;
-        padding: 0 !important;
-    }
+  .features-card-row-top {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
 
-    .features-card-row-top {
-        width: 100% !important;
-        justify-content: space-between !important;
-    }
+  .features-card-row-top > div:first-child {
+    transform: translateX(-320px) !important;
+  }
 
-    .features-card-row-top>div:first-child {
-        transform: translateX(-320px) !important;
-    }
+  .features-card-row-top > div:last-child {
+    transform: translateX(320px) !important;
+  }
 
-    .features-card-row-top>div:last-child {
-        transform: translateX(320px) !important;
-    }
+  .features-card-row-bottom {
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 60px !important;
+    top: 200px !important;
+  }
 
-    .features-card-row-bottom {
-        width: 100% !important;
-        justify-content: center !important;
-        gap: 60px !important;
-        top: 200px !important;
-    }
+  .features-card-row-bottom > div:first-child {
+    transform: translateX(-30px) !important;
+  }
 
-    .features-card-row-bottom>div:first-child {
-        transform: translateX(-30px) !important;
-    }
+  .features-card-row-bottom > div:last-child {
+    transform: translateX(30px) !important;
+  }
 
-    .features-card-row-bottom>div:last-child {
-        transform: translateX(30px) !important;
-    }
+  .feature-card {
+    width: 400px !important;
+    height: 520px !important;
+    padding: 60px 40px !important;
+    gap: 40px !important;
+  }
 
+  .feature-card img {
+    width: 64px !important;
+    height: 64px !important;
+  }
 
-    .feature-card {
-        width: 400px !important;
-        height: 520px !important;
-        padding: 60px 40px !important;
-        gap: 40px !important;
-    }
+  .feature-card h3 {
+    font-size: 2rem !important;
+    /* 32px */
+    line-height: 1.2 !important;
+  }
 
-    .feature-card img {
-        width: 64px !important;
-        height: 64px !important;
-    }
-
-    .feature-card h3 {
-        font-size: 2rem !important;
-        /* 32px */
-        line-height: 1.2 !important;
-    }
-
-    .feature-card p {
-        font-size: 1.3rem !important;
-        /* 22px */
-        line-height: 1.5 !important;
-    }
+  .feature-card p {
+    font-size: 1.3rem !important;
+    /* 22px */
+    line-height: 1.5 !important;
+  }
 }
 
 /* 2700px - Further Scaling for wider screens */
 @media (min-width: 2700px) {
-    .features-section {
-        max-width: 100% !important;
-        width: 100% !important;
-        padding-top: 160px !important;
-        padding-bottom: 120px !important;
-    }
+  .features-section {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-top: 160px !important;
+    padding-bottom: 120px !important;
+  }
 
-    .features-bg-mesh {
-        width: 100% !important;
-        left: 0 !important;
-        object-fit: cover !important;
-    }
+  .features-bg-mesh {
+    width: 100% !important;
+    left: 0 !important;
+    object-fit: cover !important;
+  }
 
-    .features-header {
-        max-width: 1800px !important;
-    }
+  .features-header {
+    max-width: 1800px !important;
+  }
 
-    .features-header h2 {
-        font-size: 5rem !important;
-    }
+  .features-header h2 {
+    font-size: 5rem !important;
+  }
 
-    .features-header p {
-        font-size: 2.2rem !important;
-    }
+  .features-header p {
+    font-size: 2.2rem !important;
+  }
 
-    .features-card-container-lg {
-        max-width: 2800px !important;
-        height: 800px !important;
-        padding: 0 50px !important;
-    }
+  .features-card-container-lg {
+    max-width: 2800px !important;
+    height: 800px !important;
+    padding: 0 50px !important;
+  }
 
-    .features-card-row-top {
-        width: 100% !important;
-        justify-content: space-between !important;
-    }
+  .features-card-row-top {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
 
-    .features-card-row-bottom {
-        width: 100% !important;
-        justify-content: center !important;
-        gap: 120px !important;
-        top: 250px !important;
-    }
+  .features-card-row-bottom {
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 120px !important;
+    top: 250px !important;
+  }
 
-    .feature-card {
-        width: 550px !important;
-        height: 700px !important;
-        padding: 80px 50px !important;
-    }
+  .feature-card {
+    width: 550px !important;
+    height: 700px !important;
+    padding: 80px 50px !important;
+  }
 
-    .feature-card img {
-        width: 80px !important;
-        height: 80px !important;
-    }
+  .feature-card img {
+    width: 80px !important;
+    height: 80px !important;
+  }
 
-    .feature-card h3 {
-        font-size: 2.5rem !important;
-    }
+  .feature-card h3 {
+    font-size: 2.5rem !important;
+  }
 
-    .feature-card p {
-        font-size: 1.6rem !important;
-    }
+  .feature-card p {
+    font-size: 1.6rem !important;
+  }
 }
