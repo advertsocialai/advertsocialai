@@ -45,6 +45,10 @@ import BlogList from "./pages/BlogList";
 import BlogDetail from "./pages/BlogDetail";
 import PublicFAQ from "./pages/PublicFAQ";
 import RegistrationPage from "./pages/Registration-page";
+import LeadershipTeam from "./pages/LeadershipTeam";
+import Careers from "./pages/Careers";
+import BestPush from "./pages/BestPush";
+import NativeTraffic from "./pages/NativeTraffic";
 
 export default function App() {
   const [isVerticalsOpen, setIsVerticalsOpen] = useState(false);
@@ -120,6 +124,10 @@ export default function App() {
                       <Route path="/blog" element={<BlogList />} />
                       <Route path="/blog/:id" element={<BlogDetail />} />
                       <Route path="/faq" element={<PublicFAQ />} />
+                      <Route path="/leadership" element={<LeadershipTeam />} />
+                      <Route path="/careers" element={<Careers />} />
+                      <Route path="/bestpush" element={<BestPush />} />
+                      <Route path="/nativetraffic" element={<NativeTraffic />} />
                     </Routes>
                   </main>
                   <Footer />

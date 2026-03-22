@@ -126,6 +126,22 @@ export default function Footer() {
                     >
                       {item}
                     </span>
+                  ) : item === "Leadership Team" ? (
+                    <span
+                      key={i}
+                      className="text-xs font-bold text-white cursor-pointer"
+                      onClick={() => (window.location.href = "/leadership")}
+                    >
+                      {item}
+                    </span>
+                  ) : item === "Careers" ? (
+                    <span
+                      key={i}
+                      className="text-xs font-bold text-white cursor-pointer"
+                      onClick={() => (window.location.href = "/careers")}
+                    >
+                      {item}
+                    </span>
                   ) : (
                     <span key={i} className="text-xs font-bold text-white">
                       {item}
@@ -164,9 +180,14 @@ export default function Footer() {
                       onClick={() => {
                         if (item === "Popunder ADS") {
                           window.location.href = "/popunderads";
-                        }
-                        if (item === "Advertising") {
+                        } else if (item === "Advertising") {
                           window.location.href = "/advertisers";
+                        } else if (item === "News & Media") {
+                          window.location.href = "/blog";
+                        } else if (item === "Best Push") {
+                          window.location.href = "/bestpush";
+                        } else if (item === "Native Traffic") {
+                          window.location.href = "/nativetraffic";
                         }
                       }}
                     >
@@ -361,6 +382,24 @@ export default function Footer() {
                       >
                         {item}
                       </span>
+                    ) : item === "Leadership Team" ? (
+                      <span
+                        key={i}
+                        className="text-xs font-bold text-white cursor-pointer hover:text-[#FF611D] transition-colors"
+                        style={{ fontFamily: "Outfit", fontSize: "0.85rem" }}
+                        onClick={() => (window.location.href = "/leadership")}
+                      >
+                        {item}
+                      </span>
+                    ) : item === "Careers" ? (
+                      <span
+                        key={i}
+                        className="text-xs font-bold text-white cursor-pointer hover:text-[#FF611D] transition-colors"
+                        style={{ fontFamily: "Outfit", fontSize: "0.85rem" }}
+                        onClick={() => (window.location.href = "/careers")}
+                      >
+                        {item}
+                      </span>
                     ) : (
                       <span
                         key={i}
@@ -427,9 +466,14 @@ export default function Footer() {
                       onClick={() => {
                         if (item === "Popunder ADS") {
                           window.location.href = "/popunderads";
-                        }
-                        if (item === "Advertising") {
+                        } else if (item === "Advertising") {
                           window.location.href = "/advertisers";
+                        } else if (item === "News & Media") {
+                          window.location.href = "/blog";
+                        } else if (item === "Best Push") {
+                          window.location.href = "/bestpush";
+                        } else if (item === "Native Traffic") {
+                          window.location.href = "/nativetraffic";
                         }
                       }}
                     >
